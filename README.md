@@ -27,7 +27,7 @@ renew_portfolio/
 │   ├── pages/                  # 페이지 컴포넌트
 │   │   ├── header.tsx         # 헤더 컴포넌트
 │   │   ├── main.tsx           # 메인 섹션 컴포넌트
-│   │   └── info.tsx           # 정보 섹션 컴포넌트
+│   │   └── about.tsx           # 정보 섹션 컴포넌트
 │   ├── styles/                 # 스타일 파일들
 │   │   ├── reset.css          # CSS 리셋
 │   │   ├── common.css         # 공통 스타일
@@ -92,7 +92,7 @@ npm run build
 - 메인 히어로 섹션
 - 인트로 메시지
 
-### Info (`src/pages/info.tsx`)
+### About (`src/pages/about.tsx`)
 - About Me 섹션
 - 프로필 이미지 및 소개
 - 경력 및 학력 정보

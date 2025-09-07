@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './pages/header';
-import Info from './pages/info';
+import About from './pages/about';
 import Main from './pages/main';
 
 
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <Main />
-      <Info />
+      <About />
     </div>
   );
 }

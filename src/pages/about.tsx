@@ -1,7 +1,7 @@
 
 import '../styles/info_section.css';
 import '../utils/main.js';
-const Info = () => {
+const About = () => {
     return (
         // ABOUT ME 섹션
         <section id="about" className="about_section">
@@ -11,7 +11,7 @@ const Info = () => {
                     <div className="about_image">
                         <img
                             src="images/profile.jpg"
-                            alt="이유림 프로필"
+                            alt="프로필사진"
                             className="profile_img"
                         />
                     </div>
@@ -86,4 +86,4 @@ const Info = () => {
     );
 }
  
-export default Info;
+export default About;
