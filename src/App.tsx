@@ -1,8 +1,8 @@
-import React from 'react';
-import Header from './pages/header';
-import About from './pages/about';
-import Main from './pages/main';
-
+import React from "react";
+import Header from "./pages/header";
+import About from "./pages/about";
+import Main from "./pages/main";
+import Skills from "./pages/skills";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <Header />
       <Main />
       <About />
+      <Skills />
     </div>
   );
 }
