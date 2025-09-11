@@ -92,40 +92,43 @@ const StrengthContentsBox = ({
 
     // 초기 애니메이션 설정
     gsap.set(cardsRef.current, {
-      rotationY: 90,
+      rotationY: 60,
       opacity: 0,
-      scale: 0.8,
-      y: 100,
+      scale: 0.9,
+      y: 80,
+      z: -100,
     });
 
     // 각 카드별로 개별 스크롤 트리거 애니메이션
     cardsRef.current.forEach((card, index) => {
       if (card) {
+        // 메인 3D 애니메이션
         gsap.to(card, {
           rotationY: 0,
           opacity: 1,
           scale: 1,
           y: 0,
-          duration: 1.2,
-          ease: "back.out(1.7)",
+          z: 0,
+          duration: 1.5,
+          ease: "power3.out",
           scrollTrigger: {
             trigger: card,
             start: "top 85%",
-            end: "top 20%",
-            scrub: 1.5,
+            end: "top 15%",
+            scrub: 1.2,
             toggleActions: "play none none reverse",
           },
         });
 
-        // 카드가 화면에 나타날 때 추가 효과
+        // 부드러운 회전 효과
         gsap.to(card, {
-          rotationX: 5,
-          duration: 0.5,
+          rotationX: 2,
+          duration: 0.8,
           ease: "power2.out",
           scrollTrigger: {
             trigger: card,
-            start: "top 70%",
-            end: "top 30%",
+            start: "top 75%",
+            end: "top 25%",
             scrub: 1,
             toggleActions: "play none none reverse",
           },
@@ -137,19 +140,21 @@ const StrengthContentsBox = ({
     gsap.fromTo(
       containerRef.current,
       {
-        y: 50,
+        y: 30,
         opacity: 0,
+        scale: 0.95,
       },
       {
         y: 0,
         opacity: 1,
-        duration: 1.5,
-        ease: "power2.out",
+        scale: 1,
+        duration: 2,
+        ease: "power3.out",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 90%",
-          end: "top 10%",
-          scrub: 2,
+          start: "top 85%",
+          end: "top 20%",
+          scrub: 1.5,
           toggleActions: "play none none reverse",
         },
       }
