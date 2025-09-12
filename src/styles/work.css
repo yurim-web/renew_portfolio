@@ -1,0 +1,255 @@
+.work_section {
+  width: 100vw;
+  padding: 150px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.work_container {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.work_title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333333;
+  text-align: left;
+  margin-bottom: 60px;
+  padding: 0 40px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  position: relative;
+}
+
+.work_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  perspective: 1200px;
+}
+
+.work_card {
+  background: #ffffff;
+  border-radius: 0;
+  padding: 60px 40px;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+  border: none;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  will-change: transform;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.work_card:hover {
+  background: #000000 !important;
+  color: white;
+  transform: none;
+  box-shadow: none;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.work_card::after {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  left: -300px;
+  width: 350px;
+  height: 250px;
+  background-image: var(--hover-image);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  z-index: 2;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  transform: translateX(-30px) scale(0.7);
+}
+
+.work_card:hover::after {
+  left: 20px;
+  opacity: 0.9;
+  transform: translateX(0px) scale(1);
+}
+
+.work_card:nth-child(1) {
+  background: #ffffff;
+}
+
+.work_card:nth-child(2) {
+  background: #ffffff;
+}
+
+.work_card:nth-child(3) {
+  background: #ffffff;
+}
+
+.work_card:nth-child(4) {
+  background: #ffffff;
+}
+
+.work_card_title {
+  font-size: 24px;
+  font-weight: 700;
+  color: inherit;
+  margin-bottom: 40px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  position: relative;
+  z-index: 3;
+  line-height: 1.2;
+}
+
+.work_project_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 3;
+  flex-grow: 1;
+}
+
+.work_project_item {
+  font-size: 18px;
+  color: inherit;
+  margin-bottom: 20px;
+  padding: 0;
+  transition: all 0.3s ease;
+  position: relative;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.work_project_item:hover {
+  opacity: 1;
+  transform: translateX(5px);
+  font-weight: 500;
+}
+
+.work_cursor_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 62px;
+  height: 62px;
+  opacity: 0.6;
+  transition: all 0.4s ease;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.work_cursor_icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.work_card:hover .work_cursor_icon {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+/* 반응형 디자인 */
+@media screen and (max-width: 1200px) {
+  .work_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .work_card {
+    padding: 40px 30px;
+    min-height: 450px;
+  }
+
+  .work_title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .work_section {
+    padding: 100px 0;
+  }
+
+  .work_container {
+    padding: 0 15px;
+  }
+
+  .work_grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .work_card {
+    padding: 30px 20px;
+    min-height: 400px;
+  }
+
+  .work_title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .work_card_title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .work_project_item {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .work_cursor_icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+  }
+
+  .work_card::after {
+    bottom: 30px;
+    left: -200px;
+    width: 250px;
+    height: 180px;
+    transform: translateX(-20px) scale(0.7);
+  }
+
+  .work_card:hover::after {
+    left: 15px;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .work_title {
+    font-size: 32px;
+  }
+
+  .work_card {
+    padding: 25px 15px;
+  }
+
+  .work_project_item {
+    font-size: 13px;
+  }
+}

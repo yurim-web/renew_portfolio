@@ -109,10 +109,10 @@
 }
 .content_box {
   display: flex;
-  gap: 10px;
+  gap: 10%;
   align-items: center;
-  line-height: 1.5;
-  font-size: 15px;
+  line-height: 1.7;
+  font-size: 18px;
   color: #333333;
   font-weight: 500;
 }
