@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "../styles/work.css";
+import "../styles/project.css";
 
 const Work = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -101,7 +101,7 @@ const Work = () => {
     <section ref={sectionRef} className="work_section">
       <div className="work_container">
         <h1 ref={titleRef} className="work_title">
-          Work.
+          Project.
         </h1>
 
         <div className="work_grid">

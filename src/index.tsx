@@ -7,6 +7,7 @@ import "./styles/header.css";
 import "./styles/main_section.css";
 import "./styles/info_section.css";
 import "./styles/skills.css";
+import "./styles/project.css";
 
 import App from "./App";
 
