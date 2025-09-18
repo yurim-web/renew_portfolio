@@ -10,11 +10,13 @@ const StrenthToggleBox = ({ activeSkill, onSkillChange }) => {
     "React",
     "Next.js",
     "Gsap.js",
-    "API",
     "Git/Github",
+    "SourceTree",
     "Notion",
+    "Figma",
     "Photoshop",
     "Illustrator",
+    "Cafe24",
   ];
 
   return (

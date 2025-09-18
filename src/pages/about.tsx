@@ -7,12 +7,8 @@ const About = () => {
       <div className="about_container">
         <h2 className="about_title">ABOUT ME</h2>
         <div className="about_content">
-          <div className="about_image">
-            <img
-              src="images/profile.jpg"
-              alt="프로필사진"
-              className="profile_img"
-            />
+          <div className="">
+            <img src="/myimg.png" alt="프로필사진" className="profile_img" />
           </div>
           <div className="about_text">
             <h3 className="name">이유림</h3>

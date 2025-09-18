@@ -4,16 +4,27 @@ import About from "./pages/about";
 import Main from "./pages/main";
 import Skills from "./pages/skills";
 import Project from "./pages/project";
+import Portfolio from "./pages/portfolio";
+import WebDesign from "./pages/web_design";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import ResumeToggle from "./common/button/ResumeToggle";
+import ThemeToggle from "./common/button/ThemeToggle";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Main />
-      <About />
-      <Skills />
-      <Project />
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <Header />
+        <Main />
+        <About />
+        <Skills />
+        <Project />
+        <Portfolio />
+        <WebDesign />
+        <ResumeToggle />
+        <ThemeToggle />
+      </div>
+    </ThemeProvider>
   );
 }
 

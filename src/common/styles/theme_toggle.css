@@ -1,0 +1,153 @@
+/* 다크모드 토글 스타일 */
+.theme_toggle_container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 1000;
+  padding: 20px 15px;
+  transition: all 0.3s ease;
+}
+
+.theme_toggle_label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.theme_toggle_button {
+  width: 50px;
+  height: 30px;
+  border-radius: 15px;
+  border: 2px solid #333333;
+  background-color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.theme_toggle_button:hover {
+  border-color: #666666;
+}
+
+.theme_toggle_circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffd700;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theme_toggle_button.dark_mode {
+  background-color: #333333;
+  border-color: #333333;
+}
+
+.theme_toggle_button.dark_mode .theme_toggle_circle {
+  background-color: #ffffff;
+  transform: translateX(20px);
+}
+
+.theme_toggle_bottom {
+  width: 60px;
+  height: 20px;
+  border: 2px solid #333333;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.theme_toggle_bottom_text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333333;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+/* 다크모드 스타일 */
+[data-theme="dark"] .theme_toggle_container {
+  background-color: rgba(26, 26, 26, 0.9);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .theme_toggle_label {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .theme_toggle_button {
+  border-color: #ffffff;
+  background-color: #1a1a1a;
+}
+
+[data-theme="dark"] .theme_toggle_button:hover {
+  border-color: #cccccc;
+}
+
+[data-theme="dark"] .theme_toggle_button.dark_mode {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+[data-theme="dark"] .theme_toggle_button.dark_mode .theme_toggle_circle {
+  background-color: #1a1a1a;
+}
+
+[data-theme="dark"] .theme_toggle_bottom {
+  border-color: #ffffff;
+  background-color: transparent;
+}
+
+[data-theme="dark"] .theme_toggle_bottom_text {
+  color: #ffffff;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .theme_toggle_container {
+    bottom: 15px;
+    right: 15px;
+    padding: 15px 10px;
+    gap: 6px;
+  }
+
+  .theme_toggle_label {
+    font-size: 12px;
+  }
+
+  .theme_toggle_button {
+    width: 40px;
+    height: 24px;
+  }
+
+  .theme_toggle_circle {
+    width: 16px;
+    height: 16px;
+  }
+
+  .theme_toggle_button.dark_mode .theme_toggle_circle {
+    transform: translateX(16px);
+  }
+
+  .theme_toggle_bottom {
+    width: 50px;
+    height: 16px;
+  }
+
+  .theme_toggle_bottom_text {
+    font-size: 10px;
+  }
+}

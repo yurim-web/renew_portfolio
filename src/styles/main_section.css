@@ -10,6 +10,12 @@
   background: #f8f9fa;
   overflow: hidden;
   padding-top: 120px; /* 헤더 높이만큼 상단 여백 추가 */
+  transition: background-color 0.3s ease;
+}
+
+/* 다크모드 메인 섹션 */
+[data-theme="dark"] .main_section {
+  background: #1a1a1a;
 }
 
 .main_container {
@@ -28,6 +34,12 @@
   margin-bottom: 30px;
   letter-spacing: -0.02em;
   line-height: 1.1;
+  transition: color 0.3s ease;
+}
+
+/* 다크모드 메인 타이틀 */
+[data-theme="dark"] .main_title {
+  color: #ffffff;
 }
 
 .main_description {
@@ -36,6 +48,12 @@
   line-height: 1.8;
   margin: 0;
   font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+/* 다크모드 메인 설명 */
+[data-theme="dark"] .main_description {
+  color: #cccccc;
 }
 
 /* ABOUT ME 섹션 스타일 */
@@ -45,6 +63,12 @@
   background: #ffffff;
   overflow: hidden;
   padding-top: 80px;
+  transition: background-color 0.3s ease;
+}
+
+/* 다크모드 ABOUT 섹션 */
+[data-theme="dark"] .about_section {
+  background: #1a1a1a;
 }
 
 /* 블러 요소들 */
@@ -125,6 +149,12 @@
   margin-bottom: 30px;
   letter-spacing: -0.02em;
   line-height: 1.1;
+  transition: color 0.3s ease;
+}
+
+/* 다크모드 섹션 타이틀 */
+[data-theme="dark"] .section_title {
+  color: #ffffff;
 }
 
 .about_description {
@@ -133,6 +163,12 @@
   line-height: 1.8;
   margin: 0;
   font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+/* 다크모드 ABOUT 설명 */
+[data-theme="dark"] .about_description {
+  color: #cccccc;
 }
 
 /* 반응형 디자인 */

@@ -27,8 +27,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+
+  margin: 0 auto;
 }
 
 .toggle_wrapper {
@@ -36,7 +38,7 @@
 }
 
 .strength_toggle {
-  padding: 12px 24px;
+  padding: 10px 20px;
   border: 2px solid #e0e0e0;
   border-radius: 25px;
   text-align: center;
@@ -46,10 +48,11 @@
   position: relative;
   overflow: hidden;
   background: #ffffff;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   white-space: nowrap;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 80px;
 }
 
 .strength_toggle:hover {
@@ -102,10 +105,15 @@
   will-change: transform;
 }
 .content-container:hover {
-  background-color: #fff9e8;
-  color: black;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 182, 193, 0.15) 0%,
+    rgba(221, 160, 221, 0.15) 50%,
+    rgba(175, 238, 238, 0.15) 100%
+  );
+  color: #8b5a8c;
   transform: translateY(-5px) rotateX(5deg);
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.25);
 }
 .content_box {
   display: flex;

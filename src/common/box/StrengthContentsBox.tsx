@@ -41,9 +41,9 @@ const StrengthContentsBox = ({
     },
     {
       contents:
-        "React를 기반으로 페이지 라우팅 및 동적 콘텐츠 처리를 간편하게 관리, 다양한 페이지 전환과 API 연동을 처리 가능합니다.",
+        "Next.js를 활용해 기본적인 프로젝트 구성과 라우팅을 구현할 수 있습니다.",
       skill: "Next.js",
-      img: require("../../assets/skill_img/nextjs.png"),
+      img: require("../../assets/skill_img/next.png"),
     },
     {
       contents:
@@ -51,27 +51,36 @@ const StrengthContentsBox = ({
       skill: "Gsap.js",
       img: require("../../assets/skill_img/gsap.png"),
     },
+
     {
-      contents: "메일, 지도, 채팅 등 다양한 API를 구현 가능 합니다.",
-      skill: "API",
-      img: require("../../assets/skill_img/api.jpg"),
-    },
-    {
-      contents: "github를 연결하기 위한 git 로컬 및 글로벌 설정이 가능합니다.",
+      contents:
+        "Git과 Github를 활용한 버전 관리 및 프로젝트 협업이 가능합니다.",
       skill: "Git",
       img: require("../../assets/skill_img/git.png"),
     },
     {
       contents:
-        "git 명령어를 활용한 gitHub 프로젝트 관리를 진행할 수 있습니다.",
+        "Git과 Github를 활용한 버전 관리 및 프로젝트 협업이 가능합니다.",
       skill: "Github",
       img: require("../../assets/skill_img/github.png"),
     },
     {
       contents:
+        "SourceTree를 활용한 Git GUI 환경에서 직관적인 버전 관리와 브랜치 작업이 가능합니다.",
+      skill: "SourceTree",
+      img: require("../../assets/skill_img/sourcetree.png"),
+    },
+    {
+      contents:
         "노션을 이용해 메모 및 아이디어 기록이나 해야할 일을 관리할 수 있습니다.",
       skill: "Notion",
-      img: require("../../assets/skill_img/notion.png"),
+      img: require("../../assets/skill_img/notion_2.png"),
+    },
+    {
+      contents:
+        "와이어프레임과 프로토타입 제작, 협업을 위한 디자인 작업이 가능합니다.",
+      skill: "Figma",
+      img: require("../../assets/skill_img/figma_2.png"),
     },
     {
       contents:
@@ -84,6 +93,12 @@ const StrengthContentsBox = ({
         "간단한 캐릭터 디자인, 로고 디자인 등 깔끔하고 돋보이는 백터 디자인을 제작할 수 있습니다.",
       skill: "Illustrator",
       img: require("../../assets/skill_img/illustrator.png"),
+    },
+    {
+      contents:
+        "Cafe24 호스팅 환경에서 웹사이트 배포 및 관리, 도메인 설정 등 서버 운영이 가능합니다.",
+      skill: "Cafe24",
+      img: require("../../assets/skill_img/cafe24.png"),
     },
   ];
 
