@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/project.css";
 
-const Work = () => {
+const Project = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -87,14 +87,6 @@ const Work = () => {
       hoverImage:
         "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
     },
-    {
-      id: 4,
-      title: "04 MOTION DESIGN",
-      projects: ["KIAMA 모션 그래픽"],
-      bgColor: "#ffffff",
-      hoverImage:
-        "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&h=300&fit=crop",
-    },
   ];
 
   return (
@@ -136,4 +128,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Project;

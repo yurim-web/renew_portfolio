@@ -31,7 +31,7 @@
 
 .work_grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0;
   perspective: 1200px;
 }
@@ -48,7 +48,7 @@
   cursor: pointer;
   transform-style: preserve-3d;
   will-change: transform;
-  min-height: 500px;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -97,10 +97,6 @@
 }
 
 .work_card:nth-child(3) {
-  background: #ffffff;
-}
-
-.work_card:nth-child(4) {
   background: #ffffff;
 }
 
@@ -176,7 +172,7 @@
 
   .work_card {
     padding: 40px 30px;
-    min-height: 450px;
+    min-height: 550px;
   }
 
   .work_title {
@@ -200,7 +196,7 @@
 
   .work_card {
     padding: 30px 20px;
-    min-height: 400px;
+    min-height: 500px;
   }
 
   .work_title {
