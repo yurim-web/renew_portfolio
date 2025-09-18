@@ -119,7 +119,7 @@
 .portfolio_image_container {
   width: 100%;
   max-width: 500px;
-  height: 400px;
+  height: 600px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -130,6 +130,7 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .portfolio_section_image:hover {

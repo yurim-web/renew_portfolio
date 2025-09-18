@@ -7,8 +7,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background: #f8f9fa;
-  overflow: hidden;
+  background: #ffffff;
+  overflow: visible;
   padding-top: 120px; /* 헤더 높이만큼 상단 여백 추가 */
   transition: background-color 0.3s ease;
 }
@@ -25,6 +25,7 @@
   text-align: left;
   max-width: 1920px;
   padding: 0 50px;
+  position: relative;
 }
 
 .main_title {
@@ -61,7 +62,7 @@
   position: relative;
   min-height: 100vh;
   background: #ffffff;
-  overflow: hidden;
+  overflow: visible;
   padding-top: 80px;
   transition: background-color 0.3s ease;
 }
@@ -78,14 +79,15 @@
   filter: blur(40px);
   opacity: 0.7;
   animation: float 6s ease-in-out infinite;
+  z-index: 1;
 }
 
 .blur_1 {
   width: 1500px;
   height: 1500px;
   background: linear-gradient(45deg, #ffb3b3, #ffc4c4);
-  top: 1%;
-  left: 5%;
+  top: -20%;
+  left: -10%;
   animation-delay: 0s;
   transform: translate3d(-239px, 198px, 0px) rotate(24deg);
 }
@@ -94,18 +96,18 @@
   width: 500px;
   height: 500px;
   background: linear-gradient(45deg, #a8e6cf, #b8f2d8);
-  top: 50%;
-  right: 20%;
+  top: 30%;
+  right: -5%;
   animation-delay: 2s;
   transform: translate3d(-131px, 66px, 0px) rotate(-2deg);
 }
 
 .blur_3 {
-  width: 600px;
-  height: 600px;
+  width: 750px;
+  height: 750px;
   background: linear-gradient(45deg, #c8e6ff, #d4f0ff);
-  bottom: 25%;
-  left: 25%;
+  bottom: -2%;
+  left: 29%;
   animation-delay: 4s;
   transform: translate3d(159px, 180px, 0px) rotate(-38deg);
 }
@@ -114,8 +116,8 @@
   width: 800px;
   height: 800px;
   background: linear-gradient(45deg, #fff8e1, #fff3b0);
-  top: 60%;
-  left: 10%;
+  top: 40%;
+  left: 0%;
   animation-delay: 1s;
   transform: translate3d(100px, -50px, 0px) rotate(15deg);
 }
@@ -136,10 +138,10 @@
 .about_container {
   width: 100%;
   margin: 0 auto;
-
   z-index: 10;
   text-align: left;
   max-width: 1900px;
+  position: relative;
 }
 
 .section_title {
@@ -187,23 +189,31 @@
   }
 
   .blur_1 {
-    width: 500px;
-    height: 500px;
+    width: 800px;
+    height: 800px;
+    top: -30%;
+    left: -15%;
   }
 
   .blur_2 {
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
+    top: 20%;
+    right: -10%;
   }
 
   .blur_3 {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
+    bottom: -15%;
+    left: 10%;
   }
 
   .blur_4 {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
+    top: 30%;
+    left: -5%;
   }
 }
 
@@ -222,22 +232,30 @@
   }
 
   .blur_1 {
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
+    top: -25%;
+    left: -20%;
   }
 
   .blur_2 {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
+    top: 15%;
+    right: -15%;
   }
 
   .blur_3 {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
+    bottom: -20%;
+    left: 5%;
   }
 
   .blur_4 {
-    width: 350px;
-    height: 350px;
+    width: 500px;
+    height: 500px;
+    top: 25%;
+    left: -10%;
   }
 }
