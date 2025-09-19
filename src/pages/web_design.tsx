@@ -99,11 +99,10 @@ const WebDesign = () => {
   const web_design_projects = [
     {
       id: 1,
-      title: "Groundplace 클론코딩",
+      title: "웹사이트 디자인",
       description:
-        "제주도 감성 숙소 공식 홈페이지를 클론 코딩하여, GSAP.js와 React를 활용해 동적인 사용자 경험을 구현했습니다.",
-      image:
-        "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop",
+        "제주도 감성 숙소 공식 홈페이지를 클론 코딩하여, GSAP.js와 React를 활용해 동적인 사용자 경험을 구현했습니 다.",
+      image: require("../assets/design_img/에드모아_웹.png"),
       tech_stack: ["HTML", "CSS", "Javascript", "Gsap.js", "React"],
       year: "2024.12",
       link: "https://github.com/groundplace-clone",
