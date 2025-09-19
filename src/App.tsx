@@ -4,6 +4,7 @@ import About from "./pages/about";
 import Main from "./pages/main";
 import Skills from "./pages/skills";
 import Project from "./pages/project";
+import ProfessionalProjects from "./pages/professional_projects";
 import Portfolio from "./pages/portfolio";
 import WebDesign from "./pages/web_design";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -19,6 +20,7 @@ function App() {
         <About />
         <Skills />
         <Project />
+        <ProfessionalProjects />
         <Portfolio />
         <WebDesign />
         <ResumeToggle />

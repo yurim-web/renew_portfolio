@@ -14,6 +14,19 @@ export interface PortfolioItem {
   image: string;
 }
 
+export interface ProfessionalProject {
+  id: number;
+  project_name: string;
+  period: string;
+  role: string;
+  tech_stack: string[];
+  description: string;
+  image: string;
+  view_link?: string;
+  github_link?: string;
+  demo_link?: string;
+}
+
 export const portfolio_sections: PortfolioItem[] = [
   // groundplace 포트폴리오
   {
@@ -116,5 +129,50 @@ export const portfolio_sections: PortfolioItem[] = [
     tech_stack: ["After Effects", "Cinema 4D", "Blender", "Premiere Pro"],
     image:
       "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop",
+  },
+];
+
+export const professional_projects: ProfessionalProject[] = [
+  {
+    id: 1,
+    project_name: "E-commerce Platform",
+    period: "2024.03 – 2024.05",
+    role: "Frontend Developer",
+    tech_stack: ["React", "TypeScript", "Node.js", "MongoDB"],
+    description:
+      "대규모 전자상거래 플랫폼의 프론트엔드 개발을 담당했습니다. 사용자 경험 최적화와 성능 향상에 중점을 두었습니다.",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
+    view_link: "https://example.com/project1",
+    github_link: "https://github.com/example/project1",
+    demo_link: "https://demo.example.com/project1",
+  },
+  {
+    id: 2,
+    project_name: "Mobile Banking App",
+    period: "2024.01 – 2024.03",
+    role: "Full Stack Developer",
+    tech_stack: ["React Native", "Express.js", "PostgreSQL", "AWS"],
+    description:
+      "금융 서비스 모바일 애플리케이션 개발에 참여했습니다. 보안과 사용자 편의성을 동시에 고려한 설계를 진행했습니다.",
+    image:
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop",
+    view_link: "https://example.com/project2",
+    github_link: "https://github.com/example/project2",
+    demo_link: "https://demo.example.com/project2",
+  },
+  {
+    id: 3,
+    project_name: "Data Analytics Dashboard",
+    period: "2023.11 – 2024.01",
+    role: "Frontend Developer",
+    tech_stack: ["Vue.js", "D3.js", "Python", "FastAPI"],
+    description:
+      "실시간 데이터 분석 대시보드 개발을 담당했습니다. 복잡한 데이터를 직관적으로 시각화하는 인터페이스를 구현했습니다.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+    view_link: "https://example.com/project3",
+    github_link: "https://github.com/example/project3",
+    demo_link: "https://demo.example.com/project3",
   },
 ];
