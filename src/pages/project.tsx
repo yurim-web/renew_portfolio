@@ -65,15 +65,15 @@ const Project = () => {
   const work_categories = [
     {
       id: 1,
-      title: "01 WEB DESIGN",
-      projects: ["그랑핸드", "힌스", "마켓컬리", "한울 모랑모랑"],
+      title: "01 Professional Projects",
+      projects: ["Herzion Shop", "ReportingX.", "스웨디시 뉴트라"],
       bgColor: "#ffffff",
       hoverImage:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
     },
     {
       id: 2,
-      title: "02 UX DESIGN(APP)",
+      title: "02 Learning Projects",
       projects: ["TRIPLENS", "워키도키", "WKTI"],
       bgColor: "#ffffff",
       hoverImage:
@@ -81,7 +81,7 @@ const Project = () => {
     },
     {
       id: 3,
-      title: "03 GRAPHIC DESIGN",
+      title: "03 Web Design",
       projects: ["EPIK 랜딩페이지", "밀키스 제로 상세페이지"],
       bgColor: "#ffffff",
       hoverImage:

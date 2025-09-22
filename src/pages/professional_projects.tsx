@@ -97,12 +97,19 @@ const ProfessionalProjects = () => {
                   <span className="professional_project_tech_label">Tech:</span>
                   <div className="professional_project_tech_stack">
                     {project.tech_stack.map((tech, techIndex) => (
-                      <span
+                      <div
                         key={techIndex}
                         className="professional_project_tech_pill"
                       >
-                        {tech}
-                      </span>
+                        <img 
+                          src={tech.icon} 
+                          alt={tech.name}
+                          className="professional_project_tech_icon"
+                        />
+                        <span className="professional_project_tech_name">
+                          {tech.name}
+                        </span>
+                      </div>
                     ))}
                   </div>
                 </div>

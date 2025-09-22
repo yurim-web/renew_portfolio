@@ -14,12 +14,17 @@ export interface PortfolioItem {
   image: string;
 }
 
+export interface TechItem {
+  name: string;
+  icon: string;
+}
+
 export interface ProfessionalProject {
   id: number;
   project_name: string;
   period: string;
   role: string;
-  tech_stack: string[];
+  tech_stack: TechItem[];
   description: string;
   image: string;
   view_link?: string;
@@ -40,106 +45,112 @@ export const portfolio_sections: PortfolioItem[] = [
     year: "2024",
     period: "2024.12.16 ~ 2024.12.20",
     participation: "개인 100%",
-    link: "https://yurim-web.github.io/imele_clone/",
-    github_link: "https://github.com/yurim-web/imele_clone",
+    link: "https://github.com/groundplace-clone",
+    github_link: "https://github.com/yurim-web/groundplace-clone",
     image:
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop",
+      "/assets/portfolio_img/groundplace_img.png",
   },
   {
     id: 2,
-    title: "WEB DESIGN",
-    subtitle: "Groundplace 클론코딩",
+    title: "PORTFOLIO",
+    subtitle: "IMELE 클론 코딩",
     bgColor: "#fed7aa",
     textColor: "#1e293b",
     content:
-      "Groundplace 제주도 감성 숙소 공식 홈페이지를 클론 코딩하여, GSAP.js와 React를 활용해 동적인 사용자 경험을 구현했습니다.",
-    year: "2024.12",
-    period: "2024.12.16 ~ 2024.12.20",
+      "IMILE 공식 쇼핑몰 사이트를 클론 코딩하여 만든 작품입니다. 반응형 웹 디자인을 다양한 크기에서 최적화된 사용자 환경을 제공했으며, GSAP.js를 활용해 애니메이션적인 효과를 구현했습니다.",
+    year: "2025",
+    period: "2025.01.02 ~ 2025.01.06",
     participation: "개인 100%",
-    link: "https://github.com/groundplace-clone",
-    github_link: "https://github.com/yurim-web/groundplace-clone",
-    tech_stack: ["HTML", "CSS", "Javascript", "Gsap.js", "React"],
+    link: "https://yurim-web.github.io/imele_clone/",
+    github_link: "https://github.com/yurim-web/imele_clone",
+  
+    tech_stack: ["HTML", "CSS", "Javascript", "Gsap.js"],
     image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop",
+      "/assets/portfolio_img/imele_img.png",
   },
   {
     id: 3,
-    title: "MOBILE APP",
-    subtitle: "WeatherTracker",
+    title: "PORTFOLIO",
+    subtitle: "SAINT LAURENT",
     bgColor: "#fef3c7",
     textColor: "#1e293b",
     content:
-      "실시간 날씨 정보를 제공하는 모바일 앱을 React Native로 개발했습니다. 사용자 친화적인 인터페이스와 정확한 날씨 데이터를 제공합니다.",
-    year: "2024.11",
-    period: "2024.11.01 ~ 2024.11.15",
+      "입생로랑(YSL) 공식 홈페이지를 새롭게 기획한 포트폴리오 사이트입니다. GSAP.js를 활용한 다양한 애니메이션 효과로 세련된 디자인을 강조했습니다.",
+    year: "2024",
+    period: "2024.11.15 ~ 2024.11.2",
     participation: "개인 100%",
-    link: "https://github.com/yurim-web/weather-tracker",
-    github_link: "https://github.com/yurim-web/weather-tracker",
-    tech_stack: ["React Native", "JavaScript", "API", "Firebase"],
+    link: "https://yurim-web.github.io/YSL_portfolio_/",
+    github_link: "https://github.com/yurim-web/YSL_portfolio_",
+    tech_stack: ["HTML", "CSS", "Javascript", "Gsap.js"],
     image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+      "/assets/portfolio_img/ysl_img.png",
   },
   {
     id: 4,
-    title: "UI/UX DESIGN",
-    subtitle: "FitTracker 모바일 앱",
+    title: "PORTFOLIO",
+    subtitle: "Waveyy 영화,드라마 정보 사이트",
     bgColor: "#dcfce7",
     textColor: "#1e293b",
     content:
-      "피트니스 트래킹 모바일 앱의 UI/UX 디자인과 프로토타입을 Figma를 활용하여 제작했습니다. 사용자 경험을 중점으로 설계했습니다.",
-    year: "2024.10",
-    period: "2024.10.01 ~ 2024.10.20",
+      "Next.js와 영화·드라마 API를 활용해 기획하고 만든 영화,드라마 정보 사이트입니다.",
+    year: "2024",
+    period: "2024.12.01 ~ 2024.12.12",
     participation: "개인 100%",
-    link: "https://figma.com/fittracker-design",
+    link: "https://movie-api-portfolio.vercel.app/",
     github_link: "https://github.com/yurim-web/fittracker-design",
-    tech_stack: ["Figma", "Adobe XD", "Principle", "Sketch"],
+    tech_stack: ["HTML","CSS","React", "Next.js", "Javascript", "API"],
     image:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
+      "/assets/portfolio_img/waveyy_img.png",
   },
   {
     id: 5,
-    title: "BRANDING",
-    subtitle: "Creative Identity",
+    title: "PORTFOLIO",
+    subtitle: "ToDo List 사이트",
     bgColor: "#dbeafe",
     textColor: "#1e293b",
     content:
-      "브랜드 아이덴티티와 로고 디자인을 통해 시각적 커뮤니케이션의 힘을 보여주는 프로젝트입니다. 일관성 있는 브랜드 경험을 제공합니다.",
-    year: "2024.09",
-    period: "2024.09.01 ~ 2024.09.25",
+      "할 일 목록을 관리할 수 있는 간단한 To-Do 리스트 웹입니다. React를 사용하여 구현되었으며, 직관적인 UI로 사용자가 할 일을 쉽게 추가, 수정, 삭제할 수 있습니다.",
+    year: "2024",
+    period: "2024.11.02 ~ 2024.11.05",
     participation: "개인 100%",
-    link: "https://behance.net/creative-identity",
-    github_link: "https://github.com/yurim-web/creative-identity",
-    tech_stack: ["Illustrator", "Photoshop", "After Effects", "InDesign"],
+    link: "https://yurim-web.github.io/TODOLIST_page/",
+    github_link: "https://github.com/yurim-web/TODOLIST_page",
+    tech_stack: ["HTML","CSS","React", "Javascript","API"],
     image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+      "/assets/portfolio_img/todolist_img.png",
   },
   {
     id: 6,
-    title: "MOTION GRAPHICS",
-    subtitle: "Dynamic Visuals",
+    title: "PORTFOLIO",
+    subtitle: "Apple 클론 코딩",
     bgColor: "#e9d5ff",
     textColor: "#1e293b",
     content:
-      "애니메이션과 모션 그래픽을 통해 생동감 있는 시각적 스토리텔링을 구현했습니다. 브랜드의 감정을 전달하는 움직임을 디자인했습니다.",
-    year: "2024.08",
-    period: "2024.08.01 ~ 2024.08.30",
+      "Apple 공식 사이트의 PC 버전을 클론 코딩하여 만든 작품입니다. React를 활용해 메인페이지를 구성했습니다.",
+    year: "2024",
+    period: "2024.10.29 ~ 2024.11.02",
     participation: "개인 100%",
-    link: "https://vimeo.com/motion-graphics",
-    github_link: "https://github.com/yurim-web/motion-graphics",
-    tech_stack: ["After Effects", "Cinema 4D", "Blender", "Premiere Pro"],
+    link: "https://yurim-web.github.io/apple_clone_page2/",
+    github_link: "https://github.com/yurim-web/apple_clone_page2",
+    tech_stack: ["HTML","CSS","React", "Javascript"],
     image:
-      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop",
+      "/assets/portfolio_img/apple_img.png",
   },
 ];
 
-// 프로젝트 데이터
+// Professional Projects
 export const professional_projects: ProfessionalProject[] = [
   {
     id: 1,
     project_name: "Herzion Shop",
     period: "2025.04 – 2024.07",
     role: "Frontend Developer",
-    tech_stack: ["HTML", "CSS", "JavaScript", "Cafe24"],
+    tech_stack: [
+      { name: "HTML", icon: "/assets/skill_img/html.png" },
+      { name: "CSS", icon: "/assets/skill_img/css.png" },
+      { name: "JavaScript", icon: "/assets/skill_img/javascript.png" },
+      { name: "Cafe24", icon: "/assets/skill_img/cafe24.png" }
+    ],
     description:
       "Herzion Shop은 프로젝트 최종 결과물로, 프론트엔드 개발을 담당했습니다. 사용자 경험 최적화와 성능 향상에 중점을 두었습니다.",
     image: "/assets/professional_projects/herzion_banner.jpg",
@@ -148,30 +159,41 @@ export const professional_projects: ProfessionalProject[] = [
   },
   {
     id: 2,
-    project_name: "Mobile Banking App",
-    period: "2024.01 – 2024.03",
-    role: "Full Stack Developer",
-    tech_stack: ["React Native", "Express.js", "PostgreSQL", "AWS"],
+    project_name: "ReportingX.",
+    period: "2025.05 – 2025.08",
+    role: "Frontend Developer",
+    tech_stack: [
+      { name: "HTML", icon: "/assets/skill_img/html.png" },
+      { name: "CSS", icon: "/assets/skill_img/css.png" },
+      { name: "JavaScript", icon: "/assets/skill_img/javascript.png" },
+      { name: "React", icon: "/assets/skill_img/react.png" }
+    ],
     description:
-      "금융 서비스 모바일 애플리케이션 개발에 참여했습니다. 보안과 사용자 편의성을 동시에 고려한 설계를 진행했습니다.",
+      "RX. 회사 내부 사이트 개발을 담당했습니다. 사용자 경험 최적화와 성능 향상에 중점을 두었습니다.",
     image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop",
-    view_link: "https://example.com/project2",
+      "/assets/professional_projects/rx_banner.png",
+    view_link: "https://mxrx.dev/",
+    demo_link: "https://markx.dev/",
     github_link: "https://github.com/example/project2",
-    demo_link: "https://demo.example.com/project2",
+   
   },
   {
     id: 3,
-    project_name: "Data Analytics Dashboard",
-    period: "2023.11 – 2024.01",
+    project_name: "스웨디시 뉴트라",
+    period: "2024.07 – 2024.08",
     role: "Frontend Developer",
-    tech_stack: ["Vue.js", "D3.js", "Python", "FastAPI"],
+    tech_stack: [
+      { name: "HTML", icon: "/assets/skill_img/html.png" },
+      { name: "CSS", icon: "/assets/skill_img/css.png" },
+      { name: "JavaScript", icon: "/assets/skill_img/javascript.png" },
+      { name: "Cafe24", icon: "/assets/skill_img/cafe24.png" }
+    ],
     description:
-      "실시간 데이터 분석 대시보드 개발을 담당했습니다. 복잡한 데이터를 직관적으로 시각화하는 인터페이스를 구현했습니다.",
+      "스웨디시 뉴트라 쇼핑몰 개발을 담당했습니다. 사용자 경험 최적화와 성능 향상에 중점을 두었습니다.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
-    view_link: "https://example.com/project3",
-    github_link: "https://github.com/example/project3",
-    demo_link: "https://demo.example.com/project3",
+      "/assets/professional_projects/swedish_banner.jpg",
+    view_link: "https://swedishnutra.kr/",
+    github_link: "https://github.com/yurim-web/swedishnutra_custom_code",
+
   },
 ];
