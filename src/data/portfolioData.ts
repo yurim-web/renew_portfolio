@@ -132,20 +132,19 @@ export const portfolio_sections: PortfolioItem[] = [
   },
 ];
 
+// 프로젝트 데이터
 export const professional_projects: ProfessionalProject[] = [
   {
     id: 1,
-    project_name: "E-commerce Platform",
-    period: "2024.03 – 2024.05",
+    project_name: "Herzion Shop",
+    period: "2025.04 – 2024.07",
     role: "Frontend Developer",
-    tech_stack: ["React", "TypeScript", "Node.js", "MongoDB"],
+    tech_stack: ["HTML", "CSS", "JavaScript", "Cafe24"],
     description:
-      "대규모 전자상거래 플랫폼의 프론트엔드 개발을 담당했습니다. 사용자 경험 최적화와 성능 향상에 중점을 두었습니다.",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
-    view_link: "https://example.com/project1",
-    github_link: "https://github.com/example/project1",
-    demo_link: "https://demo.example.com/project1",
+      "Herzion Shop은 프로젝트 최종 결과물로, 프론트엔드 개발을 담당했습니다. 사용자 경험 최적화와 성능 향상에 중점을 두었습니다.",
+    image: "/assets/professional_projects/herzion_banner.jpg",
+    view_link: "https://herzionshop.cafe24.com/",
+    github_link: "https://github.com/yurim-web/aribio_final_kor",
   },
   {
     id: 2,
