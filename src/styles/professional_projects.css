@@ -7,11 +7,14 @@
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   padding: 120px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .professional_projects_container {
   max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
   padding: 0 40px;
   position: relative;
   z-index: 2;
@@ -32,7 +35,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .professional_project_card {
@@ -43,6 +46,10 @@
   transition: all 0.3s ease;
   overflow: hidden;
   border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 600px;
 }
 
 .professional_project_card:hover {
@@ -52,7 +59,7 @@
 
 .professional_project_image_container {
   width: 100%;
-  height: 200px;
+  height: 280px;
   background: #f1f5f9;
   border-bottom: 1px solid #e2e8f0;
   display: flex;
@@ -78,6 +85,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  flex-grow: 1;
 }
 
 .professional_project_name {
@@ -168,7 +176,7 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 10px;
+  margin-top: auto;
 }
 
 .professional_project_button {
@@ -228,6 +236,7 @@
   .professional_projects_grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    align-items: stretch;
   }
 
   .professional_projects_title {
@@ -239,6 +248,9 @@
 @media screen and (max-width: 768px) {
   .professional_projects_section {
     padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .professional_projects_container {
@@ -248,6 +260,7 @@
   .professional_projects_grid {
     grid-template-columns: 1fr;
     gap: 30px;
+    align-items: stretch;
   }
 
   .professional_projects_title {
@@ -265,7 +278,7 @@
   }
 
   .professional_project_image_container {
-    height: 180px;
+    height: 220px;
   }
 }
 
@@ -285,7 +298,7 @@
   }
 
   .professional_project_image_container {
-    height: 160px;
+    height: 200px;
   }
 
   .professional_project_buttons {

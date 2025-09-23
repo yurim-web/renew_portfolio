@@ -99,74 +99,156 @@ const WebDesign = () => {
   const web_design_projects = [
     {
       id: 1,
-      title: "웹사이트 디자인",
+      title: "Addmoa 기업 홈페이지",
       description:
-        "제주도 감성 숙소 공식 홈페이지를 클론 코딩하여, GSAP.js와 React를 활용해 동적인 사용자 경험을 구현했습니 다.",
-      image: require("../assets/design_img/에드모아_웹.png"),
-      tech_stack: ["HTML", "CSS", "Javascript", "Gsap.js", "React"],
-      year: "2024.12",
+        "남색 계열의 안정감을 기반으로 브랜드 신뢰성을 강화한 기업 웹사이트 디자인",
+      image: require("../assets/design_img/addmoa_web.png"),
+      tech_stack: [
+        "#기업웹사이트",
+        "#신뢰감디자인",
+        "#남색톤",
+        "#모던UI",
+        "#심플레이아웃",
+      ],
+      year: "2024",
       link: "https://github.com/groundplace-clone",
-      category: "클론코딩",
+      category: "웹 디자인",
     },
     {
       id: 2,
-      title: "E-commerce Platform",
+      title: "뷰티 정보 홈페이지",
       description:
-        "모던한 쇼핑몰 웹사이트를 Next.js와 TypeScript로 개발했습니다. 반응형 디자인과 최적화된 사용자 경험을 제공합니다.",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      tech_stack: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe"],
-      year: "2024.11",
+        "따뜻한 갈색 톤을 활용해 전문성과 친근함을 동시에 전달한 반응형 뷰티 정보 사이트",
+      image: require("../assets/design_img/makeup_web.png"),
+      tech_stack: [
+        "#뷰티웹디자인",
+        "#갈색톤",
+        "#따뜻한분위기",
+        "#자연스러움",
+        "#반응형디자인",
+      ],
+      year: "2024",
       link: "https://github.com/ecommerce-platform",
-      category: "웹사이트",
+      category: "웹 디자인",
     },
     {
       id: 3,
-      title: "Portfolio Website",
+      title: "LH 전세임대 안내 사이트",
       description:
-        "개인 포트폴리오 웹사이트를 React와 GSAP을 활용해 인터랙티브한 애니메이션과 함께 제작했습니다.",
-      image:
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop",
-      tech_stack: ["React", "GSAP", "CSS3", "JavaScript"],
-      year: "2024.10",
+        "연두·파랑 컬러를 조화롭게 적용해 공공기관 특유의 신뢰성과 접근성을 높인 웹사이트 디자인",
+      image: require("../assets/design_img/lh_web.png"),
+      tech_stack: [
+        "#공공기관웹사이트",
+        "#연두파랑톤",
+        "#신뢰성있는디자인",
+        "#안정감",
+        "#반응형웹디자인",
+      ],
+      year: "2024",
       link: "https://github.com/portfolio-website",
-      category: "포트폴리오",
+      category: "웹 디자인",
     },
     {
       id: 4,
-      title: "Restaurant Landing Page",
+      title: "퍼스널 컬러 테스트 앱",
       description:
-        "레스토랑을 위한 랜딩 페이지를 제작했습니다. 음식 사진과 메뉴를 효과적으로 보여주는 디자인을 적용했습니다.",
-      image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
-      tech_stack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
-      year: "2024.09",
+        "파스텔 톤의 감각적인 UI로 사용자 경험을 향상시킨 퍼스널 컬러 진단 앱 디자인",
+      image: require("../assets/design_img/color_app.png"),
+      tech_stack: [
+        "#파스텔톤디자인",
+        "#감각적인UI",
+        "#컬러테스트앱",
+        "#밝고산뜻함",
+        "#뷰티앱디자인",
+      ],
+      year: "2024",
       link: "https://github.com/restaurant-landing",
-      category: "랜딩페이지",
+      category: "앱 디자인",
     },
     {
       id: 5,
-      title: "Dashboard Admin Panel",
+      title: "전기요금 계산기 앱",
       description:
-        "관리자 대시보드를 React와 Chart.js를 활용해 데이터 시각화와 함께 제작했습니다.",
-      image:
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
-      tech_stack: ["React", "Chart.js", "Material-UI", "Node.js"],
-      year: "2024.08",
+        "직관적인 그래프와 카드형 레이아웃으로 정보 가독성을 극대화한 전기요금 계산 앱 디자인",
+      image: require("../assets/design_img/elec_app.png"),
+      tech_stack: [
+        "#심플UI",
+        "#직관적인디자인",
+        "#정보시각화",
+        "#친근한컬러",
+        "#유틸리티앱",
+      ],
+      year: "2024",
       link: "https://github.com/admin-dashboard",
-      category: "대시보드",
+      category: "앱 디자인",
     },
     {
       id: 6,
-      title: "Blog Platform",
+      title: "햇살론 대출 안내 앱",
       description:
-        "개인 블로그 플랫폼을 Next.js와 MDX를 활용해 마크다운 기반 콘텐츠 관리 시스템을 구축했습니다.",
-      image:
-        "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop",
-      tech_stack: ["Next.js", "MDX", "Tailwind CSS", "Vercel"],
-      year: "2024.07",
+        "오렌지 톤의 따뜻한 감성을 담아 서민 금융 상품을 신뢰감 있게 안내하는 금융 앱 디자인",
+      image: require("../assets/design_img/sun_app.png"),
+      tech_stack: [
+        "#오렌지톤디자인",
+        "#금융앱UI",
+        "#따뜻한분위기",
+        "#정보전달중심",
+        "#서민대출안내",
+      ],
+      year: "2024",
       link: "https://github.com/blog-platform",
-      category: "블로그",
+      category: "앱 디자인",
+    },
+    {
+      id: 7,
+      title: "블로그 게시글 배너 디자인",
+      description:
+        "시각적 집중도를 높여 콘텐츠 몰입과 클릭 유도를 강화한 블로그 포스팅용 배너 디자인",
+      image: require("../assets/design_img/banner_1_1.png"),
+      tech_stack: [
+        "#배너디자인",
+        "#콘텐츠강화",
+        "#가독성높음",
+        "#심플비주얼",
+        "#블로그이미지",
+      ],
+      year: "2024",
+      link: "https://github.com/blog-platform",
+      category: "배너 디자인",
+    },
+    {
+      id: 8,
+      title: "온라인 광고 배너 디자인",
+      description:
+        "브랜드 인지도를 높이고 전환율 향상을 목표로 제작된 온라인 프로모션 배너 디자인",
+      image: require("../assets/design_img/banner_2.png"),
+      tech_stack: [
+        "#광고배너디자인",
+        "#프로모션용",
+        "#시선집중",
+        "#브랜드홍보",
+        "#마케팅배너",
+      ],
+      year: "2024",
+      link: "https://github.com/blog-platform",
+      category: "배너 디자인",
+    },
+    {
+      id: 9,
+      title: "구글 애즈 배너 디자인",
+      description:
+        "명확한 메시지와 임팩트 있는 비주얼로 광고 효과를 극대화한 구글 애즈 캠페인 배너",
+      image: require("../assets/design_img/banner_3.png"),
+      tech_stack: [
+        "#구글애즈",
+        "#광고배너",
+        "#임팩트비주얼",
+        "#마케팅디자인",
+        "#정보전달효과적",
+      ],
+      year: "2024",
+      link: "https://github.com/blog-platform",
+      category: "배너 디자인",
     },
   ];
 
@@ -197,29 +279,7 @@ const WebDesign = () => {
                     <p className="web_design_card_description">
                       {project.description}
                     </p>
-                    <div className="web_design_card_tech_stack">
-                      {project.tech_stack.map((tech, techIndex) => (
-                        <span key={techIndex} className="web_design_tech_pill">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="web_design_card_meta">
-                      <span className="web_design_card_year">
-                        {project.year}
-                      </span>
-                      <span className="web_design_card_category">
-                        {project.category}
-                      </span>
-                    </div>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="web_design_card_link"
-                    >
-                      VIEW PROJECT
-                    </a>
+                    <div className="web_design_click_hint">CLICK</div>
                   </div>
                 </div>
               </div>
@@ -246,6 +306,14 @@ const WebDesign = () => {
               />
             </div>
             <div className="web_design_modal_info">
+              <div className="web_design_modal_meta">
+                <span className="web_design_modal_year">
+                  {selectedProject.year}
+                </span>
+                <span className="web_design_modal_category">
+                  {selectedProject.category}
+                </span>
+              </div>
               <h3 className="web_design_modal_title">
                 {selectedProject.title}
               </h3>
@@ -263,14 +331,6 @@ const WebDesign = () => {
                     </span>
                   )
                 )}
-              </div>
-              <div className="web_design_modal_meta">
-                <span className="web_design_modal_year">
-                  {selectedProject.year}
-                </span>
-                <span className="web_design_modal_category">
-                  {selectedProject.category}
-                </span>
               </div>
               <a
                 href={selectedProject.link}

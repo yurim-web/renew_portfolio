@@ -68,24 +68,25 @@ const Project = () => {
       title: "01 Professional Projects",
       projects: ["Herzion Shop", "ReportingX.", "스웨디시 뉴트라"],
       bgColor: "#ffffff",
-      hoverImage:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
     },
     {
       id: 2,
       title: "02 Learning Projects",
-      projects: ["TRIPLENS", "워키도키", "WKTI"],
+      projects: [
+        "Groundplace",
+        "IMELE",
+        "SAINT LAURENT",
+        "Waveyy",
+        "ToDo List",
+        "Apple",
+      ],
       bgColor: "#ffffff",
-      hoverImage:
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
     },
     {
       id: 3,
       title: "03 Web Design",
       projects: ["EPIK 랜딩페이지", "밀키스 제로 상세페이지"],
       bgColor: "#ffffff",
-      hoverImage:
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
     },
   ];
 
@@ -105,11 +106,17 @@ const Project = () => {
               style={
                 {
                   backgroundColor: category.bgColor,
-                  "--hover-image": `url(${category.hoverImage})`,
                 } as React.CSSProperties
               }
             >
-              <h2 className="work_card_title">{category.title}</h2>
+              <h2 className="work_card_title">
+                <span className="work_card_number">
+                  {category.title.split(" ")[0]}
+                </span>
+                <span className="work_card_text">
+                  {category.title.split(" ").slice(1).join(" ")}
+                </span>
+              </h2>
               <ul className="work_project_list">
                 {category.projects.map((project, projectIndex) => (
                   <li key={projectIndex} className="work_project_item">
@@ -119,6 +126,7 @@ const Project = () => {
               </ul>
               <div className="work_cursor_icon">
                 <img src="/hover_icn.svg" alt="hover cursor" />
+                <span className="work_cursor_text">click!</span>
               </div>
             </div>
           ))}

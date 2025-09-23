@@ -47,11 +47,66 @@
   font-size: 22px;
 }
 
+/* 네비게이션 오른쪽 영역 */
+.nav_right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 /* 네비게이션 메뉴 */
 .nav_menu {
   display: flex;
   gap: 40px;
   align-items: center;
+}
+
+/* 헤더 소셜 링크 */
+.header_social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 5px;
+}
+
+.github_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  color: #333333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.github_link:hover {
+  background: #333333;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 다크모드 깃허브 링크 */
+[data-theme="dark"] .github_link {
+  background: #2d2d2d;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .github_link:hover {
+  background: #ffffff;
+  color: #333333;
+}
+
+.github_icon {
+  transition: transform 0.3s ease;
+}
+
+.github_link:hover .github_icon {
+  transform: scale(1.1);
 }
 
 .nav_link {
@@ -155,13 +210,67 @@
   color: #cccccc;
 }
 
+/* 모바일 소셜 링크 */
+.mobile_social {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .mobile_social {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile_github_link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: #333333;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 10px 0;
+}
+
+.mobile_github_link:hover {
+  color: #666666;
+}
+
+[data-theme="dark"] .mobile_github_link {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .mobile_github_link:hover {
+  color: #cccccc;
+}
+
+.mobile_github_icon {
+  transition: transform 0.3s ease;
+}
+
+.mobile_github_link:hover .mobile_github_icon {
+  transform: scale(1.1);
+}
+
 /* 모바일 + 태블릿 스타일 추가 */
 @media (max-width: 1024px) {
-  .nav {
-    padding: 0px 20px;
+  .header_container {
+    padding: 20px 0;
   }
 
-  .nav_menu {
+  .nav {
+    padding: 0px 15px;
+    max-width: 100%;
+  }
+
+  .nav_logo {
+    font-size: 18px;
+    letter-spacing: 0.3px;
+  }
+
+  .nav_right {
     display: none;
   }
 
@@ -179,5 +288,42 @@
 
   .hamburger_button.active .hamburger_line:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+/* 작은 모바일 화면 */
+@media (max-width: 480px) {
+  .header_container {
+    padding: 15px 0;
+  }
+
+  .nav {
+    padding: 0px 10px;
+  }
+
+  .nav_logo {
+    font-size: 16px;
+    letter-spacing: 0.2px;
+  }
+
+  .hamburger_button {
+    width: 25px;
+    height: 25px;
+  }
+
+  .hamburger_line {
+    height: 2px;
+  }
+}
+
+/* 매우 작은 화면 */
+@media (max-width: 360px) {
+  .nav_logo {
+    font-size: 14px;
+    letter-spacing: 0.1px;
+  }
+
+  .nav {
+    padding: 0px 8px;
   }
 }

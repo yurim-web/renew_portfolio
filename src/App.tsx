@@ -18,13 +18,27 @@ function App() {
       <div className="App">
         <Header />
         <Main />
-        <About />
-        <Skills />
-        <Project />
-        <ProfessionalProjects />
-        <Portfolio />
-        <WebDesign />
-        <Contact />
+        <div id="about">
+          <About />
+        </div>
+        <div id="strength">
+          <Skills />
+        </div>
+        <div id="project">
+          <Project />
+        </div>
+        <div id="professional">
+          <ProfessionalProjects />
+        </div>
+        <div id="portfolio">
+          <Portfolio />
+        </div>
+        <div id="web_design">
+          <WebDesign />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
         <ResumeToggle />
         <ThemeToggle />
       </div>

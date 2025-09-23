@@ -8,9 +8,10 @@ export interface PortfolioItem {
   year: string;
   period: string;
   participation: string;
+  type: "반응형" | "웹용";
   link: string;
   github_link?: string;
-  tech_stack?: string[];
+  tech_stack?: { name: string; icon: string }[];
   image: string;
 }
 
@@ -36,8 +37,8 @@ export const portfolio_sections: PortfolioItem[] = [
   // groundplace 포트폴리오
   {
     id: 1,
-    title: "PORTFOLIO",
-    subtitle: "Groundplace 클론코딩",
+    title: "Learning Project",
+    subtitle: "Groundplace",
     bgColor: "#fecaca",
     textColor: "#1e293b",
     content:
@@ -45,15 +46,22 @@ export const portfolio_sections: PortfolioItem[] = [
     year: "2024",
     period: "2024.12.16 ~ 2024.12.20",
     participation: "개인 100%",
-    link: "https://github.com/groundplace-clone",
+    type: "반응형",
+    link: "https://yurim-web.github.io/groundplace_clone/",
     github_link: "https://github.com/yurim-web/groundplace-clone",
-    image:
-      "/assets/portfolio_img/groundplace_img.png",
+    tech_stack: [
+      { name: "HTML", icon: "/assets/skill_img/html.png" },
+      { name: "CSS", icon: "/assets/skill_img/css.png" },
+      { name: "Javascript", icon: "/assets/skill_img/javascript.png" },
+      { name: "Gsap.js", icon: "/assets/skill_img/gsap.png" },
+      { name: "React", icon: "/assets/skill_img/react.png" },
+    ],
+    image: "/assets/portfolio_img/groundplace_img.png",
   },
   {
     id: 2,
-    title: "PORTFOLIO",
-    subtitle: "IMELE 클론 코딩",
+    title: "Learning Project",
+    subtitle: "IMELE",
     bgColor: "#fed7aa",
     textColor: "#1e293b",
     content:
@@ -61,16 +69,20 @@ export const portfolio_sections: PortfolioItem[] = [
     year: "2025",
     period: "2025.01.02 ~ 2025.01.06",
     participation: "개인 100%",
+    type: "반응형",
     link: "https://yurim-web.github.io/imele_clone/",
     github_link: "https://github.com/yurim-web/imele_clone",
-  
-    tech_stack: ["HTML", "CSS", "Javascript", "Gsap.js"],
-    image:
-      "/assets/portfolio_img/imele_img.png",
+    tech_stack: [
+      { name: "HTML", icon: "/assets/skill_img/html.png" },
+      { name: "CSS", icon: "/assets/skill_img/css.png" },
+      { name: "Javascript", icon: "/assets/skill_img/javascript.png" },
+      { name: "Gsap.js", icon: "/assets/skill_img/gsap.png" },
+    ],
+    image: "/assets/portfolio_img/imele_img.png",
   },
   {
     id: 3,
-    title: "PORTFOLIO",
+    title: "Learning Project",
     subtitle: "SAINT LAURENT",
     bgColor: "#fef3c7",
     textColor: "#1e293b",
@@ -79,16 +91,21 @@ export const portfolio_sections: PortfolioItem[] = [
     year: "2024",
     period: "2024.11.15 ~ 2024.11.2",
     participation: "개인 100%",
+    type: "웹용",
     link: "https://yurim-web.github.io/YSL_portfolio_/",
     github_link: "https://github.com/yurim-web/YSL_portfolio_",
-    tech_stack: ["HTML", "CSS", "Javascript", "Gsap.js"],
-    image:
-      "/assets/portfolio_img/ysl_img.png",
+    tech_stack: [
+      { name: "HTML", icon: "/assets/skill_img/html.png" },
+      { name: "CSS", icon: "/assets/skill_img/css.png" },
+      { name: "Javascript", icon: "/assets/skill_img/javascript.png" },
+      { name: "Gsap.js", icon: "/assets/skill_img/gsap.png" },
+    ],
+    image: "/assets/portfolio_img/ysl_img.png",
   },
   {
     id: 4,
-    title: "PORTFOLIO",
-    subtitle: "Waveyy 영화,드라마 정보 사이트",
+    title: "Learning Project",
+    subtitle: "Waveyy",
     bgColor: "#dcfce7",
     textColor: "#1e293b",
     content:
@@ -96,16 +113,23 @@ export const portfolio_sections: PortfolioItem[] = [
     year: "2024",
     period: "2024.12.01 ~ 2024.12.12",
     participation: "개인 100%",
+    type: "반응형",
     link: "https://movie-api-portfolio.vercel.app/",
     github_link: "https://github.com/yurim-web/fittracker-design",
-    tech_stack: ["HTML","CSS","React", "Next.js", "Javascript", "API"],
-    image:
-      "/assets/portfolio_img/waveyy_img.png",
+    tech_stack: [
+      { name: "HTML", icon: "/assets/skill_img/html.png" },
+      { name: "CSS", icon: "/assets/skill_img/css.png" },
+      { name: "React", icon: "/assets/skill_img/react.png" },
+      { name: "Next.js", icon: "/assets/skill_img/next.png" },
+      { name: "Javascript", icon: "/assets/skill_img/javascript.png" },
+      { name: "API", icon: "/assets/skill_img/api.jpg" },
+    ],
+    image: "/assets/portfolio_img/waveyy_img.png",
   },
   {
     id: 5,
-    title: "PORTFOLIO",
-    subtitle: "ToDo List 사이트",
+    title: "Learning Project",
+    subtitle: "ToDo List",
     bgColor: "#dbeafe",
     textColor: "#1e293b",
     content:
@@ -113,16 +137,22 @@ export const portfolio_sections: PortfolioItem[] = [
     year: "2024",
     period: "2024.11.02 ~ 2024.11.05",
     participation: "개인 100%",
+    type: "반응형",
     link: "https://yurim-web.github.io/TODOLIST_page/",
     github_link: "https://github.com/yurim-web/TODOLIST_page",
-    tech_stack: ["HTML","CSS","React", "Javascript","API"],
-    image:
-      "/assets/portfolio_img/todolist_img.png",
+    tech_stack: [
+      { name: "HTML", icon: "/assets/skill_img/html.png" },
+      { name: "CSS", icon: "/assets/skill_img/css.png" },
+      { name: "React", icon: "/assets/skill_img/react.png" },
+      { name: "Javascript", icon: "/assets/skill_img/javascript.png" },
+      { name: "API", icon: "/assets/skill_img/api.jpg" },
+    ],
+    image: "/assets/portfolio_img/todolist_img.png",
   },
   {
     id: 6,
-    title: "PORTFOLIO",
-    subtitle: "Apple 클론 코딩",
+    title: "Learning Project",
+    subtitle: "Apple",
     bgColor: "#e9d5ff",
     textColor: "#1e293b",
     content:
@@ -130,11 +160,16 @@ export const portfolio_sections: PortfolioItem[] = [
     year: "2024",
     period: "2024.10.29 ~ 2024.11.02",
     participation: "개인 100%",
+    type: "웹용",
     link: "https://yurim-web.github.io/apple_clone_page2/",
     github_link: "https://github.com/yurim-web/apple_clone_page2",
-    tech_stack: ["HTML","CSS","React", "Javascript"],
-    image:
-      "/assets/portfolio_img/apple_img.png",
+    tech_stack: [
+      { name: "HTML", icon: "/assets/skill_img/html.png" },
+      { name: "CSS", icon: "/assets/skill_img/css.png" },
+      { name: "React", icon: "/assets/skill_img/react.png" },
+      { name: "Javascript", icon: "/assets/skill_img/javascript.png" },
+    ],
+    image: "/assets/portfolio_img/apple_img.png",
   },
 ];
 
@@ -149,7 +184,7 @@ export const professional_projects: ProfessionalProject[] = [
       { name: "HTML", icon: "/assets/skill_img/html.png" },
       { name: "CSS", icon: "/assets/skill_img/css.png" },
       { name: "JavaScript", icon: "/assets/skill_img/javascript.png" },
-      { name: "Cafe24", icon: "/assets/skill_img/cafe24.png" }
+      { name: "Cafe24", icon: "/assets/skill_img/cafe24.png" },
     ],
     description:
       "Herzion Shop은 프로젝트 최종 결과물로, 프론트엔드 개발을 담당했습니다. 사용자 경험 최적화와 성능 향상에 중점을 두었습니다.",
@@ -166,16 +201,14 @@ export const professional_projects: ProfessionalProject[] = [
       { name: "HTML", icon: "/assets/skill_img/html.png" },
       { name: "CSS", icon: "/assets/skill_img/css.png" },
       { name: "JavaScript", icon: "/assets/skill_img/javascript.png" },
-      { name: "React", icon: "/assets/skill_img/react.png" }
+      { name: "React", icon: "/assets/skill_img/react.png" },
     ],
     description:
       "RX. 회사 내부 사이트 개발을 담당했습니다. 사용자 경험 최적화와 성능 향상에 중점을 두었습니다.",
-    image:
-      "/assets/professional_projects/rx_banner.png",
+    image: "/assets/professional_projects/rx_banner.png",
     view_link: "https://mxrx.dev/",
     demo_link: "https://markx.dev/",
     github_link: "https://github.com/example/project2",
-   
   },
   {
     id: 3,
@@ -186,14 +219,12 @@ export const professional_projects: ProfessionalProject[] = [
       { name: "HTML", icon: "/assets/skill_img/html.png" },
       { name: "CSS", icon: "/assets/skill_img/css.png" },
       { name: "JavaScript", icon: "/assets/skill_img/javascript.png" },
-      { name: "Cafe24", icon: "/assets/skill_img/cafe24.png" }
+      { name: "Cafe24", icon: "/assets/skill_img/cafe24.png" },
     ],
     description:
       "스웨디시 뉴트라 쇼핑몰 개발을 담당했습니다. 사용자 경험 최적화와 성능 향상에 중점을 두었습니다.",
-    image:
-      "/assets/professional_projects/swedish_banner.jpg",
+    image: "/assets/professional_projects/swedish_banner.jpg",
     view_link: "https://swedishnutra.kr/",
     github_link: "https://github.com/yurim-web/swedishnutra_custom_code",
-
   },
 ];

@@ -240,6 +240,7 @@ const Portfolio = () => {
                 <div className="portfolio_left_column">
                   <div className="portfolio_year">{section.year}</div>
                   <h2 className="portfolio_section_title">{section.title}</h2>
+
                   <h3 className="portfolio_section_subtitle">
                     {section.subtitle}
                   </h3>
@@ -260,6 +261,12 @@ const Portfolio = () => {
                     </span>
                   </div>
 
+                  {/* 프로젝트 타입 */}
+                  <div className="portfolio_info_row">
+                    <span className="portfolio_info_label">타입</span>
+                    <span className="portfolio_info_value">{section.type}</span>
+                  </div>
+
                   {/* 내용 */}
                   <div className="portfolio_info_row">
                     <span className="portfolio_info_label">내용</span>
@@ -272,7 +279,14 @@ const Portfolio = () => {
                     <div className="portfolio_tech_stack">
                       {section.tech_stack.map((tech, techIndex) => (
                         <span key={techIndex} className="portfolio_tech_pill">
-                          {tech}
+                          <img
+                            src={tech.icon}
+                            alt={tech.name}
+                            className="portfolio_tech_icon"
+                          />
+                          <span className="portfolio_tech_name">
+                            {tech.name}
+                          </span>
                         </span>
                       ))}
                     </div>

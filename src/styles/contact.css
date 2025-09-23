@@ -51,7 +51,7 @@
   filter: blur(40px);
   opacity: 0.6;
   animation: contact_float 10s ease-in-out infinite;
-  bottom: -10%;
+  bottom: -50%;
   left: 30%;
   z-index: 1;
 }
@@ -65,13 +65,14 @@
   filter: blur(40px);
   opacity: 0.6;
   animation: contact_float 7s ease-in-out infinite reverse;
-  top: 50%;
+  top: 30%;
   left: -5%;
   z-index: 1;
 }
 
 @keyframes contact_float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate3d(0, 0, 0) rotate(0deg);
   }
   33% {
@@ -119,8 +120,12 @@
 }
 
 @keyframes sparkle_glow {
-  0% { transform: scale(1) rotate(0deg); }
-  100% { transform: scale(1.1) rotate(10deg); }
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(10deg);
+  }
 }
 
 .contact_title h2 {
@@ -189,6 +194,48 @@
   margin-top: 15px;
 }
 
+/* 메일보내기 섹션 */
+.contact_mail_section {
+  margin-top: 30px;
+}
+
+.contact_mail_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #667eea;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.contact_mail_btn:hover {
+  background: #5a6fd8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.mail_btn_icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.contact_mail_btn:hover .mail_btn_icon {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(3px);
+}
+
 .contact_social_link {
   display: flex;
   align-items: center;
@@ -249,8 +296,13 @@
 .contact_qr_pattern {
   width: 220px;
   height: 220px;
-  background: 
-    linear-gradient(90deg, #000 25%, transparent 25%, transparent 75%, #000 75%),
+  background: linear-gradient(
+      90deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%
+    ),
     linear-gradient(#000 25%, transparent 25%, transparent 75%, #000 75%);
   background-size: 20px 20px;
   background-position: 0 0, 0 10px;
@@ -509,6 +561,22 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* 저작권 섹션 */
+.contact_copyright_section {
+  background: transparent;
+  padding: 15px 0;
+  text-align: center;
+  border-top: none;
+}
+
+.contact_copyright_text {
+  color: #888888;
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 400;
+  text-align: right;
 }
 
 /* 반응형 디자인 */
