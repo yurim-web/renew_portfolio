@@ -129,7 +129,7 @@ export const portfolio_sections: PortfolioItem[] = [
   {
     id: 5,
     title: "Learning Project",
-    subtitle: "ToDo List",
+    subtitle: "ToDoList",
     bgColor: "#dbeafe",
     textColor: "#1e293b",
     content:
@@ -138,8 +138,8 @@ export const portfolio_sections: PortfolioItem[] = [
     period: "2024.11.02 ~ 2024.11.05",
     participation: "개인 100%",
     type: "반응형",
-    link: "https://yurim-web.github.io/TODOLIST_page/",
-    github_link: "https://github.com/yurim-web/TODOLIST_page",
+    link: "https://yurim-web.github.io/todolist/",
+    github_link: "https://github.com/yurim-web/TODOLIST_code",
     tech_stack: [
       { name: "HTML", icon: "/assets/skill_img/html.png" },
       { name: "CSS", icon: "/assets/skill_img/css.png" },
