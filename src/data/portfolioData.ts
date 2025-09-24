@@ -80,7 +80,7 @@ export const portfolio_sections: PortfolioItem[] = [
     ],
     image: "/assets/portfolio_img/imele_img.png",
   },
-  
+
   {
     id: 3,
     title: "Learning Project",
@@ -103,6 +103,7 @@ export const portfolio_sections: PortfolioItem[] = [
     ],
     image: "/assets/portfolio_img/ysl_img.png",
   },
+
   {
     id: 4,
     title: "Learning Project",
@@ -114,9 +115,9 @@ export const portfolio_sections: PortfolioItem[] = [
     year: "2024",
     period: "2024.12.01 ~ 2024.12.12",
     participation: "개인 100%",
-    type: "반응형",
+    type: "웹용",
     link: "https://movie-api-portfolio.vercel.app/",
-    github_link: "https://github.com/yurim-web/fittracker-design",
+    github_link: "https://github.com/yurim-web/movie_api_portfolio",
     tech_stack: [
       { name: "HTML", icon: "/assets/skill_img/html.png" },
       { name: "CSS", icon: "/assets/skill_img/css.png" },
@@ -127,6 +128,8 @@ export const portfolio_sections: PortfolioItem[] = [
     ],
     image: "/assets/portfolio_img/waveyy_img.png",
   },
+
+
   {
     id: 5,
     title: "Learning Project",
@@ -150,6 +153,8 @@ export const portfolio_sections: PortfolioItem[] = [
     ],
     image: "/assets/portfolio_img/todolist_img.png",
   },
+
+
   {
     id: 6,
     title: "Learning Project",
@@ -163,7 +168,7 @@ export const portfolio_sections: PortfolioItem[] = [
     participation: "개인 100%",
     type: "웹용",
     link: "https://yurim-web.github.io/apple_clone_page2/",
-    github_link: "https://github.com/yurim-web/apple_clone_page2",
+    github_link: "https://github.com/yurim-web/apple_web_clone_renew",
     tech_stack: [
       { name: "HTML", icon: "/assets/skill_img/html.png" },
       { name: "CSS", icon: "/assets/skill_img/css.png" },
