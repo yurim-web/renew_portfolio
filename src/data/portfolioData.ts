@@ -46,9 +46,9 @@ export const portfolio_sections: PortfolioItem[] = [
     year: "2024",
     period: "2024.12.16 ~ 2024.12.20",
     participation: "개인 100%",
-    type: "반응형",
-    link: "https://yurim-web.github.io/groundplace_clone/",
-    github_link: "https://github.com/yurim-web/groundplace-clone",
+    type: "웹용",
+    link: "https://yurim-web.github.io/groundplace_clone_page/",
+    github_link: "https://github.com/yurim-web/grandplace_home",
     tech_stack: [
       { name: "HTML", icon: "/assets/skill_img/html.png" },
       { name: "CSS", icon: "/assets/skill_img/css.png" },
@@ -70,8 +70,8 @@ export const portfolio_sections: PortfolioItem[] = [
     period: "2025.01.02 ~ 2025.01.06",
     participation: "개인 100%",
     type: "반응형",
-    link: "https://yurim-web.github.io/imele_clone/",
-    github_link: "https://github.com/yurim-web/imele_clone",
+    link: "https://yurim-web.github.io/imele_clone_renew/",
+    github_link: "https://github.com/yurim-web/imele_clone_renew",
     tech_stack: [
       { name: "HTML", icon: "/assets/skill_img/html.png" },
       { name: "CSS", icon: "/assets/skill_img/css.png" },
@@ -80,6 +80,7 @@ export const portfolio_sections: PortfolioItem[] = [
     ],
     image: "/assets/portfolio_img/imele_img.png",
   },
+  
   {
     id: 3,
     title: "Learning Project",
