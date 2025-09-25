@@ -1,141 +1,187 @@
-# 🌟 Renewal Portfolio (진행중)
+# 🌟 이유림의 포트폴리오
 
-> 리뉴얼 웹 포트폴리오 사이트입니다.
-> 현재 **작업 진행 중(🚧)** 입니다.
+> **프론트엔드 개발자 이유림의 개인 포트폴리오 웹사이트**  
+> 현대적이고 인터랙티브한 디자인으로 제작된 반응형 포트폴리오
 
-## 🚀 기술 스택
+![Status](https://img.shields.io/badge/Status-Live-brightgreen) ![React](https://img.shields.io/badge/React-18.3.1-blue?logo=react) ![TypeScript](https://img.shields.io/badge/TypeScript-4.9.5-blue?logo=typescript) ![GSAP](https://img.shields.io/badge/GSAP-3.13.0-green?logo=greensock)
 
-- **Frontend**: React 18, TypeScript
-- **Styling**: CSS3
-- **Design/Tools:** Figma, Adobe Illustrator, Adobe Photoshop, VS Code, Git/GitHub
-- **Build Tool**: Create React App
+## 🌟 포트폴리오 사이트
 
-## 📁 프로젝트 구조
+**🎉 포트폴리오가 성공적으로 배포되었습니다!**
 
-> 💡 **참고**: 현재 기본 구조가 완성되었으며, 향후 더 많은 컴포넌트와 기능이 추가될 예정입니다.
+👉 **[https://yurim-web.github.io/yurim_portfolio_page/](https://yurim-web.github.io/yurim_portfolio_page/)**
 
-```
-renew_portfolio/
-├── public/                     # 정적 파일들
-│   ├── favicon.ico
-│   ├── index.html
-│   ├── logo192.png
-│   ├── logo512.png
-│   ├── manifest.json
-│   └── robots.txt
-├── src/                        # 소스 코드
-│   ├── pages/                  # 페이지 컴포넌트
-│   │   ├── header.tsx         # 헤더 컴포넌트
-│   │   ├── main.tsx           # 메인 섹션 컴포넌트
-│   │   └── about.tsx           # 정보 섹션 컴포넌트
-│   ├── styles/                 # 스타일 파일들
-│   │   ├── reset.css          # CSS 리셋
-│   │   ├── common.css         # 공통 스타일
-│   │   ├── header.css         # 헤더 스타일
-│   │   ├── main_section.css   # 메인 섹션 스타일
-│   │   ├── info_section.css   # 정보 섹션 스타일
-│   │   └── index.css          # 메인 스타일
-│   ├── utils/                  # 유틸리티 함수들
-│   │   ├── header.js          # 헤더 관련 JavaScript
-│   │   └── main.js            # 메인 섹션 관련 JavaScript
-│   ├── assets/                 # 이미지, 아이콘 등 리소스 (추가 예정)
-│   ├── components/             # 재사용 가능한 컴포넌트 (추가 예정)
-│   ├── App.tsx                # 메인 앱 컴포넌트
-│   └── index.tsx              # 앱 진입점
-├── package.json               # 프로젝트 의존성 및 스크립트
-├── package-lock.json          # 의존성 잠금 파일
-├── tsconfig.json              # TypeScript 설정
-└── README.md                  # 프로젝트 설명서
-```
+📂 **소스 코드**: [https://github.com/yurim-web/renew_portfolio](https://github.com/yurim-web/renew_portfolio)
 
-## 🎯 주요 기능
 
-- **반응형 디자인**: 다양한 디바이스에서 최적화된 화면
-- **스크롤 이벤트**: 스크롤에 따른 헤더 스타일 변화
-- **섹션별 구성**: About Me, Skills, Projects, Contact 섹션
-- **모던 UI/UX**: 깔끔하고 직관적인 사용자 인터페이스
+## 📋 목차
 
-## 🛠️ 설치 및 실행
+- [✨ 주요 기능](#-주요-기능)
+- [🛠️ 기술 스택](#️-기술-스택)
+- [🚀 설치 및 실행](#-설치-및-실행)
+- [📱 프로젝트 구조](#-프로젝트-구조)
+- [🎨 주요 섹션](#-주요-섹션)
+- [🌙 다크모드](#-다크모드)
+- [📱 반응형 디자인](#-반응형-디자인)
+- [🎭 애니메이션](#-애니메이션)
+- [📄 라이선스](#-라이선스)
 
-### 필수 요구사항
-- Node.js (v14 이상)
-- npm 또는 yarn
+## ✨ 주요 기능
 
-### 설치
+- 🎯 **현대적인 UI/UX**: 깔끔하고 세련된 디자인
+- 🌙 **다크모드 지원**: 사용자 선호에 따른 테마 전환
+- 📱 **완전 반응형**: 모든 디바이스에서 최적화된 경험
+- 🎭 **부드러운 애니메이션**: GSAP를 활용한 인터랙티브 효과
+- 🚀 **빠른 로딩**: 최적화된 성능
+- 🎨 **포트폴리오 전시**: 프로젝트별 상세 정보 제공
+
+## 🛠️ 기술 스택
+
+### Frontend
+- **React 18.3.1** - UI 라이브러리
+- **TypeScript 4.9.5** - 타입 안전성
+- **GSAP 3.13.0** - 고성능 애니메이션
+- **Swiper 12.0.2** - 터치 슬라이더
+
+### Styling
+- **CSS3** - 스타일링
+- **CSS Grid & Flexbox** - 레이아웃
+- **CSS Variables** - 테마 관리
+- **Media Queries** - 반응형 디자인
+
+### Development
+- **Create React App** - 프로젝트 설정
+- **ESLint** - 코드 품질 관리
+- **TypeScript** - 타입 체킹
+
+## 🚀 설치 및 실행
+
+### 1. 저장소 클론
 ```bash
-# 의존성 설치
+git clone https://github.com/yurim-web/renew_portfolio.git
+cd renew_portfolio
+```
+
+### 2. 의존성 설치
+```bash
 npm install
 ```
 
-### 개발 서버 실행
+### 3. 개발 서버 실행
 ```bash
-# 개발 서버 시작
 npm start
 ```
 
-브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어 확인할 수 있습니다.
+브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어 확인하세요.
 
-### 빌드
+### 4. 프로덕션 빌드
 ```bash
-# 프로덕션 빌드
 npm run build
 ```
 
-## 📝 컴포넌트 설명
+## 📱 프로젝트 구조
 
-### Header (`src/pages/header.tsx`)
-- 네비게이션 메뉴
-- 스크롤 시 배경 변화 효과
-- 반응형 메뉴
+```
+src/
+├── 📁 components/          # 재사용 가능한 컴포넌트
+│   ├── 📁 box/            # 박스 컴포넌트들
+│   ├── 📁 button/         # 버튼 컴포넌트들
+│   └── 📁 styles/         # 컴포넌트별 스타일
+├── 📁 contexts/           # React Context
+├── 📁 data/              # 데이터 파일들
+├── 📁 pages/             # 페이지 컴포넌트들
+├── 📁 styles/            # 전역 스타일
+├── 📁 types/             # TypeScript 타입 정의
+└── 📁 utils/             # 유틸리티 함수들
+```
 
-### Main (`src/pages/main.tsx`)
-- 메인 히어로 섹션
-- 인트로 메시지
+## 🎨 주요 섹션
 
-### About (`src/pages/about.tsx`)
-- About Me 섹션
-- 프로필 이미지 및 소개
-- 경력 및 학력 정보
-- 기술 스택 표시
+### 🏠 **메인 섹션**
+- 개인 소개 및 타이틀
+- 부드러운 블러 효과와 애니메이션
 
-## 🎨 스타일 가이드
+### 👋 **About Me**
+- 개인 정보 및 경력
+- 라이선스 및 교육 이력
+- 반응형 레이아웃
 
-### CSS 파일 구조
-- `reset.css`: 브라우저 기본 스타일 초기화
-- `common.css`: 공통으로 사용되는 스타일
-- `header.css`: 헤더 관련 스타일
-- `main_section.css`: 메인 섹션 스타일
-- `info_section.css`: 정보 섹션 스타일
+### 🎯 **STRENGTH**
+- 기술 스택 카테고리별 분류
+- 3D 호버 효과
+- 토글 버튼을 통한 카테고리 전환
 
-### 네이밍 컨벤션
-- 클래스명: 스네이크 케이스 (예: `nav_menu`, `about_section`)
-- 컴포넌트명: 파스칼 케이스 (예: `Header`, `Info`)
+### 🚀 **PORTFOLIO**
+- 학습 프로젝트 전시
+- 가로 스크롤 애니메이션 (데스크톱)
+- Swiper 슬라이더 (모바일)
+
+### 💼 **PROJECT**
+- 프로젝트 카테고리 분류
+- Professional / Learning / Web Design
+
+### 🎨 **WEB DESIGN**
+- 디자인 프로젝트 전시
+- 모달 팝업 상세 보기
+- 그리드 레이아웃
+
+### 📞 **CONTACT**
+- 연락처 정보
+- 소셜 미디어 링크
+- 이메일 전송
+
+## 🌙 다크모드
+
+- 🌞 **라이트 모드**: 깔끔하고 밝은 테마
+- 🌙 **다크 모드**: 눈에 편한 어두운 테마
+- 🔄 **자동 전환**: 시스템 설정에 따른 자동 감지
+- 💾 **상태 저장**: 사용자 선택 기억
 
 ## 📱 반응형 디자인
 
-- **Desktop**: 1200px 이상
-- **Tablet**: 768px ~ 1199px
-- **Mobile**: 767px 이하
+- 🖥️ **데스크톱**: 1200px 이상
+- 📱 **태블릿**: 768px ~ 1024px
+- 📱 **모바일**: 768px 이하
 
-## 🔧 개발 스크립트
+모든 디바이스에서 최적화된 사용자 경험을 제공합니다.
 
-```bash
-# 개발 서버 시작
-npm start
+## 🎭 애니메이션
 
-# 테스트 실행
-npm test
+### GSAP 애니메이션
+- **ScrollTrigger**: 스크롤 기반 애니메이션
+- **Timeline**: 복합 애니메이션 시퀀스
+- **Easing**: 부드러운 전환 효과
 
-# 프로덕션 빌드
-npm run build
+### 주요 효과
+- 📜 스크롤 트리거 애니메이션
+- 🎨 3D 호버 효과
+- 🌊 페이드 인/아웃
+- 🎯 타이틀 타이핑 효과
 
-# 빌드 결과물 분석
-npm run eject
-```
+## 📊 성능 최적화
+
+- ⚡ **코드 스플리팅**: 필요시에만 로드
+- 🖼️ **이미지 최적화**: WebP 포맷 사용
+- 📦 **번들 최적화**: 불필요한 코드 제거
+- 🚀 **지연 로딩**: 컴포넌트별 지연 로딩
 
 ## 📄 라이선스
 
-이 프로젝트는 개인 포트폴리오 목적으로 제작되었습니다.
+이 프로젝트는 개인 포트폴리오 웹사이트로, 제작자(유림)가 직접 개발한 작품입니다. 
+무단 복제 및 상업적 사용을 금지하며, 개인적인 학습 목적으로만 참고해주세요.
+
+---
+
+<div align="center">
+
+**💻 프론트엔드 개발자 이유림의 포트폴리오**
+
+[![GitHub](https://img.shields.io/badge/GitHub-yurim--web-black?style=flat&logo=github)](https://github.com/yurim-web)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-brightgreen?style=flat)](https://yurim-web.github.io/yurim_portfolio_page/)
+
+Made with ❤️ by 이유림
+
+</div>
 
 
-*이 포트폴리오는 React와 TypeScript를 사용하여 제작되었습니다.*
+
