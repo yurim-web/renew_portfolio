@@ -1,15 +1,16 @@
+/* 프로젝트 섹션 스타일 */
 .work_section {
   width: 100vw;
   height: 100vh;
-  padding: 300px 0; /* 상단 패딩 더 늘림 */
+  padding: 300px 0;
   min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  position: relative; /* 상대적 위치 설정 */
-  z-index: 1; /* z-index 설정 */
+  position: relative;
+  z-index: 1;
 }
 
 .work_container {
@@ -35,7 +36,6 @@
   transition: color 0.3s ease;
 }
 
-/* 다크모드 제목 */
 [data-theme="dark"] .work_title {
   color: #ffffff;
 }
@@ -81,7 +81,6 @@
   opacity: 0;
 }
 
-/* 다크모드 카드 */
 [data-theme="dark"] .work_card {
   background: #2d2d2d;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -92,12 +91,6 @@
   background: #2a2a2a !important;
   color: #ffffff;
   border: 1px solid rgba(139, 156, 255, 0.3);
-}
-
-[data-theme="dark"] .work_card:nth-child(1),
-[data-theme="dark"] .work_card:nth-child(2),
-[data-theme="dark"] .work_card:nth-child(3) {
-  background: #2d2d2d;
 }
 
 .work_card:nth-child(1) {
@@ -113,17 +106,13 @@
   min-height: 700px;
 }
 
-/* 다크모드에서 개별 카드 스타일 덮어쓰기 */
-[data-theme="dark"] .work_card:nth-child(1) {
-  background: #2d2d2d !important;
-}
-
-[data-theme="dark"] .work_card:nth-child(2) {
+[data-theme="dark"] .work_card:nth-child(1),
+[data-theme="dark"] .work_card:nth-child(2),
+[data-theme="dark"] .work_card:nth-child(3) {
   background: #2d2d2d !important;
 }
 
 [data-theme="dark"] .work_card:nth-child(3) {
-  background: #2d2d2d !important;
   min-height: 700px;
 }
 
@@ -153,7 +142,6 @@
   transition: color 0.3s ease;
 }
 
-/* 다크모드 카드 번호 */
 [data-theme="dark"] .work_card_number {
   color: #8b9cff;
 }
@@ -195,7 +183,6 @@
   color: #553c9a;
 }
 
-/* 다크모드 프로젝트 아이템 */
 [data-theme="dark"] .work_project_item {
   color: #d0d0d0;
 }
@@ -245,55 +232,37 @@
   transition: color 0.3s ease;
 }
 
-/* 다크모드 커서 텍스트 */
 [data-theme="dark"] .work_cursor_text {
   color: #b0b0b0;
 }
 
-/* 반응형 디자인 */
-@media screen and (max-width: 1200px) {
-  .work_grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-  }
-
-  .work_card {
-    padding: 40px 30px;
-    min-height: 650px;
-  }
-
-  .work_title {
-    font-size: 40px;
-  }
-}
-
 /* Swiper 스타일 */
 .work_swiper {
-  width: calc(100% - 48px); /* 양옆 24px씩 빼기 */
+  width: calc(100% - 48px);
   height: 100%;
   padding: 0;
-  display: none; /* 데스크톱에서 숨김 */
-  margin: 0 auto; /* 중앙 정렬 */
+  display: none;
+  margin: 0 auto;
 }
 
 .work_swiper .swiper-slide {
   height: auto;
   display: flex;
   align-items: stretch;
-  width: 100%; /* 슬라이드 전체 너비 사용 */
+  width: 100%;
 }
 
 .work_swiper .swiper-slide .work_card {
-  width: 100%; /* 카드가 슬라이드 전체 너비 사용 */
-  margin: 0; /* 마진 제거 */
-  border: 3px solid rgba(54, 91, 255, 0.1); /* 미묘한 테두리 추가 */
-  transform: scale(0.95); /* 약간 작게 표시 */
-  transition: transform 0.3s ease; /* 부드러운 전환 */
+  width: 100%;
+  margin: 0;
+  border: 3px solid rgba(54, 91, 255, 0.1);
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
   border-radius: 10px;
 }
 
 .work_swiper .swiper-pagination {
-  bottom: 30px; /* 하단에서 30px 위에 위치 */
+  bottom: 30px;
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -314,102 +283,137 @@
   background: #667eea;
 }
 
-/* 태블릿 반응형 (1024px 이하) */
-@media screen and (max-width: 1024px) {
-  .work_section {
-    padding: 80px 0;
-  }
-
-  .work_container {
-    padding: 0 30px;
-  }
-
+/* 반응형 디자인 */
+@media screen and (max-width: 1200px) {
   .work_grid {
-    display: none; /* 태블릿에서 그리드 숨김 */
-  }
-
-  .work_swiper {
-    display: block; /* 태블릿에서 Swiper 표시 */
-  }
-
-  .work_title {
-    font-size: 42px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
   }
 
   .work_card {
-    padding: 20px 30px;
-    height: 550px;
-    max-height: 550px;
-    min-height: 550px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    min-height: 650px;
+  }
+
+  .work_title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .work_section {
+    padding: 20px 0 150px 0;
+    height: 100%;
+  }
+
+  .work_container {
+    padding: 0 40px;
+  }
+
+  .work_grid {
+    display: none;
+  }
+
+  .work_swiper {
+    display: block;
+    width: calc(100% - 80px);
+  }
+
+  .work_title {
+    font-size: 44px;
+    margin-bottom: 50px;
+  }
+
+  .work_card {
+    padding: 35px 30px;
+    height: 600px;
+    max-height: 600px;
+    min-height: 600px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    margin: 0 10px;
   }
 
   .work_card_title {
-    font-size: 24px;
-    margin-bottom: 25px;
-  }
-
-  .work_project_list {
-    gap: 12px;
+    font-size: 26px;
     margin-bottom: 30px;
   }
 
+  .work_card_number {
+    font-size: 44px;
+  }
+
+  .work_card_text {
+    font-size: 18px;
+  }
+
+  .work_project_list {
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+
   .work_project_item {
-    font-size: 16px;
-    padding: 12px 16px;
+    font-size: 17px;
+    padding: 10px 0;
+    margin-bottom: 18px;
   }
 
   .work_cursor_icon {
-    bottom: 25px;
-    right: 25px;
+    bottom: 35px;
+    right: 30px;
+  }
+
+  .work_cursor_icon img {
+    width: 55px;
+    height: 55px;
   }
 
   .work_cursor_text {
-    font-size: 12px;
+    font-size: 13px;
+  }
+
+  .work_swiper .swiper-pagination {
+    bottom: 40px;
+  }
+
+  .work_swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+  }
+
+  .swiper {
+    height: 750px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .work_section {
-    padding: 10px 0px 30px 0px; /* 모바일에서 더 많은 상단 패딩 */
+    padding: 10px 0px 30px 0px;
   }
 
   .work_container {
     padding: 0 15px;
-    /* height: 100%; */
   }
 
   .work_grid {
-    display: none; /* 모바일에서 그리드 숨김 */
+    display: none;
   }
 
   .work_swiper {
-    display: block; /* 모바일에서 Swiper 표시 */
+    display: block;
   }
 
   .work_card {
-    padding: 15px 24px; /* 패딩 더 줄임 */
-    height: 500px; /* 고정 높이로 설정 */
-    max-height: 500px; /* 최대 높이 제한 */
+    padding: 15px 24px;
+    height: 500px;
+    max-height: 500px;
     min-height: 500px;
     box-shadow: none;
   }
 
   .work_title {
     font-size: 36px;
-    margin-bottom: 30px; /* 마진 줄임 */
-  }
-
-  .work_card h3 {
-    font-size: 16px; /* 제목 크기 더 줄임 */
-    margin-bottom: 8px; /* 마진 더 줄임 */
-  }
-
-  .work_card p {
-    font-size: 13px; /* 텍스트 크기 더 줄임 */
-    line-height: 1.3; /* 줄 간격 더 줄임 */
-    margin-bottom: 5px; /* 마진 더 줄임 */
+    margin-bottom: 30px;
   }
 
   .work_card_title {
@@ -432,7 +436,6 @@
 
   .work_cursor_icon {
     bottom: 35px;
-    /* left: 50%; */
     transform: translateX(-50%);
   }
 
@@ -444,6 +447,7 @@
   .work_cursor_text {
     font-size: 10px;
   }
+
   .swiper {
     height: 580px;
   }

@@ -1,26 +1,22 @@
 import "../styles/info_section.css";
 import "../utils/main.js";
+
 const About = () => {
   return (
-    // ABOUT ME 섹션
     <section id="about" className="about_section">
       <div className="about_container">
         <h2 className="about_title">ABOUT ME</h2>
         <div className="about_content">
-          <div className="">
+          <div className="profile_img_container">
             <img src="/myimg.png" alt="프로필사진" className="profile_img" />
           </div>
           <div className="about_text">
             <h3 className="name">Lee yurim</h3>
             <p className="greeting">
-              {/* 안녕하세요! 웹 개발에 열정을 가진 개발자 이유림입니다. */}
               사용자 경험을 최우선으로 생각하는{" "}
               <span className="highlight_tech">웹 퍼블리셔</span> 이유림입니다!
             </p>
             <p className="description">
-              {/* HTML, CSS, JavaScript, React 등 다양한 기술을 활용하여 웹사이트의
-              레이아웃과 디자인을 구성하고, 웹 표준과 웹 접근성을 준수하여 모든
-              사용자들이 웹사이트를 손쉽게 이용할 수 있도록 합니다. */}
               <span className="highlight_tech">
                 HTML, CSS, JavaScript, Figma
               </span>
@@ -40,22 +36,6 @@ const About = () => {
               맡은 일에 애정을 가지고 책임감 있게 업무를 수행합니다. 주어진
               역할에서 가치를 창출하며, 제 역량을 충분히 발휘하고자 합니다.
             </p>
-            {/* 추후에 노션 링크 삽입 예정 ! */}
-            {/* <button className="view_more_btn">
-              <span>자기소개 더보기</span>
-              <div className="btn_icon">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path
-                    d="M6 12L10 8L6 4"
-                    d="M6 12L10 8L6 4"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </button> */}
           </div>
         </div>
 
@@ -65,19 +45,19 @@ const About = () => {
             <ul className="info_list">
               <li>
                 <span className="info_icon">🎂</span>
-                Birth: 1999.01.15
+                Birth: 2000.11.04
               </li>
               <li>
                 <span className="info_icon">📧</span>
-                Email: yurim.lee@example.com
+                Email: lyl5152@naver.com
               </li>
               <li>
                 <span className="info_icon">📱</span>
-                Phone: 010-1234-5678
+                Phone: 010-4054-5152
               </li>
               <li>
                 <span className="info_icon">📍</span>
-                Location: Seoul, Korea
+                Location: Incheon, Korea
               </li>
             </ul>
 

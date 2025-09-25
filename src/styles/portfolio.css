@@ -1,3 +1,4 @@
+/* 포트폴리오 섹션 스타일 */
 .portfolio_section {
   width: 100vw;
   min-height: 100vh;
@@ -26,7 +27,6 @@
   color: #ffffff;
   text-align: left;
   margin-bottom: 0;
-
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -34,13 +34,12 @@
   z-index: 10;
 }
 
-/* 세로 쌓기 컨테이너 */
 .portfolio_horizontal_container {
   display: block;
   width: 100%;
   position: relative;
   flex: 1;
-  height: calc(100vh - 120px); /* 제목 높이 제외 */
+  height: calc(100vh - 120px);
 }
 
 .portfolio_item {
@@ -65,7 +64,6 @@
   padding: 0 40px;
 }
 
-/* 왼쪽 컬럼 - 메인 콘텐츠 */
 .portfolio_left_column {
   display: flex;
   flex-direction: column;
@@ -129,7 +127,6 @@
   line-height: 1.5;
 }
 
-/* 오른쪽 컬럼 - 이미지 */
 .portfolio_right_column {
   display: flex;
   align-items: flex-start;
@@ -280,8 +277,8 @@
 .portfolio_swiper {
   width: 100%;
   height: 100%;
-  padding: 0 24px; /* 양옆 패딩 24px */
-  display: none; /* 데스크톱에서 숨김 */
+  padding: 0 24px;
+  display: none;
 }
 
 .portfolio_swiper .swiper-slide {
@@ -297,12 +294,12 @@
 }
 
 .portfolio_swiper .swiper-pagination {
-  top: 30px !important; /* 섹션 맨 위에 위치 */
-  bottom: auto !important; /* bottom 속성 제거 */
+  top: 30px !important;
+  bottom: auto !important;
   display: flex;
   justify-content: center;
-  gap: 8px; /* 점 간격 늘림 */
-  z-index: 10; /* 다른 요소 위에 표시 */
+  gap: 8px;
+  z-index: 10;
 }
 
 .portfolio_swiper .swiper-pagination-bullet {
@@ -320,31 +317,29 @@
   background: #667eea;
 }
 
-/* Swiper 화살표 스타일 */
 .portfolio_swiper .swiper-button-next {
-  right: 20px !important; /* 오른쪽에서 20px 떨어진 위치 */
-  color: #667eea !important; /* 화살표 색상 */
-  width: 50px !important; /* 화살표 크기 */
+  right: 20px !important;
+  color: #667eea !important;
+  width: 50px !important;
   height: 50px !important;
-  background: rgba(255, 255, 255, 0.9) !important; /* 반투명 흰색 배경 */
-  border-radius: 50% !important; /* 원형 */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important; /* 그림자 */
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
   transition: all 0.3s ease !important;
-  z-index: 100 !important; /* 다른 요소 위에 표시 */
+  z-index: 100 !important;
 }
 
 .portfolio_swiper .swiper-button-next:hover {
-  background: rgba(255, 255, 255, 1) !important; /* 호버 시 완전한 흰색 */
-  transform: scale(1.1) !important; /* 호버 시 살짝 크게 */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important; /* 호버 시 더 강한 그림자 */
+  background: rgba(255, 255, 255, 1) !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
 .portfolio_swiper .swiper-button-next:after {
-  font-size: 18px !important; /* 화살표 아이콘 크기 */
+  font-size: 18px !important;
   font-weight: bold !important;
 }
 
-/* 왼쪽 화살표 숨김 */
 .portfolio_swiper .swiper-button-prev {
   display: none !important;
 }
@@ -367,23 +362,23 @@
 
 @media screen and (max-width: 1024px) {
   .portfolio_section {
-    padding: 0; /* 패딩 제거하여 화면에 꽉 차게 */
-    min-height: 100vh; /* 화면 높이에 꽉 차게 */
+    padding: 0;
+    min-height: 100vh;
   }
 
   .portfolio_container {
-    height: 100vh; /* 컨테이너 높이를 화면에 꽉 차게 */
+    height: 100vh;
     display: flex;
     flex-direction: column;
   }
 
   .portfolio_horizontal_container {
-    display: none; /* 모바일에서 기존 컨테이너 숨김 */
+    display: none;
   }
 
   .portfolio_swiper {
-    display: block; /* 모바일에서 Swiper 표시 */
-    flex: 1; /* 남은 공간을 모두 차지 */
+    display: block;
+    flex: 1;
     height: 100%;
   }
 
@@ -396,143 +391,144 @@
   .portfolio_content {
     grid-template-columns: 1fr;
     gap: 30px;
-    padding: 0 24px; /* 양옆 패딩 24px로 통일 */
+    padding: 0 24px;
   }
 
   .portfolio_title {
-    font-size: 28px; /* 제목 크기 줄임 */
-    margin-bottom: 20px; /* 마진 줄임 */
-    padding: 20px 24px 0; /* 상단 패딩 추가 */
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding: 20px 24px 0;
   }
 
   .portfolio_year {
-    font-size: 14px; /* 연도 크기 줄임 */
+    font-size: 14px;
   }
 
   .portfolio_section_title {
-    font-size: 18px; /* 섹션 제목 크기 줄임 */
+    font-size: 18px;
   }
 
   .portfolio_section_subtitle {
-    font-size: 32px; /* 서브타이틀 크기 줄임 */
+    font-size: 32px;
     line-height: 1.2;
   }
 
   .portfolio_info_label {
-    font-size: 12px; /* 라벨 크기 줄임 */
+    font-size: 12px;
   }
 
   .portfolio_info_value {
-    font-size: 14px; /* 값 크기 줄임 */
+    font-size: 14px;
     line-height: 1.4;
   }
 
   .portfolio_tech_pill {
-    padding: 6px 12px; /* 기술 스택 필 패딩 줄임 */
-    font-size: 12px; /* 기술 스택 필 크기 줄임 */
+    padding: 6px 12px;
+    font-size: 12px;
   }
 
   .portfolio_tech_icon {
-    width: 16px; /* 아이콘 크기 줄임 */
+    width: 16px;
     height: 16px;
   }
 
   .portfolio_tech_name {
-    font-size: 12px; /* 기술 이름 크기 줄임 */
+    font-size: 12px;
   }
 
   .portfolio_image_container {
-    height: 250px; /* 이미지 높이 줄임 */
+    height: 350px;
+    max-width: none;
   }
 
   .portfolio_left_column {
     padding-right: 0;
-    gap: 20px; /* 간격 줄임 */
+    gap: 20px;
   }
 
   .portfolio_link_button,
   .portfolio_github_button {
-    padding: 12px 24px; /* 버튼 패딩 줄임 */
-    font-size: 14px; /* 버튼 글자 크기 줄임 */
+    padding: 12px 24px;
+    font-size: 14px;
   }
 
   .portfolio_link_container {
-    gap: 10px; /* 버튼 간격 줄임 */
+    gap: 10px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .portfolio_section {
-    padding: 0; /* 패딩 제거하여 화면에 꽉 차게 */
-    min-height: 100vh; /* 화면 높이에 꽉 차게 */
+    padding: 0;
+    min-height: 100vh;
   }
 
   .portfolio_container {
-    height: 100vh; /* 컨테이너 높이를 화면에 꽉 차게 */
+    height: 100vh;
   }
 
   .portfolio_content {
-    padding: 0 24px; /* 양옆 패딩 24px로 통일 */
-    gap: 25px; /* 간격 더 줄임 */
+    padding: 0 24px;
+    gap: 25px;
   }
 
   .portfolio_title {
-    font-size: 24px; /* 제목 크기 더 줄임 */
+    font-size: 24px;
     margin-bottom: 30px;
   }
 
   .portfolio_year {
-    font-size: 12px; /* 연도 크기 더 줄임 */
+    font-size: 12px;
   }
 
   .portfolio_section_title {
-    font-size: 16px; /* 섹션 제목 크기 더 줄임 */
+    font-size: 16px;
   }
 
   .portfolio_section_subtitle {
-    font-size: 28px; /* 서브타이틀 크기 더 줄임 */
+    font-size: 28px;
     line-height: 1.1;
   }
 
   .portfolio_info_label {
-    font-size: 11px; /* 라벨 크기 더 줄임 */
+    font-size: 11px;
   }
 
   .portfolio_info_value {
-    font-size: 13px; /* 값 크기 더 줄임 */
+    font-size: 13px;
     line-height: 1.3;
   }
 
   .portfolio_tech_pill {
-    padding: 5px 10px; /* 기술 스택 필 패딩 더 줄임 */
-    font-size: 11px; /* 기술 스택 필 크기 더 줄임 */
+    padding: 5px 10px;
+    font-size: 11px;
   }
 
   .portfolio_tech_icon {
-    width: 14px; /* 아이콘 크기 더 줄임 */
+    width: 14px;
     height: 14px;
   }
 
   .portfolio_tech_name {
-    font-size: 11px; /* 기술 이름 크기 더 줄임 */
+    font-size: 11px;
   }
 
   .portfolio_image_container {
-    height: 200px; /* 이미지 높이 더 줄임 */
+    height: 200px;
   }
 
   .portfolio_left_column {
-    gap: 15px; /* 간격 더 줄임 */
+    gap: 15px;
   }
 
   .portfolio_link_button,
   .portfolio_github_button {
-    padding: 10px 20px; /* 버튼 패딩 더 줄임 */
-    font-size: 13px; /* 버튼 글자 크기 더 줄임 */
+    padding: 10px 20px;
+    font-size: 13px;
   }
 
   .portfolio_link_container {
-    gap: 8px; /* 버튼 간격 더 줄임 */
+    gap: 8px;
   }
 }
 
@@ -596,27 +592,27 @@
   color: #ffffff;
 }
 
-/* 다크모드에서 각 프로젝트 카드 배경색 오버라이드 */
+/* 다크모드 프로젝트 카드 배경 */
 [data-theme="dark"] .portfolio_item:nth-child(1) {
-  background-color: #1a0a0a !important; /* Groundplace - 어두운 빨강 */
+  background-color: #1a0a0a !important;
 }
 
 [data-theme="dark"] .portfolio_item:nth-child(2) {
-  background-color: #1a0f0a !important; /* IMELE - 어두운 주황 */
+  background-color: #1a0f0a !important;
 }
 
 [data-theme="dark"] .portfolio_item:nth-child(3) {
-  background-color: #1a1a0a !important; /* SAINT LAURENT - 어두운 노랑 */
+  background-color: #1a1a0a !important;
 }
 
 [data-theme="dark"] .portfolio_item:nth-child(4) {
-  background-color: #0a1a0a !important; /* Waveyy - 어두운 초록 */
+  background-color: #0a1a0a !important;
 }
 
 [data-theme="dark"] .portfolio_item:nth-child(5) {
-  background-color: #0a0a1a !important; /* ToDoList - 어두운 파랑 */
+  background-color: #0a0a1a !important;
 }
 
 [data-theme="dark"] .portfolio_item:nth-child(6) {
-  background-color: #1a0a1a !important; /* Apple - 어두운 보라 */
+  background-color: #1a0a1a !important;
 }

@@ -68,6 +68,15 @@
   box-shadow: 0 0 8px var(--active-color-shadow, rgba(0, 212, 170, 0.8));
 }
 
+
+/* 태블릿 환경 */
+
+@media (max-width: 1024px) {
+  .resume_toggle_container {
+    right: 15px;
+  }
+}
+
 /* 모바일 반응형 - 모든 모바일에서 숨기기 */
 @media (max-width: 768px) {
   .resume_toggle_container {

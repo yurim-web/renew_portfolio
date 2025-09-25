@@ -1,4 +1,4 @@
-/* Contact Section Styles */
+/* Contact 섹션 스타일 */
 .contact_section {
   position: relative;
   min-height: 100vh;
@@ -130,7 +130,7 @@
 }
 
 .contact_title h2 {
-  font-size: 4rem;
+  font-size: 64px;
   font-weight: 700;
   color: #2c3e50;
   margin: 0;
@@ -142,13 +142,12 @@
   transition: color 0.3s ease;
 }
 
-/* 다크모드 제목 */
 [data-theme="dark"] .contact_title h2 {
   color: #ffffff;
 }
 
 .contact_subtitle {
-  font-size: 1.2rem;
+  font-size: 19px;
   color: #667eea;
   font-weight: 600;
   letter-spacing: 2px;
@@ -157,7 +156,6 @@
   transition: color 0.3s ease;
 }
 
-/* 다크모드 부제목 */
 [data-theme="dark"] .contact_subtitle {
   color: #a8e6cf;
 }
@@ -174,19 +172,18 @@
   align-items: center;
   gap: 20px;
   color: #34495e;
-  font-size: 1.3rem;
+  font-size: 21px;
   font-weight: 500;
   transition: color 0.3s ease;
   justify-content: center;
 }
 
-/* 다크모드 연락처 아이템 */
 [data-theme="dark"] .contact_item {
   color: #cccccc;
 }
 
 .contact_icon {
-  font-size: 1.8rem;
+  font-size: 29px;
   width: 40px;
   text-align: center;
 }
@@ -214,7 +211,7 @@
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 18px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
 }
@@ -262,7 +259,7 @@
 }
 
 .contact_social_icon {
-  font-size: 2.5rem;
+  font-size: 40px;
   color: #2c3e50;
   width: 40px;
   height: 40px;
@@ -331,7 +328,7 @@
 }
 
 .contact_thank_you p {
-  font-size: 1.8rem;
+  font-size: 29px;
   color: #2c3e50;
   font-weight: 600;
   margin: 0;
@@ -339,16 +336,14 @@
 }
 
 .contact_thank_you span {
-  font-size: 2rem;
+  font-size: 32px;
   margin-left: 10px;
 }
 
-/* 다크모드 감사 인사 */
 [data-theme="dark"] .contact_thank_you p {
   color: #ffffff;
 }
 
-/* 다크모드 메일보내기 버튼 */
 [data-theme="dark"] .contact_mail_btn {
   background: #ffffff;
   color: #2c3e50;
@@ -360,7 +355,6 @@
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
 }
 
-/* 다크모드 깃허브 아이콘 */
 [data-theme="dark"] .contact_social_icon {
   color: #ffffff;
 }
@@ -377,19 +371,18 @@
   z-index: 10;
 }
 
-/* 다크모드 이메일 폼 섹션 */
 [data-theme="dark"] .contact_form_section {
   background: rgba(26, 26, 46, 0.8);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* 다크모드 블러 효과 - 메인 섹션과 일치 */
+/* 다크모드 블러 효과 */
 [data-theme="dark"] .contact_blur_1,
 [data-theme="dark"] .contact_blur_2,
 [data-theme="dark"] .contact_blur_3,
 [data-theme="dark"] .contact_blur_4 {
-  opacity: 0.2; /* 더 연하게 */
-  filter: blur(80px); /* 더 부드럽게 */
+  opacity: 0.2;
+  filter: blur(80px);
 }
 
 [data-theme="dark"] .contact_blur_1 {
@@ -438,7 +431,7 @@
 }
 
 .contact_form_header h3 {
-  font-size: 2.5rem;
+  font-size: 40px;
   font-weight: 700;
   color: #2c3e50;
   margin: 0 0 15px 0;
@@ -448,19 +441,17 @@
   transition: color 0.3s ease;
 }
 
-/* 다크모드 폼 헤더 */
 [data-theme="dark"] .contact_form_header h3 {
   color: #ffffff;
 }
 
 .contact_form_header p {
-  font-size: 1.1rem;
+  font-size: 18px;
   color: #667eea;
   margin: 0;
   transition: color 0.3s ease;
 }
 
-/* 다크모드 폼 헤더 설명 */
 [data-theme="dark"] .contact_form_header p {
   color: #a8e6cf;
 }
@@ -480,13 +471,12 @@
 }
 
 .contact_form_group label {
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 600;
   color: #2c3e50;
   transition: color 0.3s ease;
 }
 
-/* 다크모드 폼 라벨 */
 [data-theme="dark"] .contact_form_group label {
   color: #ffffff;
 }
@@ -496,7 +486,7 @@
   padding: 15px 20px;
   border: 2px solid rgba(102, 126, 234, 0.2);
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: 16px;
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -516,7 +506,6 @@
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
-/* 다크모드 폼 입력 */
 [data-theme="dark"] .contact_form_group input,
 [data-theme="dark"] .contact_form_group textarea {
   background: rgba(255, 255, 255, 0.1);
@@ -536,7 +525,6 @@
   transition: color 0.3s ease;
 }
 
-/* 다크모드 플레이스홀더 */
 [data-theme="dark"] .contact_form_group input::placeholder,
 [data-theme="dark"] .contact_form_group textarea::placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -548,7 +536,7 @@
   border: none;
   padding: 18px 40px;
   border-radius: 12px;
-  font-size: 1.1rem;
+  font-size: 18px;
   font-weight: 700;
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
@@ -596,7 +584,6 @@
   border: 1px solid rgba(255, 182, 193, 0.5);
 }
 
-/* 다크모드 메시지 */
 [data-theme="dark"] .contact_form_message.success {
   background: rgba(168, 230, 207, 0.15);
   color: #a8e6cf;
@@ -635,13 +622,13 @@
 
 .contact_copyright_text {
   color: #888888;
-  font-size: 0.9rem;
+  font-size: 14px;
   margin: 0;
   font-weight: 400;
   text-align: center;
 }
 
-/* 태블릿 반응형 (1200px 이하) */
+/* 반응형 디자인 */
 @media (max-width: 1200px) {
   .contact_container {
     padding: 40px 40px;
@@ -652,7 +639,7 @@
   }
 
   .contact_title h2 {
-    font-size: 3.5rem;
+    font-size: 56px;
   }
 
   .contact_qr_code {
@@ -666,10 +653,9 @@
   }
 }
 
-/* 태블릿 반응형 (1024px 이하) */
 @media (max-width: 1024px) {
   .contact_container {
-    padding: 35px 35px;
+    padding: 35px 50px;
   }
 
   .contact_content {
@@ -677,15 +663,15 @@
   }
 
   .contact_title h2 {
-    font-size: 3.2rem;
+    font-size: 51px;
   }
 
   .contact_subtitle {
-    font-size: 1.15rem;
+    font-size: 18px;
   }
 
   .contact_item {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
 
   .contact_qr_code {
@@ -697,9 +683,16 @@
     width: 170px;
     height: 170px;
   }
+
+  .contact_info {
+    align-items: flex-start;
+  }
+
+  .contact_details {
+    align-items: flex-start;
+  }
 }
 
-/* 모바일 반응형 (768px 이하) */
 @media (max-width: 768px) {
   .contact_container {
     padding: 30px 30px;
@@ -725,15 +718,15 @@
   }
 
   .contact_title h2 {
-    font-size: 2.8rem;
+    font-size: 45px;
   }
 
   .contact_subtitle {
-    font-size: 1.1rem;
+    font-size: 18px;
   }
 
   .contact_item {
-    font-size: 1.2rem;
+    font-size: 19px;
     justify-content: center;
   }
 
@@ -757,7 +750,7 @@
   }
 
   .contact_thank_you p {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 
   .contact_blur_1 {
@@ -789,7 +782,6 @@
   }
 }
 
-/* 작은 모바일 반응형 (480px 이하) */
 @media (max-width: 480px) {
   .contact_container {
     padding: 20px 20px;
@@ -804,20 +796,20 @@
   }
 
   .contact_title h2 {
-    font-size: 2.2rem;
+    font-size: 35px;
   }
 
   .contact_subtitle {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .contact_item {
-    font-size: 1.1rem;
+    font-size: 18px;
     gap: 15px;
   }
 
   .contact_icon {
-    font-size: 1.5rem;
+    font-size: 24px;
     width: 35px;
   }
 
@@ -837,7 +829,7 @@
 
   .contact_mail_btn {
     padding: 14px 28px;
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .contact_qr_code {
@@ -851,7 +843,7 @@
   }
 
   .contact_thank_you p {
-    font-size: 1.3rem;
+    font-size: 21px;
   }
 
   .contact_blur_1 {
@@ -888,20 +880,19 @@
   }
 
   .contact_form_header h3 {
-    font-size: 2rem;
+    font-size: 32px;
   }
 
   .contact_form_header p {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .contact_form_submit {
     padding: 15px 30px;
-    font-size: 1rem;
+    font-size: 16px;
   }
 }
 
-/* 매우 작은 모바일 반응형 (360px 이하) */
 @media (max-width: 360px) {
   .contact_container {
     padding: 15px 15px;
@@ -912,20 +903,20 @@
   }
 
   .contact_title h2 {
-    font-size: 1.8rem;
+    font-size: 29px;
   }
 
   .contact_subtitle {
-    font-size: 0.9rem;
+    font-size: 14px;
   }
 
   .contact_item {
-    font-size: 1rem;
+    font-size: 16px;
     gap: 12px;
   }
 
   .contact_icon {
-    font-size: 1.3rem;
+    font-size: 21px;
     width: 30px;
   }
 
@@ -941,7 +932,7 @@
 
   .contact_mail_btn {
     padding: 12px 24px;
-    font-size: 0.9rem;
+    font-size: 14px;
   }
 
   .contact_qr_code {
@@ -955,6 +946,6 @@
   }
 
   .contact_thank_you p {
-    font-size: 1.1rem;
+    font-size: 18px;
   }
 }

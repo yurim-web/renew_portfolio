@@ -1,3 +1,14 @@
+// 이미지 import
+import addmoaWebImg from "../assets/design_img/addmoa_web.png";
+import makeupWebImg from "../assets/design_img/makeup_web.png";
+import lhWebImg from "../assets/design_img/lh_web.png";
+import colorAppImg from "../assets/design_img/color_app.png";
+import elecAppImg from "../assets/design_img/elec_app.png";
+import sunAppImg from "../assets/design_img/sun_app.png";
+import banner1Img from "../assets/design_img/banner_1_1.png";
+import banner2Img from "../assets/design_img/banner_2.png";
+import banner3Img from "../assets/design_img/banner_3.png";
+
 export interface WebDesignProject {
   id: number;
   title: string;
@@ -14,7 +25,7 @@ export const web_design_projects: WebDesignProject[] = [
     title: "Addmoa 기업 홈페이지",
     description:
       "남색 계열의 안정감을 기반으로 브랜드 신뢰성을 강화한 기업 웹사이트 디자인",
-    image: require("../assets/design_img/addmoa_web.png"),
+    image: addmoaWebImg,
     tech_stack: [
       "#기업웹사이트",
       "#신뢰감디자인",
@@ -30,7 +41,7 @@ export const web_design_projects: WebDesignProject[] = [
     title: "뷰티 정보 홈페이지",
     description:
       "따뜻한 갈색 톤을 활용해 전문성과 친근함을 동시에 전달한 반응형 뷰티 정보 사이트",
-    image: require("../assets/design_img/makeup_web.png"),
+    image: makeupWebImg,
     tech_stack: [
       "#뷰티웹디자인",
       "#갈색톤",
@@ -46,7 +57,7 @@ export const web_design_projects: WebDesignProject[] = [
     title: "LH 전세임대 안내 사이트",
     description:
       "연두·파랑 컬러를 조화롭게 적용해 공공기관 특유의 신뢰성과 접근성을 높인 웹사이트 디자인",
-    image: require("../assets/design_img/lh_web.png"),
+    image: lhWebImg,
     tech_stack: [
       "#공공기관웹사이트",
       "#연두파랑톤",
@@ -62,7 +73,7 @@ export const web_design_projects: WebDesignProject[] = [
     title: "퍼스널 컬러 테스트 앱",
     description:
       "파스텔 톤의 감각적인 UI로 사용자 경험을 향상시킨 퍼스널 컬러 진단 앱 디자인",
-    image: require("../assets/design_img/color_app.png"),
+    image: colorAppImg,
     tech_stack: [
       "#파스텔톤디자인",
       "#감각적인UI",
@@ -78,7 +89,7 @@ export const web_design_projects: WebDesignProject[] = [
     title: "전기요금 계산기 앱",
     description:
       "직관적인 그래프와 카드형 레이아웃으로 정보 가독성을 극대화한 전기요금 계산 앱 디자인",
-    image: require("../assets/design_img/elec_app.png"),
+    image: elecAppImg,
     tech_stack: [
       "#심플UI",
       "#직관적인디자인",
@@ -94,7 +105,7 @@ export const web_design_projects: WebDesignProject[] = [
     title: "햇살론 대출 안내 앱",
     description:
       "오렌지 톤의 따뜻한 감성을 담아 서민 금융 상품을 신뢰감 있게 안내하는 금융 앱 디자인",
-    image: require("../assets/design_img/sun_app.png"),
+    image: sunAppImg,
     tech_stack: [
       "#오렌지톤디자인",
       "#금융앱UI",
@@ -110,7 +121,7 @@ export const web_design_projects: WebDesignProject[] = [
     title: "블로그 게시글 배너 디자인",
     description:
       "시각적 집중도를 높여 콘텐츠 몰입과 클릭 유도를 강화한 블로그 포스팅용 배너 디자인",
-    image: require("../assets/design_img/banner_1_1.png"),
+    image: banner1Img,
     tech_stack: [
       "#배너디자인",
       "#콘텐츠강화",
@@ -126,7 +137,7 @@ export const web_design_projects: WebDesignProject[] = [
     title: "온라인 광고 배너 디자인",
     description:
       "브랜드 인지도를 높이고 전환율 향상을 목표로 제작된 온라인 프로모션 배너 디자인",
-    image: require("../assets/design_img/banner_2.png"),
+    image: banner2Img,
     tech_stack: [
       "#광고배너디자인",
       "#프로모션용",
@@ -142,7 +153,7 @@ export const web_design_projects: WebDesignProject[] = [
     title: "구글 애즈 배너 디자인",
     description:
       "명확한 메시지와 임팩트 있는 비주얼로 광고 효과를 극대화한 구글 애즈 캠페인 배너",
-    image: require("../assets/design_img/banner_3.png"),
+    image: banner3Img,
     tech_stack: [
       "#구글애즈",
       "#광고배너",

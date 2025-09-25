@@ -1,21 +1,6 @@
-// ABOUT ME 섹션 인터랙션
+// 메인 페이지 인터랙션 처리
 document.addEventListener("DOMContentLoaded", function () {
-    // 더보기 버튼 클릭 이벤트
-    const viewMoreBtn = document.querySelector(".view_more_btn");
-    if (viewMoreBtn) {
-      viewMoreBtn.addEventListener("click", function () {
-        // 여기에 더보기 기능을 구현할 수 있습니다
-        // 예: 모달 창 열기, 추가 내용 표시 등
-        console.log("자기소개 더보기 클릭됨");
-  
-        // 임시로 알림 표시
-        alert(
-          "자기소개 더보기 기능입니다. 필요에 따라 모달이나 추가 페이지로 연결할 수 있습니다."
-        );
-      });
-    }
-  
-    // 스킬 로고 호버 효과 강화
+    // 스킬 로고 호버 효과
     const skillLogos = document.querySelectorAll(".skill_logo");
     skillLogos.forEach((logo) => {
       logo.addEventListener("mouseenter", function () {
@@ -72,15 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
       skillObserver.observe(logo);
     });
   
-    // 프로필 이미지 클릭 이벤트 (선택사항)
-    const profileImg = document.querySelector(".profile_img");
-    if (profileImg) {
-      profileImg.addEventListener("click", function () {
-        // 이미지 클릭 시 확대 보기 등의 기능
-        console.log("프로필 이미지 클릭됨");
-      });
-    }
-  
     // 정보 항목 호버 효과
     const infoItems = document.querySelectorAll(".info_list li");
     infoItems.forEach((item) => {
@@ -94,10 +70,10 @@ document.addEventListener("DOMContentLoaded", function () {
         this.style.transform = "translateX(0)";
       });
     });
-  });
+});
   
-  // 페이지 로드 시 부드러운 페이드인 효과
-  window.addEventListener("load", function () {
+// 페이지 로드 시 부드러운 페이드인 효과
+window.addEventListener("load", function () {
     const aboutSection = document.querySelector(".about_section");
     if (aboutSection) {
       aboutSection.style.opacity = "0";
@@ -107,5 +83,5 @@ document.addEventListener("DOMContentLoaded", function () {
         aboutSection.style.opacity = "1";
       }, 300);
     }
-  });
+});
   

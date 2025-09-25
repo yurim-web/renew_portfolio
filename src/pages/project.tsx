@@ -17,9 +17,9 @@ const Project = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // 화면 크기 확인 (태블릿도 포함)
+    // 화면 크기 확인 (태블릿 가로 모드도 포함)
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 1024);
+      setIsMobile(window.innerWidth <= 1200);
     };
 
     checkMobile();
@@ -34,22 +34,24 @@ const Project = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     // 제목 애니메이션
-    gsap.fromTo(
-      titleRef.current,
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: titleRef.current,
-          start: "top 100%", // Skills 섹션이 완전히 지나간 후 시작
-          end: "bottom 0%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
+    if (titleRef.current) {
+      gsap.fromTo(
+        titleRef.current,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: titleRef.current,
+            start: "top 100%", // Skills 섹션이 완전히 지나간 후 시작
+            end: "bottom 0%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }
 
     // 카드들 애니메이션
     cardsRef.current.forEach((card, index) => {
@@ -220,7 +222,7 @@ const Project = () => {
                     ))}
                   </ul>
                   <div className="work_cursor_icon">
-                    <img src="/hover_icn.svg" alt="hover cursor" />
+                    <img src={`${process.env.PUBLIC_URL}/hover_icn.svg`} alt="hover cursor" />
                     <span className="work_cursor_text">click!</span>
                   </div>
                 </div>
@@ -278,7 +280,7 @@ const Project = () => {
                   ))}
                 </ul>
                 <div className="work_cursor_icon">
-                  <img src="/hover_icn.svg" alt="hover cursor" />
+                  <img src={`${process.env.PUBLIC_URL}/hover_icn.svg`} alt="hover cursor" />
                   <span className="work_cursor_text">click!</span>
                 </div>
               </div>

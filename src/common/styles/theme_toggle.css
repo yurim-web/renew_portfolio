@@ -101,6 +101,14 @@
   color: #ffffff;
 }
 
+@media (max-width: 1024px) {
+  .theme_toggle_container {
+    bottom: 20px;
+    right: 0px;
+  }
+}
+
+/*  */
 /* 모바일 반응형 - 모든 모바일에서 숨기기 */
 @media (max-width: 768px) {
   .theme_toggle_container {

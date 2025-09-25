@@ -1,9 +1,9 @@
 import '../styles/main_section.css';
 import '../utils/main.js';
+
 const Main = () => {
     return (  
         <main className="main">
-          {/* <!-- 메인 소개 섹션 --> */}
           <section id="main" className="main_section">
             <div className="blur blur_1"></div>
             <div className="blur blur_2"></div>

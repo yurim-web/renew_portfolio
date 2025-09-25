@@ -15,25 +15,27 @@ const Contact: React.FC = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     // 전체 컨테이너 애니메이션 - 아래에서 위로 자연스럽게 올라오기
-    gsap.fromTo(
-      ".contact_container",
-      {
-        opacity: 0,
-        y: 80,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
+    if (sectionRef.current) {
+      gsap.fromTo(
+        ".contact_container",
+        {
+          opacity: 0,
+          y: 80,
         },
-      }
-    );
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -131,7 +133,7 @@ const Contact: React.FC = () => {
                 >
                   <div className="contact_qr_code">
                     <img
-                      src="/assets/kakao.jpg"
+                      src="./assets/kakao.jpg"
                       alt="카카오톡 QR 코드"
                       className="contact_qr_image"
                     />

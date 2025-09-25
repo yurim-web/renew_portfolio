@@ -1,4 +1,4 @@
-/* 헤더 스타일 코드 */
+/* 헤더 컴포넌트 스타일 */
 .header_container {
   background-color: transparent;
   backdrop-filter: none;
@@ -13,19 +13,16 @@
   box-shadow: none;
 }
 
-/* 다크모드 헤더 스타일 */
 [data-theme="dark"] .header_container {
   color: #ffffff;
 }
 
-/* 스크롤 시 헤더 스타일 */
 .header_scrolled {
   background-color: rgba(255, 255, 255, 0.15) !important;
   backdrop-filter: blur(6px) !important;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03) !important;
 }
 
-/* 다크모드 스크롤 시 헤더 스타일 - 블러 효과 더 연하게 */
 [data-theme="dark"] .header_scrolled {
   background-color: rgba(26, 26, 26, 0.1) !important;
   backdrop-filter: blur(10px) !important;
@@ -41,28 +38,24 @@
   padding: 0px 50px;
 }
 
-/* 네비게이션 로고 */
 .nav_logo {
   font-weight: 700;
   letter-spacing: 0.5px;
   font-size: 22px;
 }
 
-/* 네비게이션 오른쪽 영역 */
 .nav_right {
   display: flex;
   align-items: center;
   gap: 40px;
 }
 
-/* 네비게이션 메뉴 */
 .nav_menu {
   display: flex;
   gap: 40px;
   align-items: center;
 }
 
-/* 헤더 소셜 링크 */
 .header_social {
   display: flex;
   align-items: center;
@@ -91,7 +84,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* 다크모드 깃허브 링크 */
 [data-theme="dark"] .github_link {
   background: transparent;
   color: #ffffff;
@@ -119,7 +111,6 @@
   transition: color 0.3s ease;
 }
 
-/* 다크모드 네비게이션 링크 */
 [data-theme="dark"] .nav_link {
   color: #ffffff;
 }
@@ -127,7 +118,8 @@
 [data-theme="dark"] .nav_link:hover {
   color: #cccccc;
 }
-/* 햄버거 버튼 스타일 */
+
+/* 모바일 메뉴 */
 .hamburger_button {
   display: none;
   flex-direction: column;
@@ -149,12 +141,10 @@
   transform-origin: center;
 }
 
-/* 다크모드 햄버거 버튼 */
 [data-theme="dark"] .hamburger_line {
   background-color: #ffffff;
 }
 
-/* 모바일 메뉴 스타일 */
 .mobile_menu {
   position: fixed;
   top: 0;
@@ -170,7 +160,6 @@
   justify-content: center;
 }
 
-/* 다크모드 모바일 메뉴 */
 [data-theme="dark"] .mobile_menu {
   background-color: rgba(26, 26, 26, 0.95);
 }
@@ -202,7 +191,6 @@
   color: #666666;
 }
 
-/* 다크모드 모바일 네비게이션 링크 */
 [data-theme="dark"] .mobile_nav_link {
   color: #ffffff;
 }
@@ -211,7 +199,6 @@
   color: #cccccc;
 }
 
-/* 모바일 소셜 링크 */
 .mobile_social {
   margin-top: 20px;
   padding-top: 20px;
@@ -255,14 +242,14 @@
   transform: scale(1.1);
 }
 
-/* 모바일 + 태블릿 스타일 추가 */
+/* 반응형 디자인 */
 @media (max-width: 1024px) {
   .header_container {
-    padding: 20px 0;
+    padding: 30px 0;
   }
 
   .nav {
-    padding: 0px 15px;
+    padding: 0px 25px;
     max-width: 100%;
   }
 
@@ -292,7 +279,6 @@
   }
 }
 
-/* 작은 모바일 화면 */
 @media (max-width: 480px) {
   .header_container {
     padding: 20px 0;
@@ -317,7 +303,6 @@
   }
 }
 
-/* 매우 작은 화면 */
 @media (max-width: 360px) {
   .nav_logo {
     font-size: 14px;

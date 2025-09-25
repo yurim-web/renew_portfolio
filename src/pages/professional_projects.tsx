@@ -13,22 +13,24 @@ const ProfessionalProjects = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     // 제목 애니메이션
-    gsap.fromTo(
-      titleRef.current,
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: titleRef.current,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
+    if (titleRef.current) {
+      gsap.fromTo(
+        titleRef.current,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: titleRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }
 
     // 프로젝트 카드들 애니메이션
     projectsRef.current.forEach((project, index) => {
@@ -147,6 +149,16 @@ const ProfessionalProjects = () => {
                       className="professional_project_button professional_project_button_demo"
                     >
                       Landing Page
+                    </a>
+                  )}
+                  {project.guide_link && (
+                    <a
+                      href={project.guide_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="professional_project_button professional_project_button_guide"
+                    >
+                      Guide
                     </a>
                   )}
                 </div>

@@ -31,6 +31,7 @@ export interface ProfessionalProject {
   view_link?: string;
   github_link?: string;
   demo_link?: string;
+  guide_link?: string;
 }
 
 export const portfolio_sections: PortfolioItem[] = [
@@ -50,13 +51,13 @@ export const portfolio_sections: PortfolioItem[] = [
     link: "https://yurim-web.github.io/groundplace_clone_page/",
     github_link: "https://github.com/yurim-web/grandplace_home",
     tech_stack: [
-      { name: "HTML", icon: "/assets/skill_img/html.png" },
-      { name: "CSS", icon: "/assets/skill_img/css.png" },
-      { name: "Javascript", icon: "/assets/skill_img/javascript.png" },
-      { name: "Gsap.js", icon: "/assets/skill_img/gsap.png" },
-      { name: "React", icon: "/assets/skill_img/react.png" },
+      { name: "HTML", icon: `${process.env.PUBLIC_URL}/assets/skill_img/html.png` },
+      { name: "CSS", icon: `${process.env.PUBLIC_URL}/assets/skill_img/css.png` },
+      { name: "Javascript", icon: `${process.env.PUBLIC_URL}/assets/skill_img/javascript.png` },
+      { name: "Gsap.js", icon: `${process.env.PUBLIC_URL}/assets/skill_img/gsap.png` },
+      { name: "React", icon: `${process.env.PUBLIC_URL}/assets/skill_img/react.png` },
     ],
-    image: "/assets/portfolio_img/groundplace_img.png",
+    image: `${process.env.PUBLIC_URL}/assets/portfolio_img/groundplace_img.png`,
   },
   {
     id: 2,
@@ -73,12 +74,12 @@ export const portfolio_sections: PortfolioItem[] = [
     link: "https://yurim-web.github.io/imele_clone_renew/",
     github_link: "https://github.com/yurim-web/imele_clone_renew",
     tech_stack: [
-      { name: "HTML", icon: "/assets/skill_img/html.png" },
-      { name: "CSS", icon: "/assets/skill_img/css.png" },
-      { name: "Javascript", icon: "/assets/skill_img/javascript.png" },
-      { name: "Gsap.js", icon: "/assets/skill_img/gsap.png" },
+      { name: "HTML", icon: `${process.env.PUBLIC_URL}/assets/skill_img/html.png` },
+      { name: "CSS", icon: `${process.env.PUBLIC_URL}/assets/skill_img/css.png` },
+      { name: "Javascript", icon: `${process.env.PUBLIC_URL}/assets/skill_img/javascript.png` },
+      { name: "Gsap.js", icon: `${process.env.PUBLIC_URL}/assets/skill_img/gsap.png` },
     ],
-    image: "/assets/portfolio_img/imele_img.png",
+    image: `${process.env.PUBLIC_URL}/assets/portfolio_img/imele_img.png`,
   },
 
   {
@@ -96,12 +97,12 @@ export const portfolio_sections: PortfolioItem[] = [
     link: "https://yurim-web.github.io/YSL_portfolio_/",
     github_link: "https://github.com/yurim-web/YSL_portfolio_",
     tech_stack: [
-      { name: "HTML", icon: "/assets/skill_img/html.png" },
-      { name: "CSS", icon: "/assets/skill_img/css.png" },
-      { name: "Javascript", icon: "/assets/skill_img/javascript.png" },
-      { name: "Gsap.js", icon: "/assets/skill_img/gsap.png" },
+      { name: "HTML", icon: `${process.env.PUBLIC_URL}/assets/skill_img/html.png` },
+      { name: "CSS", icon: `${process.env.PUBLIC_URL}/assets/skill_img/css.png` },
+      { name: "Javascript", icon: `${process.env.PUBLIC_URL}/assets/skill_img/javascript.png` },
+      { name: "Gsap.js", icon: `${process.env.PUBLIC_URL}/assets/skill_img/gsap.png` },
     ],
-    image: "/assets/portfolio_img/ysl_img.png",
+    image: `${process.env.PUBLIC_URL}/assets/portfolio_img/ysl_img.png`,
   },
 
   {
@@ -119,14 +120,14 @@ export const portfolio_sections: PortfolioItem[] = [
     link: "https://movie-api-portfolio.vercel.app/",
     github_link: "https://github.com/yurim-web/movie_api_portfolio",
     tech_stack: [
-      { name: "HTML", icon: "/assets/skill_img/html.png" },
-      { name: "CSS", icon: "/assets/skill_img/css.png" },
-      { name: "React", icon: "/assets/skill_img/react.png" },
-      { name: "Next.js", icon: "/assets/skill_img/next.png" },
-      { name: "Javascript", icon: "/assets/skill_img/javascript.png" },
-      { name: "API", icon: "/assets/skill_img/api.jpg" },
+      { name: "HTML", icon: `${process.env.PUBLIC_URL}/assets/skill_img/html.png` },
+      { name: "CSS", icon: `${process.env.PUBLIC_URL}/assets/skill_img/css.png` },
+      { name: "React", icon: `${process.env.PUBLIC_URL}/assets/skill_img/react.png` },
+      { name: "Next.js", icon: `${process.env.PUBLIC_URL}/assets/skill_img/next.png` },
+      { name: "Javascript", icon: `${process.env.PUBLIC_URL}/assets/skill_img/javascript.png` },
+      { name: "API", icon: `${process.env.PUBLIC_URL}/assets/skill_img/api.jpg` },
     ],
-    image: "/assets/portfolio_img/waveyy_img.png",
+    image: `${process.env.PUBLIC_URL}/assets/portfolio_img/waveyy_img.png`,
   },
 
   {
@@ -144,13 +145,13 @@ export const portfolio_sections: PortfolioItem[] = [
     link: "https://yurim-web.github.io/todolist/",
     github_link: "https://github.com/yurim-web/TODOLIST_code",
     tech_stack: [
-      { name: "HTML", icon: "/assets/skill_img/html.png" },
-      { name: "CSS", icon: "/assets/skill_img/css.png" },
-      { name: "React", icon: "/assets/skill_img/react.png" },
-      { name: "Javascript", icon: "/assets/skill_img/javascript.png" },
-      { name: "API", icon: "/assets/skill_img/api.jpg" },
+      { name: "HTML", icon: `${process.env.PUBLIC_URL}/assets/skill_img/html.png` },
+      { name: "CSS", icon: `${process.env.PUBLIC_URL}/assets/skill_img/css.png` },
+      { name: "React", icon: `${process.env.PUBLIC_URL}/assets/skill_img/react.png` },
+      { name: "Javascript", icon: `${process.env.PUBLIC_URL}/assets/skill_img/javascript.png` },
+      { name: "API", icon: `${process.env.PUBLIC_URL}/assets/skill_img/api.jpg` },
     ],
-    image: "/assets/portfolio_img/todolist_img.png",
+    image: `${process.env.PUBLIC_URL}/assets/portfolio_img/todolist_img.png`,
   },
 
   {
@@ -168,12 +169,12 @@ export const portfolio_sections: PortfolioItem[] = [
     link: "https://yurim-web.github.io/apple_clone_page2/",
     github_link: "https://github.com/yurim-web/apple_web_clone_renew",
     tech_stack: [
-      { name: "HTML", icon: "/assets/skill_img/html.png" },
-      { name: "CSS", icon: "/assets/skill_img/css.png" },
-      { name: "React", icon: "/assets/skill_img/react.png" },
-      { name: "Javascript", icon: "/assets/skill_img/javascript.png" },
+      { name: "HTML", icon: `${process.env.PUBLIC_URL}/assets/skill_img/html.png` },
+      { name: "CSS", icon: `${process.env.PUBLIC_URL}/assets/skill_img/css.png` },
+      { name: "React", icon: `${process.env.PUBLIC_URL}/assets/skill_img/react.png` },
+      { name: "Javascript", icon: `${process.env.PUBLIC_URL}/assets/skill_img/javascript.png` },
     ],
-    image: "/assets/portfolio_img/apple_img.png",
+    image: `${process.env.PUBLIC_URL}/assets/portfolio_img/apple_img.png`,
   },
 ];
 
@@ -185,14 +186,14 @@ export const professional_projects: ProfessionalProject[] = [
     period: "2025.04 – 2024.07",
     role: "Frontend Developer",
     tech_stack: [
-      { name: "HTML", icon: "/assets/skill_img/html.png" },
-      { name: "CSS", icon: "/assets/skill_img/css.png" },
-      { name: "JavaScript", icon: "/assets/skill_img/javascript.png" },
-      { name: "Cafe24", icon: "/assets/skill_img/cafe24.png" },
+      { name: "HTML", icon: `${process.env.PUBLIC_URL}/assets/skill_img/html.png` },
+      { name: "CSS", icon: `${process.env.PUBLIC_URL}/assets/skill_img/css.png` },
+      { name: "JavaScript", icon: `${process.env.PUBLIC_URL}/assets/skill_img/javascript.png` },
+      { name: "Cafe24", icon: `${process.env.PUBLIC_URL}/assets/skill_img/cafe24.png` },
     ],
     description:
       "Herzion Shop은 프로젝트 최종 결과물로, 프론트엔드 개발을 담당했습니다. 사용자 경험 최적화와 성능 향상에 중점을 두었습니다.",
-    image: "/assets/professional_projects/herzion_banner.jpg",
+    image: `${process.env.PUBLIC_URL}/assets/professional_projects/herzion_banner.jpg`,
     view_link: "https://herzionshop.cafe24.com/",
     github_link: "https://github.com/yurim-web/aribio_final_kor",
   },
@@ -202,16 +203,17 @@ export const professional_projects: ProfessionalProject[] = [
     period: "2025.05 – 2025.08",
     role: "Frontend Developer",
     tech_stack: [
-      { name: "HTML", icon: "/assets/skill_img/html.png" },
-      { name: "CSS", icon: "/assets/skill_img/css.png" },
-      { name: "JavaScript", icon: "/assets/skill_img/javascript.png" },
-      { name: "React", icon: "/assets/skill_img/react.png" },
+      { name: "HTML", icon: `${process.env.PUBLIC_URL}/assets/skill_img/html.png` },
+      { name: "CSS", icon: `${process.env.PUBLIC_URL}/assets/skill_img/css.png` },
+      { name: "JavaScript", icon: `${process.env.PUBLIC_URL}/assets/skill_img/javascript.png` },
+      { name: "React", icon: `${process.env.PUBLIC_URL}/assets/skill_img/react.png` },
     ],
     description:
       "RX. 회사 내부 사이트 개발을 담당했습니다. 사용자 경험 최적화와 성능 향상에 중점을 두었습니다.",
-    image: "/assets/professional_projects/rx_banner.png",
+    image: `${process.env.PUBLIC_URL}/assets/professional_projects/rx_banner.png`,
     view_link: "https://mxrx.dev/",
     demo_link: "https://markx.dev/",
+    guide_link: "https://markx.dev/guide_main",
   },
   {
     id: 3,
@@ -219,14 +221,14 @@ export const professional_projects: ProfessionalProject[] = [
     period: "2024.07 – 2024.08",
     role: "Frontend Developer",
     tech_stack: [
-      { name: "HTML", icon: "/assets/skill_img/html.png" },
-      { name: "CSS", icon: "/assets/skill_img/css.png" },
-      { name: "JavaScript", icon: "/assets/skill_img/javascript.png" },
-      { name: "Cafe24", icon: "/assets/skill_img/cafe24.png" },
+      { name: "HTML", icon: `${process.env.PUBLIC_URL}/assets/skill_img/html.png` },
+      { name: "CSS", icon: `${process.env.PUBLIC_URL}/assets/skill_img/css.png` },
+      { name: "JavaScript", icon: `${process.env.PUBLIC_URL}/assets/skill_img/javascript.png` },
+      { name: "Cafe24", icon: `${process.env.PUBLIC_URL}/assets/skill_img/cafe24.png` },
     ],
     description:
       "스웨디시 뉴트라 쇼핑몰 개발을 담당했습니다. 사용자 경험 최적화와 성능 향상에 중점을 두었습니다.",
-    image: "/assets/professional_projects/swedish_banner.jpg",
+    image: `${process.env.PUBLIC_URL}/assets/professional_projects/swedish_banner.jpg`,
     view_link: "https://swedishnutra.kr/",
     github_link: "https://github.com/yurim-web/swedishnutra_code",
   },

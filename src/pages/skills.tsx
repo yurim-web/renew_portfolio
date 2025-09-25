@@ -14,7 +14,6 @@ const Skills = () => {
   };
 
   useEffect(() => {
-    // 애니메이션 제거 - 바로 표시
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
@@ -25,10 +24,12 @@ const Skills = () => {
       <h1 ref={titleRef} className="strength_title">
         Strength.
       </h1>
-      <StrenthToggleBox
-        activeSkill={activeSkill}
-        onSkillChange={handleSkillChange}
-      />
+      <div className="strength_toggle_wrapper">
+        <StrenthToggleBox
+          activeSkill={activeSkill}
+          onSkillChange={handleSkillChange}
+        />
+      </div>
       <StrengthContentsBox activeSkill={activeSkill} />
     </article>
   );
