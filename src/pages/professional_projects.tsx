@@ -101,8 +101,8 @@ const ProfessionalProjects = () => {
                         key={techIndex}
                         className="professional_project_tech_pill"
                       >
-                        <img 
-                          src={tech.icon} 
+                        <img
+                          src={tech.icon}
                           alt={tech.name}
                           className="professional_project_tech_icon"
                         />
@@ -146,7 +146,7 @@ const ProfessionalProjects = () => {
                       rel="noopener noreferrer"
                       className="professional_project_button professional_project_button_demo"
                     >
-                      Demo
+                      Landing Page
                     </a>
                   )}
                 </div>

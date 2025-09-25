@@ -6,6 +6,9 @@
   flex-direction: column;
   gap: 30px;
   padding: 130px 0px;
+  box-sizing: border-box; /* 패딩 포함한 너비 계산 */
+  position: relative; /* 상대적 위치 설정 */
+  z-index: 2; /* Project 섹션보다 위에 표시 */
 }
 
 .strength_title {
@@ -15,6 +18,12 @@
     BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+/* 다크모드 제목 */
+[data-theme="dark"] .strength_title {
+  color: #ffffff;
 }
 
 .strength_toggle_container {
@@ -24,8 +33,8 @@
   gap: 15px;
   justify-content: flex-start;
   align-items: center;
-
   margin: 0 auto;
+  box-sizing: border-box; /* 패딩 포함한 너비 계산 */
 }
 
 .toggle_wrapper {
@@ -48,6 +57,8 @@
   white-space: nowrap;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   min-width: 80px;
+  max-width: 100%; /* 최대 너비 제한 */
+  word-break: keep-all; /* 한국어 텍스트 줄바꿈 최적화 */
 }
 
 .strength_toggle:hover {
@@ -66,12 +77,36 @@
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
 }
 
+/* 다크모드 토글 버튼 */
+[data-theme="dark"] .strength_toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .strength_toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #8b9cff;
+  color: #8b9cff;
+  box-shadow: 0 8px 25px rgba(139, 156, 255, 0.2);
+}
+
+[data-theme="dark"] .strength_toggle.active {
+  background-color: #8b9cff;
+  color: white;
+  border-color: #8b9cff;
+  box-shadow: 0 8px 25px rgba(139, 156, 255, 0.4);
+}
+
 .strength_content_container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   perspective: 1200px;
   perspective-origin: center center;
+  width: 100%;
+  box-sizing: border-box; /* 패딩 포함한 너비 계산 */
 }
 
 .strength_card_wrapper {
@@ -92,12 +127,16 @@
   border: 2px solid #667eea;
   border-radius: 20px;
   transition: all 0.5s ease;
-  padding: 40px 30px;
+  padding: 30px 25px; /* 패딩 축소 */
   position: relative;
   margin-top: 30px;
   transform-style: preserve-3d;
   backface-visibility: hidden;
   will-change: transform;
+  background: rgba(255, 255, 255, 0.05);
+  width: 100%;
+  box-sizing: border-box; /* 패딩 포함한 너비 계산 */
+  overflow: visible; /* 텍스트 잘림 방지 */
 }
 .content-container:hover {
   background: linear-gradient(
@@ -110,19 +149,48 @@
   transform: translateY(-5px) rotateX(5deg);
   box-shadow: 0 10px 30px rgba(255, 182, 193, 0.25);
 }
+
+/* 다크모드 콘텐츠 컨테이너 */
+[data-theme="dark"] .content-container {
+  border-color: #8b9cff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .content-container:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 156, 255, 0.2) 0%,
+    rgba(139, 156, 255, 0.15) 50%,
+    rgba(139, 156, 255, 0.1) 100%
+  );
+  color: #b0c4ff;
+  box-shadow: 0 10px 30px rgba(139, 156, 255, 0.3);
+}
 .content_box {
   display: flex;
-  gap: 10%;
+  gap: 20px; /* 픽셀 단위로 변경하여 안정적인 간격 */
   align-items: center;
   line-height: 1.7;
   font-size: 18px;
   color: #333333;
   font-weight: 500;
+  transition: color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box; /* 패딩 포함한 너비 계산 */
+  word-break: keep-all; /* 한국어 텍스트 줄바꿈 최적화 */
+  overflow-wrap: break-word; /* 긴 단어 줄바꿈 */
+  hyphens: auto; /* 자동 하이픈 */
+}
+
+/* 다크모드 콘텐츠 박스 */
+[data-theme="dark"] .content_box {
+  color: #e0e0e0;
 }
 .content_img {
-  width: 150px;
-  height: 150px;
+  width: 120px; /* 이미지 크기 축소 */
+  height: 120px; /* 이미지 크기 축소 */
   object-fit: contain;
+  flex-shrink: 0; /* 이미지 크기 고정 */
 }
 .content_title {
   background-color: #667eea;
@@ -135,6 +203,61 @@
   top: -20px;
   font-size: 20px;
   font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* 다크모드 콘텐츠 제목 */
+[data-theme="dark"] .content_title {
+  background-color: #8b9cff;
+  border-color: #8b9cff;
+}
+
+/* 태블릿 반응형 (1024px 이하) */
+@media screen and (max-width: 1024px) {
+  .strength {
+    padding: 100px 30px;
+    gap: 25px;
+  }
+
+  .strength_title {
+    font-size: 42px;
+  }
+
+  .strength_toggle_container {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .strength_toggle {
+    padding: 12px 20px;
+    font-size: 14px;
+    min-width: 90px;
+  }
+
+  .strength_content_container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .content-container {
+    padding: 25px 20px;
+    margin-top: 25px;
+  }
+
+  .content_box {
+    font-size: 16px;
+    gap: 18px;
+  }
+
+  .content_img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .content_title {
+    font-size: 18px;
+    width: 120px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -145,9 +268,10 @@
 
   .strength {
     width: 100%;
-    padding: 0px 20px;
+    padding: 80px 20px;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box; /* 패딩 포함한 너비 계산 */
   }
 
   .strength_title {
@@ -161,6 +285,8 @@
     flex-wrap: wrap;
     gap: 12px;
     justify-content: center;
+    overflow: hidden; /* 모든 스크롤 방지 */
+    box-sizing: border-box; /* 패딩 포함한 너비 계산 */
   }
   .strength_toggle {
     padding: 10px 18px;
@@ -171,15 +297,22 @@
   .strength_content_container {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box; /* 패딩 포함한 너비 계산 */
   }
 
   .content-container {
     padding: 30px 20px;
     margin-top: 25px;
-    width: 80%;
+    width: 100%; /* 전체 너비 사용 */
+    overflow: visible; /* 텍스트 잘림 방지 */
+    box-sizing: border-box; /* 패딩 포함한 너비 계산 */
   }
   .content_box {
     font-size: 12px;
+    gap: 15px; /* 모바일에서 간격 축소 */
+    word-break: keep-all; /* 한국어 텍스트 줄바꿈 최적화 */
+    overflow-wrap: break-word; /* 긴 단어 줄바꿈 */
+    hyphens: auto; /* 자동 하이픈 */
   }
   .content_img {
     width: 90px;

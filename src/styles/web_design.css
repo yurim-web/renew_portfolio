@@ -11,7 +11,7 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 150px 20px;
 }
 
 .web_design_title {
@@ -120,6 +120,12 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* 다크모드에서 backdrop-filter 효과 더 연하게 */
+[data-theme="dark"] .web_design_card_overlay {
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.3);
+}
+
 .web_design_card:hover .web_design_click_hint {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
@@ -200,22 +206,48 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* 모바일 반응형 */
+/* 태블릿 반응형 (1024px 이하) */
 @media screen and (max-width: 1024px) {
-  .web_design_section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .web_design_container {
+    padding: 120px 30px;
   }
 
   .web_design_title {
-    font-size: 40px;
+    font-size: 42px;
     margin-bottom: 60px;
   }
 
   .web_design_grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+
+  .web_design_card_image_container {
+    height: 220px;
+  }
+
+  .web_design_card_title {
+    font-size: 22px;
+  }
+
+  .web_design_card_description {
+    font-size: 14px;
+  }
+}
+
+/* 모바일 반응형 (768px 이하) */
+@media screen and (max-width: 768px) {
+  .web_design_container {
+    padding: 100px 20px;
+  }
+
+  .web_design_title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+
+  .web_design_grid {
+    grid-template-columns: 1fr;
     gap: 30px;
   }
 
@@ -223,34 +255,48 @@
     height: 200px;
   }
 
+  .web_design_card_overlay {
+    padding: 20px;
+  }
+
   .web_design_card_title {
     font-size: 20px;
+    margin-bottom: 12px;
   }
 
   .web_design_card_description {
     font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .web_design_tech_pill {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .web_design_card_link {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .web_design_click_hint {
+    font-size: 10px;
+    padding: 5px 10px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .web_design_section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
+/* 작은 모바일 반응형 (480px 이하) */
+@media screen and (max-width: 480px) {
   .web_design_container {
-    padding: 0 15px;
+    padding: 80px 15px;
   }
 
   .web_design_title {
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 40px;
   }
 
   .web_design_grid {
-    grid-template-columns: 1fr;
     gap: 25px;
   }
 
@@ -274,12 +320,17 @@
 
   .web_design_tech_pill {
     font-size: 11px;
-    padding: 4px 8px;
+    padding: 5px 8px;
   }
 
   .web_design_card_link {
     padding: 10px 20px;
     font-size: 13px;
+  }
+
+  .web_design_click_hint {
+    font-size: 9px;
+    padding: 4px 8px;
   }
 }
 
@@ -324,6 +375,11 @@
   z-index: 1000;
   backdrop-filter: blur(10px);
   animation: modalFadeIn 0.3s ease-out;
+}
+
+/* 다크모드에서 backdrop-filter 효과 더 연하게 */
+[data-theme="dark"] .web_design_modal {
+  backdrop-filter: blur(20px);
 }
 
 @keyframes modalFadeIn {
@@ -377,6 +433,9 @@
   z-index: 1001;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  line-height: 1;
+  padding: 0;
+  margin: 0;
 }
 
 .web_design_modal_close:hover {
@@ -479,37 +538,37 @@
   border: 1px solid rgba(255, 182, 193, 0.3);
 }
 
-.web_design_modal_link {
-  display: inline-block;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 182, 193, 0.8) 0%,
-    rgba(221, 160, 221, 0.8) 50%,
-    rgba(175, 238, 238, 0.8) 100%
-  );
-  color: white;
-  padding: 15px 30px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(255, 182, 193, 0.3);
+/* 태블릿 모달 반응형 (1024px 이하) */
+@media screen and (max-width: 1024px) {
+  .web_design_modal_content {
+    max-width: 90vw;
+    max-height: 90vh;
+    margin: 30px;
+  }
+
+  .web_design_modal_image_container {
+    height: 50vh;
+  }
+
+  .web_design_modal_info {
+    padding: 25px;
+  }
+
+  .web_design_modal_title {
+    font-size: 26px;
+  }
+
+  .web_design_modal_description {
+    font-size: 15px;
+  }
+
+  .web_design_modal_tech_pill {
+    font-size: 13px;
+    padding: 7px 14px;
+  }
 }
 
-.web_design_modal_link:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 182, 193, 1) 0%,
-    rgba(221, 160, 221, 1) 50%,
-    rgba(175, 238, 238, 1) 100%
-  );
-}
-
-/* 모바일 모달 반응형 */
+/* 모바일 모달 반응형 (768px 이하) */
 @media screen and (max-width: 768px) {
   .web_design_modal_content {
     max-width: 95vw;
@@ -526,7 +585,7 @@
   }
 
   .web_design_modal_title {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .web_design_modal_description {
@@ -538,11 +597,6 @@
     padding: 6px 12px;
   }
 
-  .web_design_modal_link {
-    padding: 12px 24px;
-    font-size: 14px;
-  }
-
   .web_design_modal_close {
     top: 15px;
     right: 15px;
@@ -550,4 +604,109 @@
     height: 35px;
     font-size: 20px;
   }
+}
+
+/* 작은 모바일 모달 반응형 (480px 이하) */
+@media screen and (max-width: 480px) {
+  .web_design_modal_content {
+    max-width: 98vw;
+    max-height: 98vh;
+    margin: 10px;
+  }
+
+  .web_design_modal_image_container {
+    height: 35vh;
+  }
+
+  .web_design_modal_info {
+    padding: 15px;
+  }
+
+  .web_design_modal_title {
+    font-size: 20px;
+  }
+
+  .web_design_modal_description {
+    font-size: 13px;
+  }
+
+  .web_design_modal_tech_pill {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .web_design_modal_close {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .web_design_modal_meta {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
+
+/* 다크모드 스타일 */
+[data-theme="dark"] .web_design_section {
+  background-color: #0a0a0a;
+}
+
+[data-theme="dark"] .web_design_title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .web_design_card {
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .web_design_card:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] .web_design_modal_content {
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .web_design_modal_info {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.03) 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+}
+
+[data-theme="dark"] .web_design_modal_title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .web_design_modal_description {
+  color: #b0b0b0;
+}
+
+[data-theme="dark"] .web_design_modal_tech_pill {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .web_design_modal_meta {
+  color: #b0b0b0;
+}
+
+[data-theme="dark"] .web_design_modal_year {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .web_design_modal_category {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }

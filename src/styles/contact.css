@@ -2,71 +2,69 @@
 .contact_section {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f8f9ff 0%, #e8f4fd 50%, #f0e8ff 100%);
+  background: transparent;
   overflow: hidden;
-  padding-top: 120px;
+  padding: 0;
   transition: background-color 0.3s ease;
-}
-
-/* 다크모드 Contact 섹션 */
-[data-theme="dark"] .contact_section {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 배경 블러 효과 */
 .contact_blur_1 {
   position: absolute;
-  width: 1200px;
-  height: 1200px;
+  width: 800px;
+  height: 800px;
   background: linear-gradient(45deg, #ffb3b3, #ffc4c4);
   border-radius: 50%;
-  filter: blur(40px);
-  opacity: 0.6;
+  filter: blur(80px);
+  opacity: 0.3;
   animation: contact_float 8s ease-in-out infinite;
-  top: -20%;
-  left: -10%;
+  top: -40%;
+  left: -30%;
   z-index: 1;
 }
 
 .contact_blur_2 {
   position: absolute;
-  width: 800px;
-  height: 800px;
+  width: 700px;
+  height: 700px;
   background: linear-gradient(45deg, #a8e6cf, #b8f2d8);
   border-radius: 50%;
-  filter: blur(40px);
-  opacity: 0.6;
+  filter: blur(80px);
+  opacity: 0.3;
   animation: contact_float 6s ease-in-out infinite reverse;
-  top: 20%;
-  right: -15%;
+  top: -20%;
+  right: -35%;
   z-index: 1;
 }
 
 .contact_blur_3 {
   position: absolute;
-  width: 1000px;
-  height: 1000px;
+  width: 750px;
+  height: 750px;
   background: linear-gradient(45deg, #c8e6ff, #d4f0ff);
   border-radius: 50%;
-  filter: blur(40px);
-  opacity: 0.6;
+  filter: blur(80px);
+  opacity: 0.3;
   animation: contact_float 10s ease-in-out infinite;
   bottom: -50%;
-  left: 30%;
+  left: -20%;
   z-index: 1;
 }
 
 .contact_blur_4 {
   position: absolute;
-  width: 900px;
-  height: 900px;
+  width: 650px;
+  height: 650px;
   background: linear-gradient(45deg, #fff8e1, #fff3b0);
   border-radius: 50%;
-  filter: blur(40px);
-  opacity: 0.6;
+  filter: blur(80px);
+  opacity: 0.3;
   animation: contact_float 7s ease-in-out infinite reverse;
-  top: 30%;
-  left: -5%;
+  top: 20%;
+  right: -25%;
   z-index: 1;
 }
 
@@ -87,17 +85,17 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 50px 50px;
   position: relative;
-  z-index: 2;
+  z-index: 10;
 }
 
 .contact_content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  min-height: 80vh;
+  gap: 80px;
+  width: 100%;
 }
 
 /* 연락처 정보 영역 */
@@ -105,12 +103,15 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  align-items: center;
+  text-align: center;
 }
 
 .contact_title {
   display: flex;
   align-items: center;
   gap: 20px;
+  justify-content: center;
 }
 
 .contact_sparkle {
@@ -165,6 +166,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+  align-items: center;
 }
 
 .contact_item {
@@ -175,6 +177,7 @@
   font-size: 1.3rem;
   font-weight: 500;
   transition: color 0.3s ease;
+  justify-content: center;
 }
 
 /* 다크모드 연락처 아이템 */
@@ -192,6 +195,8 @@
   display: flex;
   gap: 20px;
   margin-top: 15px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 메일보내기 섹션 */
@@ -203,7 +208,7 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: #667eea;
+  background: #2c3e50;
   color: white;
   padding: 16px 32px;
   border-radius: 50px;
@@ -211,13 +216,13 @@
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
 }
 
 .contact_mail_btn:hover {
-  background: #5a6fd8;
+  background: #34495e;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
 }
 
 .mail_btn_icon {
@@ -243,22 +248,24 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: rgba(102, 126, 234, 0.1);
-  border: 2px solid rgba(102, 126, 234, 0.3);
+  background: transparent;
+  border: none;
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .contact_social_link:hover {
-  background: rgba(102, 126, 234, 0.2);
-  border-color: #667eea;
+  background: transparent;
+  border: none;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.3);
 }
 
 .contact_social_icon {
-  font-size: 2rem;
-  color: #667eea;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  width: 40px;
+  height: 40px;
 }
 
 /* QR 코드 영역 */
@@ -293,42 +300,34 @@
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
-.contact_qr_pattern {
-  width: 220px;
-  height: 220px;
-  background: linear-gradient(
-      90deg,
-      #000 25%,
-      transparent 25%,
-      transparent 75%,
-      #000 75%
-    ),
-    linear-gradient(#000 25%, transparent 25%, transparent 75%, #000 75%);
-  background-size: 20px 20px;
-  background-position: 0 0, 0 10px;
-  border-radius: 8px;
-  position: relative;
+.contact_qr_link {
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.contact_qr_icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #ffffff;
-  border-radius: 50%;
-  padding: 15px;
-  font-size: 2.5rem;
-  color: #667eea;
-  border: 3px solid #667eea;
+.contact_qr_link:hover {
+  transform: translateY(-5px);
+}
+
+.contact_qr_image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.contact_qr_link:hover .contact_qr_image {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 /* 감사 인사 */
 .contact_thank_you {
-  position: absolute;
-  bottom: 40px;
-  right: 50px;
-  z-index: 3;
+  text-align: center;
+  margin-top: 30px;
+  padding: 0;
 }
 
 .contact_thank_you p {
@@ -349,6 +348,23 @@
   color: #ffffff;
 }
 
+/* 다크모드 메일보내기 버튼 */
+[data-theme="dark"] .contact_mail_btn {
+  background: #ffffff;
+  color: #2c3e50;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .contact_mail_btn:hover {
+  background: #f0f0f0;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* 다크모드 깃허브 아이콘 */
+[data-theme="dark"] .contact_social_icon {
+  color: #ffffff;
+}
+
 /* 이메일 폼 섹션 */
 .contact_form_section {
   width: 100%;
@@ -365,6 +381,47 @@
 [data-theme="dark"] .contact_form_section {
   background: rgba(26, 26, 46, 0.8);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 다크모드 블러 효과 - 메인 섹션과 일치 */
+[data-theme="dark"] .contact_blur_1,
+[data-theme="dark"] .contact_blur_2,
+[data-theme="dark"] .contact_blur_3,
+[data-theme="dark"] .contact_blur_4 {
+  opacity: 0.2; /* 더 연하게 */
+  filter: blur(80px); /* 더 부드럽게 */
+}
+
+[data-theme="dark"] .contact_blur_1 {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 179, 179, 0.4),
+    rgba(255, 196, 196, 0.4)
+  );
+}
+
+[data-theme="dark"] .contact_blur_2 {
+  background: linear-gradient(
+    45deg,
+    rgba(168, 230, 207, 0.4),
+    rgba(184, 242, 216, 0.4)
+  );
+}
+
+[data-theme="dark"] .contact_blur_3 {
+  background: linear-gradient(
+    45deg,
+    rgba(200, 230, 255, 0.4),
+    rgba(212, 240, 255, 0.4)
+  );
+}
+
+[data-theme="dark"] .contact_blur_4 {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 248, 225, 0.4),
+    rgba(255, 243, 176, 0.4)
+  );
 }
 
 .contact_form_container {
@@ -566,9 +623,14 @@
 /* 저작권 섹션 */
 .contact_copyright_section {
   background: transparent;
-  padding: 15px 0;
+  padding: 20px 0;
   text-align: center;
   border-top: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 .contact_copyright_text {
@@ -576,11 +638,15 @@
   font-size: 0.9rem;
   margin: 0;
   font-weight: 400;
-  text-align: right;
+  text-align: center;
 }
 
-/* 반응형 디자인 */
+/* 태블릿 반응형 (1200px 이하) */
 @media (max-width: 1200px) {
+  .contact_container {
+    padding: 40px 40px;
+  }
+
   .contact_content {
     gap: 60px;
   }
@@ -588,21 +654,74 @@
   .contact_title h2 {
     font-size: 3.5rem;
   }
-}
 
-@media (max-width: 768px) {
-  .contact_section {
-    padding-top: 80px;
+  .contact_qr_code {
+    width: 220px;
+    height: 220px;
   }
 
+  .contact_qr_image {
+    width: 190px;
+    height: 190px;
+  }
+}
+
+/* 태블릿 반응형 (1024px 이하) */
+@media (max-width: 1024px) {
   .contact_container {
-    padding: 0 30px;
+    padding: 35px 35px;
   }
 
   .contact_content {
-    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .contact_title h2 {
+    font-size: 3.2rem;
+  }
+
+  .contact_subtitle {
+    font-size: 1.15rem;
+  }
+
+  .contact_item {
+    font-size: 1.25rem;
+  }
+
+  .contact_qr_code {
+    width: 200px;
+    height: 200px;
+  }
+
+  .contact_qr_image {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+/* 모바일 반응형 (768px 이하) */
+@media (max-width: 768px) {
+  .contact_container {
+    padding: 30px 30px;
+  }
+
+  .contact_copyright_section {
+    padding-left: 0;
+  }
+
+  .contact_content {
+    flex-direction: column;
     gap: 50px;
     text-align: center;
+    align-items: center;
+  }
+
+  .contact_info {
+    align-items: center;
+  }
+
+  .contact_title {
+    justify-content: center;
   }
 
   .contact_title h2 {
@@ -618,19 +737,22 @@
     justify-content: center;
   }
 
+  .contact_social {
+    justify-content: center;
+  }
+
   .contact_qr_code {
     width: 200px;
     height: 200px;
   }
 
-  .contact_qr_pattern {
+  .contact_qr_image {
     width: 170px;
     height: 170px;
   }
 
   .contact_thank_you {
-    position: static;
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
   }
 
@@ -639,45 +761,83 @@
   }
 
   .contact_blur_1 {
-    width: 800px;
-    height: 800px;
-    top: -30%;
-    left: -15%;
+    width: 500px;
+    height: 500px;
+    top: -25%;
+    left: -20%;
   }
 
   .contact_blur_2 {
-    width: 600px;
-    height: 600px;
-    top: 15%;
-    right: -20%;
+    width: 450px;
+    height: 450px;
+    top: 10%;
+    right: -25%;
   }
 
   .contact_blur_3 {
-    width: 700px;
-    height: 700px;
-    bottom: -15%;
-    left: 20%;
+    width: 480px;
+    height: 480px;
+    bottom: -20%;
+    left: -15%;
   }
 
   .contact_blur_4 {
-    width: 600px;
-    height: 600px;
-    top: 40%;
-    left: -10%;
+    width: 420px;
+    height: 420px;
+    top: 30%;
+    right: -20%;
   }
 }
 
+/* 작은 모바일 반응형 (480px 이하) */
 @media (max-width: 480px) {
   .contact_container {
-    padding: 0 20px;
+    padding: 20px 20px;
+  }
+
+  .contact_copyright_section {
+    padding-left: 0;
+  }
+
+  .contact_content {
+    gap: 40px;
   }
 
   .contact_title h2 {
     font-size: 2.2rem;
   }
 
+  .contact_subtitle {
+    font-size: 1rem;
+  }
+
   .contact_item {
     font-size: 1.1rem;
+    gap: 15px;
+  }
+
+  .contact_icon {
+    font-size: 1.5rem;
+    width: 35px;
+  }
+
+  .contact_social {
+    gap: 15px;
+  }
+
+  .contact_social_link {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact_social_icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact_mail_btn {
+    padding: 14px 28px;
+    font-size: 1rem;
   }
 
   .contact_qr_code {
@@ -685,7 +845,7 @@
     height: 180px;
   }
 
-  .contact_qr_pattern {
+  .contact_qr_image {
     width: 150px;
     height: 150px;
   }
@@ -695,23 +855,31 @@
   }
 
   .contact_blur_1 {
-    width: 600px;
-    height: 600px;
+    width: 350px;
+    height: 350px;
+    top: -20%;
+    left: -25%;
   }
 
   .contact_blur_2 {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
+    top: 5%;
+    right: -30%;
   }
 
   .contact_blur_3 {
-    width: 500px;
-    height: 500px;
+    width: 320px;
+    height: 320px;
+    bottom: -15%;
+    left: -20%;
   }
 
   .contact_blur_4 {
-    width: 450px;
-    height: 450px;
+    width: 280px;
+    height: 280px;
+    top: 25%;
+    right: -25%;
   }
 
   /* 이메일 폼 반응형 */
@@ -730,5 +898,63 @@
   .contact_form_submit {
     padding: 15px 30px;
     font-size: 1rem;
+  }
+}
+
+/* 매우 작은 모바일 반응형 (360px 이하) */
+@media (max-width: 360px) {
+  .contact_container {
+    padding: 15px 15px;
+  }
+
+  .contact_copyright_section {
+    padding-left: 0;
+  }
+
+  .contact_title h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact_subtitle {
+    font-size: 0.9rem;
+  }
+
+  .contact_item {
+    font-size: 1rem;
+    gap: 12px;
+  }
+
+  .contact_icon {
+    font-size: 1.3rem;
+    width: 30px;
+  }
+
+  .contact_social_link {
+    width: 45px;
+    height: 45px;
+  }
+
+  .contact_social_icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contact_mail_btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .contact_qr_code {
+    width: 160px;
+    height: 160px;
+  }
+
+  .contact_qr_image {
+    width: 130px;
+    height: 130px;
+  }
+
+  .contact_thank_you p {
+    font-size: 1.1rem;
   }
 }

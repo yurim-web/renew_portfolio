@@ -129,7 +129,6 @@ export const portfolio_sections: PortfolioItem[] = [
     image: "/assets/portfolio_img/waveyy_img.png",
   },
 
-
   {
     id: 5,
     title: "Learning Project",
@@ -153,7 +152,6 @@ export const portfolio_sections: PortfolioItem[] = [
     ],
     image: "/assets/portfolio_img/todolist_img.png",
   },
-
 
   {
     id: 6,
@@ -214,7 +212,6 @@ export const professional_projects: ProfessionalProject[] = [
     image: "/assets/professional_projects/rx_banner.png",
     view_link: "https://mxrx.dev/",
     demo_link: "https://markx.dev/",
-    github_link: "https://github.com/example/project2",
   },
   {
     id: 3,
@@ -231,6 +228,6 @@ export const professional_projects: ProfessionalProject[] = [
       "스웨디시 뉴트라 쇼핑몰 개발을 담당했습니다. 사용자 경험 최적화와 성능 향상에 중점을 두었습니다.",
     image: "/assets/professional_projects/swedish_banner.jpg",
     view_link: "https://swedishnutra.kr/",
-    github_link: "https://github.com/yurim-web/swedishnutra_custom_code",
+    github_link: "https://github.com/yurim-web/swedishnutra_code",
   },
 ];

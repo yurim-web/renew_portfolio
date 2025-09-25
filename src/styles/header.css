@@ -4,7 +4,7 @@
   backdrop-filter: none;
   color: #333333;
   width: 100%;
-  padding: 40px 0;
+  padding: 35px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,9 +25,10 @@
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03) !important;
 }
 
-/* 다크모드 스크롤 시 헤더 스타일 */
+/* 다크모드 스크롤 시 헤더 스타일 - 블러 효과 더 연하게 */
 [data-theme="dark"] .header_scrolled {
-  background-color: rgba(26, 26, 26, 0.15) !important;
+  background-color: rgba(26, 26, 26, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
   box-shadow: 0 2px 20px rgba(255, 255, 255, 0.03) !important;
 }
 
@@ -51,7 +52,7 @@
 .nav_right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 
 /* 네비게이션 메뉴 */
@@ -76,7 +77,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #f8f9fa;
+  background: transparent;
   color: #333333;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -92,7 +93,7 @@
 
 /* 다크모드 깃허브 링크 */
 [data-theme="dark"] .github_link {
-  background: #2d2d2d;
+  background: transparent;
   color: #ffffff;
 }
 
@@ -294,11 +295,11 @@
 /* 작은 모바일 화면 */
 @media (max-width: 480px) {
   .header_container {
-    padding: 15px 0;
+    padding: 20px 0;
   }
 
   .nav {
-    padding: 0px 10px;
+    padding: 0px 24px;
   }
 
   .nav_logo {
@@ -324,6 +325,6 @@
   }
 
   .nav {
-    padding: 0px 8px;
+    padding: 0px 15px;
   }
 }

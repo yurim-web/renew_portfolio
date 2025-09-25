@@ -1,6 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "../styles/portfolio.css";
 import { portfolio_sections } from "../data/portfolioData";
 
@@ -10,6 +15,7 @@ const Portfolio = () => {
   const horizontalContainerRef = useRef<HTMLDivElement>(null);
   const portfolioItemsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+  const scrollTriggerRef = useRef<ScrollTrigger | null>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -32,8 +38,8 @@ const Portfolio = () => {
       }
     );
 
-    // YSL 스타일 세로 쌓기 애니메이션
-    if (horizontalContainerRef.current) {
+    // YSL 스타일 세로 쌓기 애니메이션 (데스크톱에서만)
+    if (horizontalContainerRef.current && !isMobile) {
       const portfolioItems = portfolioItemsRef.current.filter(Boolean);
 
       // 화면 크기 확인 (useState로 관리)
@@ -82,7 +88,7 @@ const Portfolio = () => {
       }, 100);
 
       // 전체 포트폴리오 섹션을 고정하고 내부에서 애니메이션 진행
-      ScrollTrigger.create({
+      scrollTriggerRef.current = ScrollTrigger.create({
         trigger: sectionRef.current,
         start: "top top",
         end: () => `+=${portfolioItems.length * window.innerHeight}px`, // 섹션 개수만큼 스크롤 거리
@@ -154,44 +160,63 @@ const Portfolio = () => {
         const leftColumn = item.querySelector(".portfolio_left_column");
         const rightColumn = item.querySelector(".portfolio_right_column");
 
-        if (leftColumn) {
-          gsap.fromTo(
-            leftColumn,
-            { opacity: 0, x: -30 },
-            {
-              opacity: 1,
-              x: 0,
-              duration: 1.5,
-              ease: "power2.out",
-              delay: 0.3,
-              scrollTrigger: {
-                trigger: item,
-                start: "left 80%",
-                end: "left 20%",
-                toggleActions: "play none none reverse",
-              },
-            }
-          );
-        }
+        // 모바일에서는 양옆 애니메이션 제거
+        if (!isMobile) {
+          if (leftColumn) {
+            gsap.fromTo(
+              leftColumn,
+              { opacity: 0, x: -30 },
+              {
+                opacity: 1,
+                x: 0,
+                duration: 1.5,
+                ease: "power2.out",
+                delay: 0.3,
+                scrollTrigger: {
+                  trigger: item,
+                  start: "left 80%",
+                  end: "left 20%",
+                  toggleActions: "play none none reverse",
+                },
+              }
+            );
+          }
 
-        if (rightColumn) {
-          gsap.fromTo(
-            rightColumn,
-            { opacity: 0, x: 30 },
-            {
-              opacity: 1,
-              x: 0,
-              duration: 1.5,
-              ease: "power2.out",
-              delay: 0.5,
-              scrollTrigger: {
-                trigger: item,
-                start: "left 80%",
-                end: "left 20%",
-                toggleActions: "play none none reverse",
-              },
-            }
-          );
+          if (rightColumn) {
+            gsap.fromTo(
+              rightColumn,
+              { opacity: 0, x: 30 },
+              {
+                opacity: 1,
+                x: 0,
+                duration: 1.5,
+                ease: "power2.out",
+                delay: 0.5,
+                scrollTrigger: {
+                  trigger: item,
+                  start: "left 80%",
+                  end: "left 20%",
+                  toggleActions: "play none none reverse",
+                },
+              }
+            );
+          }
+        } else {
+          // 모바일에서는 단순히 opacity만 적용
+          if (leftColumn) {
+            gsap.set(leftColumn, { opacity: 1 });
+          }
+          if (rightColumn) {
+            gsap.set(rightColumn, { opacity: 1 });
+          }
+        }
+      });
+    } else if (horizontalContainerRef.current && isMobile) {
+      // 모바일에서는 모든 아이템을 단순히 보이도록 설정
+      const portfolioItems = portfolioItemsRef.current.filter(Boolean);
+      portfolioItems.forEach((item, index) => {
+        if (item) {
+          gsap.set(item, { opacity: 1, x: "0%", y: "0%", zIndex: index + 1 });
         }
       });
     }
@@ -214,121 +239,279 @@ const Portfolio = () => {
     };
   }, [isMobile]);
 
+  // 특정 프로젝트로 이동하는 함수 (전역에서 접근 가능하도록)
+  useEffect(() => {
+    (window as any).scrollToPortfolioProject = (projectName: string) => {
+      const projectIndex = portfolio_sections.findIndex(
+        (section) => section.subtitle === projectName
+      );
+
+      if (projectIndex !== -1 && scrollTriggerRef.current) {
+        // ScrollTrigger의 실제 스크롤 위치 계산
+        const trigger = scrollTriggerRef.current;
+        const triggerStart = trigger.start;
+        const triggerEnd = trigger.end;
+
+        // 해당 프로젝트의 progress 계산
+        const targetProgress = projectIndex / (portfolio_sections.length - 1);
+
+        // ScrollTrigger 범위 내에서의 스크롤 위치 계산
+        const scrollDistance =
+          triggerStart + targetProgress * (triggerEnd - triggerStart);
+
+        // 부드럽게 스크롤
+        window.scrollTo({
+          top: scrollDistance,
+          behavior: "smooth",
+        });
+      }
+    };
+
+    return () => {
+      delete (window as any).scrollToPortfolioProject;
+    };
+  }, []);
+
   return (
     <section ref={sectionRef} className="portfolio_section">
       <div className="portfolio_container">
-        <h1 ref={titleRef} className="portfolio_title">
-          {/* PORTFOLIO. */}
-        </h1>
+        {isMobile ? (
+          <Swiper
+            modules={[Pagination, Navigation]}
+            spaceBetween={0}
+            slidesPerView={1}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: null, // 왼쪽 화살표 비활성화
+            }}
+            pagination={{ clickable: true }}
+            className="portfolio_swiper"
+          >
+            {portfolio_sections.map((section, index) => (
+              <SwiperSlide key={section.id}>
+                <div
+                  className="portfolio_item"
+                  data-project={section.subtitle}
+                  style={{
+                    backgroundColor: section.bgColor,
+                    color: section.textColor,
+                  }}
+                >
+                  <div className="portfolio_content">
+                    {/* 왼쪽 컬럼 - 메인 콘텐츠 */}
+                    <div className="portfolio_left_column">
+                      <div className="portfolio_year">{section.year}</div>
+                      <h2 className="portfolio_section_title">
+                        {section.title}
+                      </h2>
 
-        <div
-          ref={horizontalContainerRef}
-          className="portfolio_horizontal_container"
-        >
-          {portfolio_sections.map((section, index) => (
-            <div
-              key={section.id}
-              ref={(el) => (portfolioItemsRef.current[index] = el)}
-              className="portfolio_item"
-              style={{
-                backgroundColor: section.bgColor,
-                color: section.textColor,
-              }}
-            >
-              <div className="portfolio_content">
-                {/* 왼쪽 컬럼 - 메인 콘텐츠 */}
-                <div className="portfolio_left_column">
-                  <div className="portfolio_year">{section.year}</div>
-                  <h2 className="portfolio_section_title">{section.title}</h2>
+                      <h3 className="portfolio_section_subtitle">
+                        {section.subtitle}
+                      </h3>
 
-                  <h3 className="portfolio_section_subtitle">
-                    {section.subtitle}
-                  </h3>
-
-                  {/* 제작기간 */}
-                  <div className="portfolio_info_row">
-                    <span className="portfolio_info_label">제작기간</span>
-                    <span className="portfolio_info_value">
-                      {section.period}
-                    </span>
-                  </div>
-
-                  {/* 참여도 */}
-                  <div className="portfolio_info_row">
-                    <span className="portfolio_info_label">참여도</span>
-                    <span className="portfolio_info_value">
-                      {section.participation}
-                    </span>
-                  </div>
-
-                  {/* 프로젝트 타입 */}
-                  <div className="portfolio_info_row">
-                    <span className="portfolio_info_label">타입</span>
-                    <span className="portfolio_info_value">{section.type}</span>
-                  </div>
-
-                  {/* 내용 */}
-                  <div className="portfolio_info_row">
-                    <span className="portfolio_info_label">내용</span>
-                    <span className="portfolio_info_value">
-                      {section.content}
-                    </span>
-                  </div>
-
-                  {section.tech_stack && (
-                    <div className="portfolio_tech_stack">
-                      {section.tech_stack.map((tech, techIndex) => (
-                        <span key={techIndex} className="portfolio_tech_pill">
-                          <img
-                            src={tech.icon}
-                            alt={tech.name}
-                            className="portfolio_tech_icon"
-                          />
-                          <span className="portfolio_tech_name">
-                            {tech.name}
-                          </span>
+                      {/* 제작기간 */}
+                      <div className="portfolio_info_row">
+                        <span className="portfolio_info_label">제작기간</span>
+                        <span className="portfolio_info_value">
+                          {section.period}
                         </span>
-                      ))}
-                    </div>
-                  )}
+                      </div>
 
-                  {/* 링크 버튼 */}
-                  <div className="portfolio_link_container">
-                    <a
-                      href={section.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="portfolio_link_button"
-                    >
-                      LINK
-                    </a>
-                    {section.github_link && (
-                      <a
-                        href={section.github_link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="portfolio_github_button"
-                      >
-                        GITHUB
-                      </a>
-                    )}
+                      {/* 참여도 */}
+                      <div className="portfolio_info_row">
+                        <span className="portfolio_info_label">참여도</span>
+                        <span className="portfolio_info_value">
+                          {section.participation}
+                        </span>
+                      </div>
+
+                      {/* 프로젝트 타입 */}
+                      <div className="portfolio_info_row">
+                        <span className="portfolio_info_label">타입</span>
+                        <span className="portfolio_info_value">
+                          {section.type}
+                        </span>
+                      </div>
+
+                      {/* 내용 */}
+                      <div className="portfolio_info_row">
+                        <span className="portfolio_info_label">내용</span>
+                        <span className="portfolio_info_value">
+                          {section.content}
+                        </span>
+                      </div>
+
+                      {section.tech_stack && (
+                        <div className="portfolio_tech_stack">
+                          {section.tech_stack.map((tech, techIndex) => (
+                            <span
+                              key={techIndex}
+                              className="portfolio_tech_pill"
+                            >
+                              <img
+                                src={tech.icon}
+                                alt={tech.name}
+                                className="portfolio_tech_icon"
+                              />
+                              <span className="portfolio_tech_name">
+                                {tech.name}
+                              </span>
+                            </span>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* 링크 버튼 */}
+                      <div className="portfolio_link_container">
+                        <a
+                          href={section.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="portfolio_link_button"
+                        >
+                          LINK
+                        </a>
+                        {section.github_link && (
+                          <a
+                            href={section.github_link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="portfolio_github_button"
+                          >
+                            GITHUB
+                          </a>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* 오른쪽 컬럼 - 이미지 */}
+                    <div className="portfolio_right_column">
+                      <div className="portfolio_image_container">
+                        <img
+                          src={section.image}
+                          alt={section.title}
+                          className="portfolio_section_image"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          <div
+            ref={horizontalContainerRef}
+            className="portfolio_horizontal_container"
+          >
+            {portfolio_sections.map((section, index) => (
+              <div
+                key={section.id}
+                ref={(el) => (portfolioItemsRef.current[index] = el)}
+                className="portfolio_item"
+                data-project={section.subtitle}
+                style={{
+                  backgroundColor: section.bgColor,
+                  color: section.textColor,
+                }}
+              >
+                <div className="portfolio_content">
+                  {/* 왼쪽 컬럼 - 메인 콘텐츠 */}
+                  <div className="portfolio_left_column">
+                    <div className="portfolio_year">{section.year}</div>
+                    <h2 className="portfolio_section_title">{section.title}</h2>
 
-                {/* 오른쪽 컬럼 - 이미지 */}
-                <div className="portfolio_right_column">
-                  <div className="portfolio_image_container">
-                    <img
-                      src={section.image}
-                      alt={section.title}
-                      className="portfolio_section_image"
-                    />
+                    <h3 className="portfolio_section_subtitle">
+                      {section.subtitle}
+                    </h3>
+
+                    {/* 제작기간 */}
+                    <div className="portfolio_info_row">
+                      <span className="portfolio_info_label">제작기간</span>
+                      <span className="portfolio_info_value">
+                        {section.period}
+                      </span>
+                    </div>
+
+                    {/* 참여도 */}
+                    <div className="portfolio_info_row">
+                      <span className="portfolio_info_label">참여도</span>
+                      <span className="portfolio_info_value">
+                        {section.participation}
+                      </span>
+                    </div>
+
+                    {/* 프로젝트 타입 */}
+                    <div className="portfolio_info_row">
+                      <span className="portfolio_info_label">타입</span>
+                      <span className="portfolio_info_value">
+                        {section.type}
+                      </span>
+                    </div>
+
+                    {/* 내용 */}
+                    <div className="portfolio_info_row">
+                      <span className="portfolio_info_label">내용</span>
+                      <span className="portfolio_info_value">
+                        {section.content}
+                      </span>
+                    </div>
+
+                    {section.tech_stack && (
+                      <div className="portfolio_tech_stack">
+                        {section.tech_stack.map((tech, techIndex) => (
+                          <span key={techIndex} className="portfolio_tech_pill">
+                            <img
+                              src={tech.icon}
+                              alt={tech.name}
+                              className="portfolio_tech_icon"
+                            />
+                            <span className="portfolio_tech_name">
+                              {tech.name}
+                            </span>
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* 링크 버튼 */}
+                    <div className="portfolio_link_container">
+                      <a
+                        href={section.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="portfolio_link_button"
+                      >
+                        LINK
+                      </a>
+                      {section.github_link && (
+                        <a
+                          href={section.github_link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="portfolio_github_button"
+                        >
+                          GITHUB
+                        </a>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* 오른쪽 컬럼 - 이미지 */}
+                  <div className="portfolio_right_column">
+                    <div className="portfolio_image_container">
+                      <img
+                        src={section.image}
+                        alt={section.title}
+                        className="portfolio_section_image"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

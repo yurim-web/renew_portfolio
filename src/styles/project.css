@@ -1,13 +1,15 @@
 .work_section {
   width: 100vw;
   height: 100vh;
-  /* padding: 180px 0; */
+  padding: 300px 0; /* 상단 패딩 더 늘림 */
   min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
+  position: relative; /* 상대적 위치 설정 */
+  z-index: 1; /* z-index 설정 */
 }
 
 .work_container {
@@ -30,6 +32,12 @@
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   position: relative;
   letter-spacing: -0.02em;
+  transition: color 0.3s ease;
+}
+
+/* 다크모드 제목 */
+[data-theme="dark"] .work_title {
+  color: #ffffff;
 }
 
 .work_grid {
@@ -41,7 +49,7 @@
 }
 
 .work_card {
-  background: #ffffff;
+  background: #f8f9fa;
   border-radius: 20px;
   padding: 35px 25px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -73,34 +81,50 @@
   opacity: 0;
 }
 
-.work_card::after {
-  content: "";
-  position: absolute;
-  bottom: 40px;
-  left: -300px;
-  width: 350px;
-  height: 250px;
-  background-image: var(--hover-image);
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  z-index: 2;
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  border-radius: 12px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
-  transform: translateX(-30px) scale(0.7);
+/* 다크모드 카드 */
+[data-theme="dark"] .work_card {
+  background: #2d2d2d;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .work_card:hover {
+  background: #2a2a2a !important;
+  color: #ffffff;
+  border: 1px solid rgba(139, 156, 255, 0.3);
+}
+
+[data-theme="dark"] .work_card:nth-child(1),
+[data-theme="dark"] .work_card:nth-child(2),
+[data-theme="dark"] .work_card:nth-child(3) {
+  background: #2d2d2d;
 }
 
 .work_card:nth-child(1) {
-  background: #ffffff;
+  background: #f8f9fa;
 }
 
 .work_card:nth-child(2) {
-  background: #ffffff;
+  background: #f8f9fa;
 }
 
 .work_card:nth-child(3) {
-  background: #ffffff;
+  background: #f8f9fa;
+  min-height: 700px;
+}
+
+/* 다크모드에서 개별 카드 스타일 덮어쓰기 */
+[data-theme="dark"] .work_card:nth-child(1) {
+  background: #2d2d2d !important;
+}
+
+[data-theme="dark"] .work_card:nth-child(2) {
+  background: #2d2d2d !important;
+}
+
+[data-theme="dark"] .work_card:nth-child(3) {
+  background: #2d2d2d !important;
+  min-height: 700px;
 }
 
 .work_card_title {
@@ -126,6 +150,12 @@
   color: #553c9a;
   line-height: 1;
   letter-spacing: -0.02em;
+  transition: color 0.3s ease;
+}
+
+/* 다크모드 카드 번호 */
+[data-theme="dark"] .work_card_number {
+  color: #8b9cff;
 }
 
 .work_card_text {
@@ -165,6 +195,16 @@
   color: #553c9a;
 }
 
+/* 다크모드 프로젝트 아이템 */
+[data-theme="dark"] .work_project_item {
+  color: #d0d0d0;
+}
+
+[data-theme="dark"] .work_project_item:hover {
+  border-bottom-color: rgba(139, 156, 255, 0.4);
+  color: #8b9cff;
+}
+
 .work_cursor_icon {
   position: absolute;
   bottom: 50px;
@@ -202,6 +242,12 @@
   display: block;
   margin: 0 auto;
   white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+/* 다크모드 커서 텍스트 */
+[data-theme="dark"] .work_cursor_text {
+  color: #b0b0b0;
 }
 
 /* 반응형 디자인 */
@@ -221,28 +267,149 @@
   }
 }
 
+/* Swiper 스타일 */
+.work_swiper {
+  width: calc(100% - 48px); /* 양옆 24px씩 빼기 */
+  height: 100%;
+  padding: 0;
+  display: none; /* 데스크톱에서 숨김 */
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+.work_swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  align-items: stretch;
+  width: 100%; /* 슬라이드 전체 너비 사용 */
+}
+
+.work_swiper .swiper-slide .work_card {
+  width: 100%; /* 카드가 슬라이드 전체 너비 사용 */
+  margin: 0; /* 마진 제거 */
+  border: 3px solid rgba(54, 91, 255, 0.1); /* 미묘한 테두리 추가 */
+  transform: scale(0.95); /* 약간 작게 표시 */
+  transition: transform 0.3s ease; /* 부드러운 전환 */
+  border-radius: 10px;
+}
+
+.work_swiper .swiper-pagination {
+  bottom: 30px; /* 하단에서 30px 위에 위치 */
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.work_swiper .swiper-pagination-bullet {
+  background: #667eea;
+  opacity: 0.3;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.work_swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.2);
+  background: #667eea;
+}
+
+/* 태블릿 반응형 (1024px 이하) */
+@media screen and (max-width: 1024px) {
+  .work_section {
+    padding: 80px 0;
+  }
+
+  .work_container {
+    padding: 0 30px;
+  }
+
+  .work_grid {
+    display: none; /* 태블릿에서 그리드 숨김 */
+  }
+
+  .work_swiper {
+    display: block; /* 태블릿에서 Swiper 표시 */
+  }
+
+  .work_title {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
+
+  .work_card {
+    padding: 20px 30px;
+    height: 550px;
+    max-height: 550px;
+    min-height: 550px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .work_card_title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .work_project_list {
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  .work_project_item {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+
+  .work_cursor_icon {
+    bottom: 25px;
+    right: 25px;
+  }
+
+  .work_cursor_text {
+    font-size: 12px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .work_section {
-    padding: 100px 0;
+    padding: 10px 0px 30px 0px; /* 모바일에서 더 많은 상단 패딩 */
   }
 
   .work_container {
     padding: 0 15px;
+    /* height: 100%; */
   }
 
   .work_grid {
-    grid-template-columns: 1fr;
-    gap: 0;
+    display: none; /* 모바일에서 그리드 숨김 */
+  }
+
+  .work_swiper {
+    display: block; /* 모바일에서 Swiper 표시 */
   }
 
   .work_card {
-    padding: 30px 20px;
-    min-height: 600px;
+    padding: 15px 24px; /* 패딩 더 줄임 */
+    height: 500px; /* 고정 높이로 설정 */
+    max-height: 500px; /* 최대 높이 제한 */
+    min-height: 500px;
+    box-shadow: none;
   }
 
   .work_title {
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 30px; /* 마진 줄임 */
+  }
+
+  .work_card h3 {
+    font-size: 16px; /* 제목 크기 더 줄임 */
+    margin-bottom: 8px; /* 마진 더 줄임 */
+  }
+
+  .work_card p {
+    font-size: 13px; /* 텍스트 크기 더 줄임 */
+    line-height: 1.3; /* 줄 간격 더 줄임 */
+    margin-bottom: 5px; /* 마진 더 줄임 */
   }
 
   .work_card_title {
@@ -277,13 +444,8 @@
   .work_cursor_text {
     font-size: 10px;
   }
-
-  .work_card::after {
-    bottom: 30px;
-    left: -200px;
-    width: 250px;
-    height: 180px;
-    transform: translateX(-20px) scale(0.7);
+  .swiper {
+    height: 580px;
   }
 }
 

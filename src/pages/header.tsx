@@ -17,7 +17,12 @@ const Header = () => {
     <header className="header_container">
       <nav className="nav">
         <div className="nav_logo">
-          <h1>YURIM'S WEB PORTFOLIO</h1>
+          <h1
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            style={{ cursor: "pointer" }}
+          >
+            YURIM'S WEB PORTFOLIO
+          </h1>
         </div>
         <div className="nav_right">
           <ul className="nav_menu">
@@ -28,16 +33,16 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="#skills"
+                href="#strength"
                 className="nav_link"
                 onClick={close_mobile_menu}
               >
-                SKILLS
+                STRENGTH
               </a>
             </li>
             <li>
               <a
-                href="#projects"
+                href="#project"
                 className="nav_link"
                 onClick={close_mobile_menu}
               >
@@ -56,7 +61,7 @@ const Header = () => {
           </ul>
           <div className="header_social">
             <a
-              href="https://github.com/your-username"
+              href="https://github.com/yurim-web"
               target="_blank"
               rel="noopener noreferrer"
               className="github_link"
@@ -100,16 +105,16 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#skills"
+              href="#strength"
               className="mobile_nav_link"
               onClick={close_mobile_menu}
             >
-              SKILLS
+              STRENGTH
             </a>
           </li>
           <li>
             <a
-              href="#projects"
+              href="#project"
               className="mobile_nav_link"
               onClick={close_mobile_menu}
             >
@@ -127,7 +132,7 @@ const Header = () => {
           </li>
           <li className="mobile_social">
             <a
-              href="https://github.com/your-username"
+              href="https://github.com/yurim-web"
               target="_blank"
               rel="noopener noreferrer"
               className="mobile_github_link"

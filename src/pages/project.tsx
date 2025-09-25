@@ -1,12 +1,34 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "../styles/project.css";
 
 const Project = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 화면 크기 확인 (태블릿도 포함)
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -22,8 +44,8 @@ const Project = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: titleRef.current,
-          start: "top 80%",
-          end: "bottom 20%",
+          start: "top 100%", // Skills 섹션이 완전히 지나간 후 시작
+          end: "bottom 0%",
           toggleActions: "play none none reverse",
         },
       }
@@ -48,8 +70,8 @@ const Project = () => {
             delay: index * 0.2,
             scrollTrigger: {
               trigger: card,
-              start: "top 85%",
-              end: "bottom 15%",
+              start: "top 100%", // Skills 섹션이 완전히 지나간 후 시작
+              end: "bottom 0%",
               toggleActions: "play none none reverse",
             },
           }
@@ -68,6 +90,7 @@ const Project = () => {
       title: "01 Professional Projects",
       projects: ["Herzion Shop", "ReportingX.", "스웨디시 뉴트라"],
       bgColor: "#ffffff",
+      targetSection: "professional",
     },
     {
       id: 2,
@@ -77,18 +100,60 @@ const Project = () => {
         "IMELE",
         "SAINT LAURENT",
         "Waveyy",
-        "ToDo List",
+        "ToDoList",
         "Apple",
       ],
       bgColor: "#ffffff",
+      targetSection: "portfolio",
     },
     {
       id: 3,
       title: "03 Web Design",
-      projects: ["EPIK 랜딩페이지", "밀키스 제로 상세페이지"],
+      projects: [
+        "Addmoa 기업 홈페이지",
+        "뷰티 정보 홈페이지",
+        "LH 전세임대 안내 사이트",
+        "퍼스널 컬러 테스트 앱",
+        "전기요금 계산기 앱",
+        "햇살론 대출 안내 앱",
+        "블로그 게시글 배너 디자인",
+        "온라인 광고 배너 디자인",
+        "구글 애즈 배너 디자인",
+      ],
       bgColor: "#ffffff",
+      targetSection: "web_design",
     },
   ];
+
+  // 섹션으로 스크롤하는 함수
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
+  // 특정 프로젝트로 스크롤하는 함수
+  const scrollToSpecificProject = (projectName: string) => {
+    // portfolio 섹션으로 먼저 이동
+    const portfolioSection = document.getElementById("portfolio");
+    if (portfolioSection) {
+      portfolioSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
+      // 약간의 지연 후 GSAP ScrollTrigger를 사용하여 해당 프로젝트로 이동
+      setTimeout(() => {
+        if ((window as any).scrollToPortfolioProject) {
+          (window as any).scrollToPortfolioProject(projectName);
+        }
+      }, 800); // 스크롤 애니메이션이 완료될 때까지 충분한 시간 대기
+    }
+  };
 
   return (
     <section ref={sectionRef} className="work_section">
@@ -97,40 +162,129 @@ const Project = () => {
           Project.
         </h1>
 
-        <div className="work_grid">
-          {work_categories.map((category, index) => (
-            <div
-              key={category.id}
-              ref={(el) => (cardsRef.current[index] = el)}
-              className="work_card"
-              style={
-                {
-                  backgroundColor: category.bgColor,
-                } as React.CSSProperties
-              }
-            >
-              <h2 className="work_card_title">
-                <span className="work_card_number">
-                  {category.title.split(" ")[0]}
-                </span>
-                <span className="work_card_text">
-                  {category.title.split(" ").slice(1).join(" ")}
-                </span>
-              </h2>
-              <ul className="work_project_list">
-                {category.projects.map((project, projectIndex) => (
-                  <li key={projectIndex} className="work_project_item">
-                    {project}
-                  </li>
-                ))}
-              </ul>
-              <div className="work_cursor_icon">
-                <img src="/hover_icn.svg" alt="hover cursor" />
-                <span className="work_cursor_text">click!</span>
+        {isMobile ? (
+          <Swiper
+            modules={[Pagination]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation={false}
+            pagination={{ clickable: true }}
+            className="work_swiper"
+          >
+            {work_categories.map((category, index) => (
+              <SwiperSlide key={category.id}>
+                <div
+                  ref={(el) => (cardsRef.current[index] = el)}
+                  className="work_card"
+                  style={
+                    {
+                      backgroundColor: category.bgColor,
+                    } as React.CSSProperties
+                  }
+                  onClick={() => {
+                    if (category.id === 2) {
+                      // 02 Learning Projects 카드인 경우 첫 번째 프로젝트로 이동
+                      scrollToSpecificProject(category.projects[0]);
+                    } else {
+                      // 다른 카드들은 기존 방식
+                      scrollToSection(category.targetSection);
+                    }
+                  }}
+                >
+                  <h2 className="work_card_title">
+                    <span className="work_card_number">
+                      {category.title.split(" ")[0]}
+                    </span>
+                    <span className="work_card_text">
+                      {category.title.split(" ").slice(1).join(" ")}
+                    </span>
+                  </h2>
+                  <ul className="work_project_list">
+                    {category.projects.map((project, projectIndex) => (
+                      <li
+                        key={projectIndex}
+                        className="work_project_item"
+                        onClick={(e) => {
+                          e.stopPropagation(); // 카드 클릭 이벤트 방지
+                          if (category.id === 2) {
+                            // Learning Projects 카드의 경우 특정 프로젝트로 이동
+                            scrollToSpecificProject(project);
+                          } else {
+                            // 다른 카드들은 해당 섹션으로 이동
+                            scrollToSection(category.targetSection);
+                          }
+                        }}
+                      >
+                        {project}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="work_cursor_icon">
+                    <img src="/hover_icn.svg" alt="hover cursor" />
+                    <span className="work_cursor_text">click!</span>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          <div className="work_grid">
+            {work_categories.map((category, index) => (
+              <div
+                key={category.id}
+                ref={(el) => (cardsRef.current[index] = el)}
+                className="work_card"
+                style={
+                  {
+                    backgroundColor: category.bgColor,
+                  } as React.CSSProperties
+                }
+                onClick={() => {
+                  if (category.id === 2) {
+                    // 02 Learning Projects 카드인 경우 첫 번째 프로젝트로 이동
+                    scrollToSpecificProject(category.projects[0]);
+                  } else {
+                    // 다른 카드들은 기존 방식
+                    scrollToSection(category.targetSection);
+                  }
+                }}
+              >
+                <h2 className="work_card_title">
+                  <span className="work_card_number">
+                    {category.title.split(" ")[0]}
+                  </span>
+                  <span className="work_card_text">
+                    {category.title.split(" ").slice(1).join(" ")}
+                  </span>
+                </h2>
+                <ul className="work_project_list">
+                  {category.projects.map((project, projectIndex) => (
+                    <li
+                      key={projectIndex}
+                      className="work_project_item"
+                      onClick={(e) => {
+                        e.stopPropagation(); // 카드 클릭 이벤트 방지
+                        if (category.id === 2) {
+                          // Learning Projects 카드의 경우 특정 프로젝트로 이동
+                          scrollToSpecificProject(project);
+                        } else {
+                          // 다른 카드들은 해당 섹션으로 이동
+                          scrollToSection(category.targetSection);
+                        }
+                      }}
+                    >
+                      {project}
+                    </li>
+                  ))}
+                </ul>
+                <div className="work_cursor_icon">
+                  <img src="/hover_icn.svg" alt="hover cursor" />
+                  <span className="work_cursor_text">click!</span>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
