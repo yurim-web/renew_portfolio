@@ -11,7 +11,7 @@
   transition: background-color 0.3s ease;
 }
 
-[data-theme="dark"] .main_section {
+[data-theme='dark'] .main_section {
   background: #1a1a1a;
 }
 
@@ -35,7 +35,7 @@
   transition: color 0.3s ease;
 }
 
-[data-theme="dark"] .main_title {
+[data-theme='dark'] .main_title {
   color: #ffffff;
 }
 
@@ -48,7 +48,7 @@
   transition: color 0.3s ease;
 }
 
-[data-theme="dark"] .main_description {
+[data-theme='dark'] .main_description {
   color: #cccccc;
 }
 
@@ -62,7 +62,7 @@
   transition: background-color 0.3s ease;
 }
 
-[data-theme="dark"] .about_section {
+[data-theme='dark'] .about_section {
   background: #1a1a1a;
 }
 
@@ -116,41 +116,25 @@
   transform: translate3d(100px, -50px, 0px) rotate(15deg);
 }
 
-[data-theme="dark"] .blur {
+[data-theme='dark'] .blur {
   opacity: 0.3;
   filter: blur(60px);
 }
 
-[data-theme="dark"] .blur_1 {
-  background: linear-gradient(
-    45deg,
-    rgba(255, 179, 179, 0.4),
-    rgba(255, 196, 196, 0.4)
-  );
+[data-theme='dark'] .blur_1 {
+  background: linear-gradient(45deg, rgba(255, 179, 179, 0.4), rgba(255, 196, 196, 0.4));
 }
 
-[data-theme="dark"] .blur_2 {
-  background: linear-gradient(
-    45deg,
-    rgba(168, 230, 207, 0.4),
-    rgba(184, 242, 216, 0.4)
-  );
+[data-theme='dark'] .blur_2 {
+  background: linear-gradient(45deg, rgba(168, 230, 207, 0.4), rgba(184, 242, 216, 0.4));
 }
 
-[data-theme="dark"] .blur_3 {
-  background: linear-gradient(
-    45deg,
-    rgba(200, 230, 255, 0.4),
-    rgba(212, 240, 255, 0.4)
-  );
+[data-theme='dark'] .blur_3 {
+  background: linear-gradient(45deg, rgba(200, 230, 255, 0.4), rgba(212, 240, 255, 0.4));
 }
 
-[data-theme="dark"] .blur_4 {
-  background: linear-gradient(
-    45deg,
-    rgba(255, 248, 225, 0.4),
-    rgba(255, 243, 176, 0.4)
-  );
+[data-theme='dark'] .blur_4 {
+  background: linear-gradient(45deg, rgba(255, 248, 225, 0.4), rgba(255, 243, 176, 0.4));
 }
 
 @keyframes float {
@@ -185,7 +169,7 @@
   transition: color 0.3s ease;
 }
 
-[data-theme="dark"] .section_title {
+[data-theme='dark'] .section_title {
   color: #ffffff;
 }
 
@@ -198,7 +182,7 @@
   transition: color 0.3s ease;
 }
 
-[data-theme="dark"] .about_description {
+[data-theme='dark'] .about_description {
   color: #cccccc;
 }
 
@@ -207,11 +191,11 @@
   .main_container {
     padding: 0 50px;
   }
-  
+
   .main_title {
     font-size: 80px;
   }
-  
+
   .main_description {
     font-size: 18px;
   }

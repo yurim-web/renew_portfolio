@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import StrengthContentsBox from "../common/box/StrengthContentsBox";
-import StrenthToggleBox from "../common/box/StrenthToggleBox";
-import "../styles/skills.css";
+import React, { useState, useEffect, useRef } from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import StrengthContentsBox from '../common/box/StrengthContentsBox';
+import StrenthToggleBox from '../common/box/StrenthToggleBox';
+import '../styles/skills.css';
 
 const Skills = () => {
   const [activeSkill, setActiveSkill] = useState<string | null>(null);
@@ -15,7 +15,7 @@ const Skills = () => {
 
   useEffect(() => {
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
 
@@ -25,10 +25,7 @@ const Skills = () => {
         Strength.
       </h1>
       <div className="strength_toggle_wrapper">
-        <StrenthToggleBox
-          activeSkill={activeSkill}
-          onSkillChange={handleSkillChange}
-        />
+        <StrenthToggleBox activeSkill={activeSkill} onSkillChange={handleSkillChange} />
       </div>
       <StrengthContentsBox activeSkill={activeSkill} />
     </article>

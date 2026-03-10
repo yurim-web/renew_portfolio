@@ -51,23 +51,22 @@
 
 /* 다크모드 스타일 */
 
-[data-theme="dark"] .resume_toggle_label {
+[data-theme='dark'] .resume_toggle_label {
   color: #ffffff;
 }
 
-[data-theme="dark"] .resume_dot {
+[data-theme='dark'] .resume_dot {
   background-color: #666666;
 }
 
-[data-theme="dark"] .resume_dot:hover {
+[data-theme='dark'] .resume_dot:hover {
   background-color: #cccccc;
 }
 
-[data-theme="dark"] .resume_dot.active {
+[data-theme='dark'] .resume_dot.active {
   background-color: var(--active-color, #00d4aa);
   box-shadow: 0 0 8px var(--active-color-shadow, rgba(0, 212, 170, 0.8));
 }
-
 
 /* 태블릿 환경 */
 

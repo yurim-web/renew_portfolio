@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "../../styles/skills.css";
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import '../../styles/skills.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,13 +34,13 @@ const StrengthContents = ({
         rotation: 0,
         opacity: 1,
         duration: 1,
-        ease: "back.out(1.7)",
+        ease: 'back.out(1.7)',
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 80%",
-          end: "top 20%",
+          start: 'top 80%',
+          end: 'top 20%',
           scrub: 1,
-          toggleActions: "play none none reverse",
+          toggleActions: 'play none none reverse',
         },
       }
     );
@@ -58,19 +58,19 @@ const StrengthContents = ({
         opacity: 1,
         scale: 1,
         duration: 0.8,
-        ease: "power2.out",
+        ease: 'power2.out',
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 75%",
-          end: "top 25%",
+          start: 'top 75%',
+          end: 'top 25%',
           scrub: 1.2,
-          toggleActions: "play none none reverse",
+          toggleActions: 'play none none reverse',
         },
       }
     );
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
 

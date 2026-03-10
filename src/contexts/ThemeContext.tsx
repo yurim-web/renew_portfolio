@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface ThemeContextType {
   is_dark_mode: boolean;
@@ -12,7 +12,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
-    throw new Error("useTheme must be used within a ThemeProvider");
+    throw new Error('useTheme must be used within a ThemeProvider');
   }
   return context;
 };
@@ -23,18 +23,15 @@ interface ThemeProviderProps {
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [is_dark_mode, setIsDarkMode] = useState<boolean>(() => {
-    const saved_theme = localStorage.getItem("theme");
-    return saved_theme === "dark";
+    const saved_theme = localStorage.getItem('theme');
+    return saved_theme === 'dark';
   });
 
   const [resume_section, setResumeSection] = useState<number>(1);
 
   useEffect(() => {
-    localStorage.setItem("theme", is_dark_mode ? "dark" : "light");
-    document.documentElement.setAttribute(
-      "data-theme",
-      is_dark_mode ? "dark" : "light"
-    );
+    localStorage.setItem('theme', is_dark_mode ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', is_dark_mode ? 'dark' : 'light');
   }, [is_dark_mode]);
 
   const toggle_dark_mode = () => {
@@ -52,7 +49,5 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     set_resume_section,
   };
 
-  return (
-    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 };

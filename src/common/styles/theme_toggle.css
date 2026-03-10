@@ -80,24 +80,24 @@
 }
 
 /* 다크모드 스타일 */
-[data-theme="dark"] .theme_toggle_label {
+[data-theme='dark'] .theme_toggle_label {
   color: #ffffff;
 }
 
-[data-theme="dark"] .theme_toggle_button.dark_mode {
+[data-theme='dark'] .theme_toggle_button.dark_mode {
   background-color: #ffffff;
 }
 
-[data-theme="dark"] .theme_toggle_button.dark_mode .theme_toggle_circle {
+[data-theme='dark'] .theme_toggle_button.dark_mode .theme_toggle_circle {
   background-color: #1a1a1a;
 }
 
-[data-theme="dark"] .theme_toggle_bottom {
+[data-theme='dark'] .theme_toggle_bottom {
   border-color: #ffffff;
   background-color: transparent;
 }
 
-[data-theme="dark"] .theme_toggle_bottom_text {
+[data-theme='dark'] .theme_toggle_bottom_text {
   color: #ffffff;
 }
 

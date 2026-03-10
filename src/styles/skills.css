@@ -14,15 +14,26 @@
 .strength_title {
   color: #333333;
   font-size: 50px;
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
   font-weight: 700;
   transition: color 0.3s ease;
 }
 
 /* 다크모드 제목 */
-[data-theme="dark"] .strength_title {
+[data-theme='dark'] .strength_title {
   color: #ffffff;
 }
 
@@ -78,21 +89,21 @@
 }
 
 /* 다크모드 토글 버튼 */
-[data-theme="dark"] .strength_toggle {
+[data-theme='dark'] .strength_toggle {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.3);
   color: #e0e0e0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-[data-theme="dark"] .strength_toggle:hover {
+[data-theme='dark'] .strength_toggle:hover {
   background: rgba(255, 255, 255, 0.15);
   border-color: #8b9cff;
   color: #8b9cff;
   box-shadow: 0 8px 25px rgba(139, 156, 255, 0.2);
 }
 
-[data-theme="dark"] .strength_toggle.active {
+[data-theme='dark'] .strength_toggle.active {
   background-color: #8b9cff;
   color: white;
   border-color: #8b9cff;
@@ -151,12 +162,12 @@
 }
 
 /* 다크모드 콘텐츠 컨테이너 */
-[data-theme="dark"] .content-container {
+[data-theme='dark'] .content-container {
   border-color: #8b9cff;
   background: rgba(255, 255, 255, 0.05);
 }
 
-[data-theme="dark"] .content-container:hover {
+[data-theme='dark'] .content-container:hover {
   background: linear-gradient(
     135deg,
     rgba(139, 156, 255, 0.2) 0%,
@@ -183,7 +194,7 @@
 }
 
 /* 다크모드 콘텐츠 박스 */
-[data-theme="dark"] .content_box {
+[data-theme='dark'] .content_box {
   color: #e0e0e0;
 }
 .content_img {
@@ -207,7 +218,7 @@
 }
 
 /* 다크모드 콘텐츠 제목 */
-[data-theme="dark"] .content_title {
+[data-theme='dark'] .content_title {
   background-color: #8b9cff;
   border-color: #8b9cff;
 }

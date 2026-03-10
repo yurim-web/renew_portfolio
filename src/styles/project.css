@@ -28,15 +28,26 @@
   text-align: left;
   margin-bottom: 50px;
   padding: 0 40px;
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
   position: relative;
   letter-spacing: -0.02em;
   transition: color 0.3s ease;
 }
 
-[data-theme="dark"] .work_title {
+[data-theme='dark'] .work_title {
   color: #ffffff;
 }
 
@@ -81,13 +92,13 @@
   opacity: 0;
 }
 
-[data-theme="dark"] .work_card {
+[data-theme='dark'] .work_card {
   background: #2d2d2d;
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #ffffff;
 }
 
-[data-theme="dark"] .work_card:hover {
+[data-theme='dark'] .work_card:hover {
   background: #2a2a2a !important;
   color: #ffffff;
   border: 1px solid rgba(139, 156, 255, 0.3);
@@ -106,13 +117,13 @@
   min-height: 700px;
 }
 
-[data-theme="dark"] .work_card:nth-child(1),
-[data-theme="dark"] .work_card:nth-child(2),
-[data-theme="dark"] .work_card:nth-child(3) {
+[data-theme='dark'] .work_card:nth-child(1),
+[data-theme='dark'] .work_card:nth-child(2),
+[data-theme='dark'] .work_card:nth-child(3) {
   background: #2d2d2d !important;
 }
 
-[data-theme="dark"] .work_card:nth-child(3) {
+[data-theme='dark'] .work_card:nth-child(3) {
   min-height: 700px;
 }
 
@@ -121,9 +132,20 @@
   font-weight: 700;
   color: inherit;
   margin-bottom: 30px;
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
   position: relative;
   z-index: 3;
   line-height: 1.3;
@@ -142,7 +164,7 @@
   transition: color 0.3s ease;
 }
 
-[data-theme="dark"] .work_card_number {
+[data-theme='dark'] .work_card_number {
   color: #8b9cff;
 }
 
@@ -183,11 +205,11 @@
   color: #553c9a;
 }
 
-[data-theme="dark"] .work_project_item {
+[data-theme='dark'] .work_project_item {
   color: #d0d0d0;
 }
 
-[data-theme="dark"] .work_project_item:hover {
+[data-theme='dark'] .work_project_item:hover {
   border-bottom-color: rgba(139, 156, 255, 0.4);
   color: #8b9cff;
 }
@@ -220,9 +242,20 @@
   font-weight: 600;
   color: #666666;
   opacity: 0.6;
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   text-align: center;
@@ -232,7 +265,7 @@
   transition: color 0.3s ease;
 }
 
-[data-theme="dark"] .work_cursor_text {
+[data-theme='dark'] .work_cursor_text {
   color: #b0b0b0;
 }
 
