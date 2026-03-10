@@ -1,8 +1,8 @@
-import React, { useRef, useEffect, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "../styles/web_design.css";
-import { web_design_projects, WebDesignProject } from "../data/webDesignData";
+import React, { useRef, useEffect, useState } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import '../styles/web_design.css';
+import { web_design_projects, WebDesignProject } from '../data/webDesignData';
 
 const WebDesign = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -10,8 +10,7 @@ const WebDesign = () => {
   const gridRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [selectedProject, setSelectedProject] =
-    useState<WebDesignProject | null>(null);
+  const [selectedProject, setSelectedProject] = useState<WebDesignProject | null>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -25,12 +24,12 @@ const WebDesign = () => {
           opacity: 1,
           y: 0,
           duration: 1,
-          ease: "power2.out",
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: titleRef.current,
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "play none none reverse",
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
           },
         }
       );
@@ -53,19 +52,19 @@ const WebDesign = () => {
         y: 0,
         scale: 1,
         duration: 0.8,
-        ease: "power2.out",
+        ease: 'power2.out',
         stagger: 0.2,
         scrollTrigger: {
           trigger: gridRef.current,
-          start: "top 70%",
-          end: "bottom 30%",
-          toggleActions: "play none none reverse",
+          start: 'top 70%',
+          end: 'bottom 30%',
+          toggleActions: 'play none none reverse',
         },
       });
     }
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
 
@@ -73,30 +72,30 @@ const WebDesign = () => {
   const openModal = (project: WebDesignProject) => {
     setSelectedImage(project.image);
     setSelectedProject(project);
-    document.body.style.overflow = "hidden"; // 스크롤 방지
+    document.body.style.overflow = 'hidden'; // 스크롤 방지
   };
 
   // 모달 닫기 함수
   const closeModal = () => {
     setSelectedImage(null);
     setSelectedProject(null);
-    document.body.style.overflow = "unset"; // 스크롤 복원
+    document.body.style.overflow = 'unset'; // 스크롤 복원
   };
 
   // ESC 키로 모달 닫기
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
+      if (e.key === 'Escape') {
         closeModal();
       }
     };
 
     if (selectedImage) {
-      document.addEventListener("keydown", handleEscape);
+      document.addEventListener('keydown', handleEscape);
     }
 
     return () => {
-      document.removeEventListener("keydown", handleEscape);
+      document.removeEventListener('keydown', handleEscape);
     };
   }, [selectedImage]);
 
@@ -111,22 +110,16 @@ const WebDesign = () => {
           {web_design_projects.map((project, index) => (
             <div
               key={project.id}
-              ref={(el) => (cardRefs.current[index] = el)}
+              ref={el => (cardRefs.current[index] = el)}
               className="web_design_card"
               onClick={() => openModal(project)}
             >
               <div className="web_design_card_image_container">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="web_design_card_image"
-                />
+                <img src={project.image} alt={project.title} className="web_design_card_image" />
                 <div className="web_design_card_overlay">
                   <div className="web_design_card_info">
                     <h3 className="web_design_card_title">{project.title}</h3>
-                    <p className="web_design_card_description">
-                      {project.description}
-                    </p>
+                    <p className="web_design_card_description">{project.description}</p>
                     <div className="web_design_click_hint">CLICK</div>
                   </div>
                 </div>
@@ -138,12 +131,15 @@ const WebDesign = () => {
 
       {/* 이미지 모달 */}
       {selectedImage && selectedProject && (
-        <div className="web_design_modal" onClick={closeModal}>
-          <div
-            className="web_design_modal_content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button className="web_design_modal_close" onClick={closeModal}>
+        <div
+          className="web_design_modal"
+          onClick={closeModal}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal_title"
+        >
+          <div className="web_design_modal_content" onClick={e => e.stopPropagation()}>
+            <button className="web_design_modal_close" onClick={closeModal} aria-label="모달 닫기">
               ×
             </button>
             <div className="web_design_modal_image_container">
@@ -155,30 +151,19 @@ const WebDesign = () => {
             </div>
             <div className="web_design_modal_info">
               <div className="web_design_modal_meta">
-                <span className="web_design_modal_year">
-                  {selectedProject.year}
-                </span>
-                <span className="web_design_modal_category">
-                  {selectedProject.category}
-                </span>
+                <span className="web_design_modal_year">{selectedProject.year}</span>
+                <span className="web_design_modal_category">{selectedProject.category}</span>
               </div>
-              <h3 className="web_design_modal_title">
+              <h3 id="modal_title" className="web_design_modal_title">
                 {selectedProject.title}
               </h3>
-              <p className="web_design_modal_description">
-                {selectedProject.description}
-              </p>
+              <p className="web_design_modal_description">{selectedProject.description}</p>
               <div className="web_design_modal_tech_stack">
-                {selectedProject.tech_stack.map(
-                  (tech: string, techIndex: number) => (
-                    <span
-                      key={techIndex}
-                      className="web_design_modal_tech_pill"
-                    >
-                      {tech}
-                    </span>
-                  )
-                )}
+                {selectedProject.tech_stack.map((tech: string, techIndex: number) => (
+                  <span key={techIndex} className="web_design_modal_tech_pill">
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
           </div>

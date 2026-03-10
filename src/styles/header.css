@@ -13,7 +13,7 @@
   box-shadow: none;
 }
 
-[data-theme="dark"] .header_container {
+[data-theme='dark'] .header_container {
   color: #ffffff;
 }
 
@@ -23,7 +23,7 @@
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03) !important;
 }
 
-[data-theme="dark"] .header_scrolled {
+[data-theme='dark'] .header_scrolled {
   background-color: rgba(26, 26, 26, 0.1) !important;
   backdrop-filter: blur(10px) !important;
   box-shadow: 0 2px 20px rgba(255, 255, 255, 0.03) !important;
@@ -84,12 +84,12 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-[data-theme="dark"] .github_link {
+[data-theme='dark'] .github_link {
   background: transparent;
   color: #ffffff;
 }
 
-[data-theme="dark"] .github_link:hover {
+[data-theme='dark'] .github_link:hover {
   background: #ffffff;
   color: #333333;
 }
@@ -111,12 +111,71 @@
   transition: color 0.3s ease;
 }
 
-[data-theme="dark"] .nav_link {
+[data-theme='dark'] .nav_link {
   color: #ffffff;
 }
 
-[data-theme="dark"] .nav_link:hover {
+[data-theme='dark'] .nav_link:hover {
   color: #cccccc;
+}
+
+/* PROJECTS 드롭다운 */
+.nav_dropdown {
+  position: relative;
+}
+
+.nav_dropdown_menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 8px 0;
+  min-width: 170px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+  z-index: 100;
+}
+
+.nav_dropdown:hover .nav_dropdown_menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav_dropdown_link {
+  display: block;
+  padding: 10px 20px;
+  font-weight: 500;
+  color: #333333;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav_dropdown_link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .nav_dropdown_menu {
+  background-color: rgba(26, 26, 26, 0.97);
+}
+
+[data-theme='dark'] .nav_dropdown_link {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .nav_dropdown_link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 /* 모바일 메뉴 */
@@ -141,7 +200,7 @@
   transform-origin: center;
 }
 
-[data-theme="dark"] .hamburger_line {
+[data-theme='dark'] .hamburger_line {
   background-color: #ffffff;
 }
 
@@ -160,7 +219,7 @@
   justify-content: center;
 }
 
-[data-theme="dark"] .mobile_menu {
+[data-theme='dark'] .mobile_menu {
   background-color: rgba(26, 26, 26, 0.95);
 }
 
@@ -191,11 +250,11 @@
   color: #666666;
 }
 
-[data-theme="dark"] .mobile_nav_link {
+[data-theme='dark'] .mobile_nav_link {
   color: #ffffff;
 }
 
-[data-theme="dark"] .mobile_nav_link:hover {
+[data-theme='dark'] .mobile_nav_link:hover {
   color: #cccccc;
 }
 
@@ -205,7 +264,7 @@
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-[data-theme="dark"] .mobile_social {
+[data-theme='dark'] .mobile_social {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -226,11 +285,11 @@
   color: #666666;
 }
 
-[data-theme="dark"] .mobile_github_link {
+[data-theme='dark'] .mobile_github_link {
   color: #ffffff;
 }
 
-[data-theme="dark"] .mobile_github_link:hover {
+[data-theme='dark'] .mobile_github_link:hover {
   color: #cccccc;
 }
 

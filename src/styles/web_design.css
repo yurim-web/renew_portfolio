@@ -18,9 +18,20 @@
 .web_design_title {
   color: #1e293b;
   font-size: 50px;
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
   font-weight: 700;
   text-align: center;
   margin-bottom: 80px;
@@ -311,9 +322,20 @@
   font-weight: 700;
   color: #1e293b;
   margin-bottom: 15px;
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
 }
 
 .web_design_modal_description {
@@ -636,35 +658,35 @@
 }
 
 /* 다크모드 스타일 */
-[data-theme="dark"] .web_design_section {
+[data-theme='dark'] .web_design_section {
   background-color: #0a0a0a;
 }
 
-[data-theme="dark"] .web_design_title {
+[data-theme='dark'] .web_design_title {
   color: #ffffff;
 }
 
-[data-theme="dark"] .web_design_card {
+[data-theme='dark'] .web_design_card {
   background: #1a1a1a;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-[data-theme="dark"] .web_design_card:hover {
+[data-theme='dark'] .web_design_card:hover {
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
 }
 
-[data-theme="dark"] .web_design_card_overlay {
+[data-theme='dark'] .web_design_card_overlay {
   backdrop-filter: blur(15px);
   background: rgba(0, 0, 0, 0.3);
 }
 
-[data-theme="dark"] .web_design_modal_content {
+[data-theme='dark'] .web_design_modal_content {
   background: #1a1a1a;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-[data-theme="dark"] .web_design_modal_info {
+[data-theme='dark'] .web_design_modal_info {
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.05) 0%,
@@ -673,29 +695,29 @@
   );
 }
 
-[data-theme="dark"] .web_design_modal_title {
+[data-theme='dark'] .web_design_modal_title {
   color: #ffffff;
 }
 
-[data-theme="dark"] .web_design_modal_description {
+[data-theme='dark'] .web_design_modal_description {
   color: #b0b0b0;
 }
 
-[data-theme="dark"] .web_design_modal_tech_pill {
+[data-theme='dark'] .web_design_modal_tech_pill {
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-[data-theme="dark"] .web_design_modal_meta {
+[data-theme='dark'] .web_design_modal_meta {
   color: #b0b0b0;
 }
 
-[data-theme="dark"] .web_design_modal_year {
+[data-theme='dark'] .web_design_modal_year {
   color: #ffffff;
 }
 
-[data-theme="dark"] .web_design_modal_category {
+[data-theme='dark'] .web_design_modal_category {
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.2);
