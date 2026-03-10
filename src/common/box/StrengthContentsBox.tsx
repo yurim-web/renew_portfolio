@@ -19,6 +19,7 @@ import figmaImg from '../../assets/skill_img/figma_2.png';
 import photoshopImg from '../../assets/skill_img/photoshop.png';
 import illustratorImg from '../../assets/skill_img/illustrator.png';
 import typescriptImg from '../../assets/skill_img/typescript.png';
+import confluenceImg from '../../assets/skill_img/confluence.png';
 import cafe24Img from '../../assets/skill_img/cafe24.png';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -26,53 +27,56 @@ gsap.registerPlugin(ScrollTrigger);
 const skillData = [
   {
     contents:
-      '유효성 문제 없이 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 간단하고 빠르게 구성 합니다.',
+      '시맨틱 마크업과 웹 표준·접근성을 준수한 HTML 구조를 설계합니다. 다양한 디바이스 환경을 고려한 견고한 마크업을 빠르게 작성합니다.',
     skill: 'HTML',
     img: htmlImg,
   },
   {
     contents:
-      '다양한 디자인과 애니메이션을 구성하며 Javascript와 연동 할 수 있는 화려한 디자인 제작 가능합니다.',
+      'Flexbox, Grid를 활용한 복잡한 레이아웃과 애니메이션을 구현합니다. 디자인 시안을 픽셀 단위로 재현하며 JavaScript 인터랙션과 결합한 동적 UI 표현에 강점이 있습니다.',
     skill: 'CSS',
     img: cssImg,
   },
   {
     contents:
-      '조건문 및 반복문을 이용해 슬라이드, 메뉴, 스크롤 애니메이션과 같은 다양한 동적 기능을 구현 가능합니다.',
+      'DOM 제어와 이벤트 처리를 기반으로 슬라이드, 메뉴, 스크롤 인터랙션 등 실무 수준의 동적 기능을 구현합니다.',
     skill: 'Javascript',
     img: javascriptImg,
   },
   {
     contents:
-      'TypeScript를 활용하여 정적 타입 시스템으로 코드 안정성을 높이고, 인터페이스와 제네릭을 이용한 타입 안전한 개발이 가능합니다.',
+      '인터페이스와 타입 정의로 코드 안정성을 높이고, 런타임 오류를 사전에 방지하는 타입 안전한 개발을 실무에서 적용하고 있습니다.',
     skill: 'TypeScript',
     img: typescriptImg,
   },
   {
     contents:
-      'React의 기본 개념인 컴포넌트 기반 아키텍처를 활용하여 UI를 구조화하고, useState, useEffect와 같은 훅을 사용하여 상태 및 라이프사이클 관리 가능합니다.',
+      '컴포넌트 기반으로 UI를 구조화하고, useState·useEffect·useRef 등 기본 훅을 활용해 상태 관리와 사이드 이펙트를 처리합니다.',
     skill: 'React',
     img: reactImg,
   },
   {
-    contents: 'Next.js를 활용해 기본적인 프로젝트 구성과 라우팅을 구현할 수 있습니다.',
+    contents:
+      'Next.js를 활용해 페이지 라우팅과 기본적인 프로젝트 구조를 설계할 수 있으며, 꾸준히 학습을 이어가고 있습니다.',
     skill: 'Next.js',
     img: nextImg,
   },
   {
     contents:
-      '스크롤 애니메이션, 타임라인 애니메이션 등 다양한 동적 효과를 GSAP을 이용해 구성 가능합니다.',
+      'ScrollTrigger와 Timeline을 활용해 스크롤 기반 애니메이션과 시퀀스 인터랙션을 구현합니다. 다수의 실무·개인 프로젝트에 적용한 경험이 있습니다.',
     skill: 'Gsap.js',
     img: gsapImg,
   },
 
   {
-    contents: 'Git과 Github를 활용한 버전 관리 및 프로젝트 협업이 가능합니다.',
+    contents:
+      '브랜치 전략과 커밋 컨벤션 기반으로 버전을 관리하고, 실무 협업 환경에서 Git을 일상적으로 사용하고 있습니다.',
     skill: 'Git',
     img: gitImg,
   },
   {
-    contents: 'Git과 Github를 활용한 버전 관리 및 프로젝트 협업이 가능합니다.',
+    contents:
+      '브랜치 전략과 커밋 컨벤션 기반으로 버전을 관리하고, 실무 협업 환경에서 GitHub을 일상적으로 사용하고 있습니다.',
     skill: 'Github',
     img: githubImg,
   },
@@ -85,6 +89,12 @@ const skillData = [
     contents: '노션을 이용해 메모 및 아이디어 기록이나 해야할 일을 관리할 수 있습니다.',
     skill: 'Notion',
     img: notionImg,
+  },
+  {
+    contents:
+      'Confluence를 활용한 팀 문서 작성 및 프로젝트 협업이 가능합니다. 실무 환경에서 팀원들과 문서를 공유하고 관리한 경험이 있습니다.',
+    skill: 'Confluence',
+    img: confluenceImg,
   },
   {
     contents: '와이어프레임과 프로토타입 제작, 협업을 위한 디자인 작업이 가능합니다.',

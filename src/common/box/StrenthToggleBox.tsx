@@ -21,6 +21,7 @@ const StrenthToggleBox: React.FC<StrenthToggleBoxProps> = ({ activeSkill, onSkil
     'Git/Github',
     'SourceTree',
     'Notion',
+    'Confluence',
     'Figma',
     'Photoshop',
     'Illustrator',
