@@ -1,8 +1,8 @@
-import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "../styles/professional_projects.css";
-import { professional_projects } from "../data/portfolioData";
+import React, { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import '../styles/professional_projects.css';
+import { professional_projects } from '../data/portfolioData';
 
 const ProfessionalProjects = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -21,12 +21,12 @@ const ProfessionalProjects = () => {
           opacity: 1,
           y: 0,
           duration: 1,
-          ease: "power2.out",
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: titleRef.current,
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "play none none reverse",
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
           },
         }
       );
@@ -42,13 +42,13 @@ const ProfessionalProjects = () => {
             opacity: 1,
             y: 0,
             duration: 0.8,
-            ease: "power2.out",
+            ease: 'power2.out',
             delay: index * 0.2,
             scrollTrigger: {
               trigger: project,
-              start: "top 85%",
-              end: "bottom 15%",
-              toggleActions: "play none none reverse",
+              start: 'top 85%',
+              end: 'bottom 15%',
+              toggleActions: 'play none none reverse',
             },
           }
         );
@@ -56,7 +56,7 @@ const ProfessionalProjects = () => {
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
 
@@ -71,7 +71,7 @@ const ProfessionalProjects = () => {
           {professional_projects.map((project, index) => (
             <div
               key={project.id}
-              ref={(el) => (projectsRef.current[index] = el)}
+              ref={el => (projectsRef.current[index] = el)}
               className="professional_project_card"
             >
               <div className="professional_project_image_container">
@@ -83,42 +83,29 @@ const ProfessionalProjects = () => {
               </div>
 
               <div className="professional_project_content">
-                <h3 className="professional_project_name">
-                  {project.project_name}
-                </h3>
+                <h3 className="professional_project_name">{project.project_name}</h3>
 
-                <div className="professional_project_period">
-                  {project.period}
-                </div>
+                <div className="professional_project_period">{project.period}</div>
 
-                <div className="professional_project_role">
-                  Role: {project.role}
-                </div>
+                <div className="professional_project_role">Role: {project.role}</div>
 
                 <div className="professional_project_tech">
                   <span className="professional_project_tech_label">Tech:</span>
                   <div className="professional_project_tech_stack">
                     {project.tech_stack.map((tech, techIndex) => (
-                      <div
-                        key={techIndex}
-                        className="professional_project_tech_pill"
-                      >
+                      <div key={techIndex} className="professional_project_tech_pill">
                         <img
                           src={tech.icon}
                           alt={tech.name}
                           className="professional_project_tech_icon"
                         />
-                        <span className="professional_project_tech_name">
-                          {tech.name}
-                        </span>
+                        <span className="professional_project_tech_name">{tech.name}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <p className="professional_project_description">
-                  {project.description}
-                </p>
+                <p className="professional_project_description">{project.description}</p>
 
                 <div className="professional_project_buttons">
                   {project.view_link && (
