@@ -1,122 +1,119 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import StrengthContents from "./StrengthContents";
-import "../../styles/skills.css";
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import StrengthContents from './StrengthContents';
+import '../../styles/skills.css';
 
 // 이미지 import
-import htmlImg from "../../assets/skill_img/html.png";
-import cssImg from "../../assets/skill_img/css.png";
-import javascriptImg from "../../assets/skill_img/javascript.png";
-import reactImg from "../../assets/skill_img/react.png";
-import nextImg from "../../assets/skill_img/next.png";
-import gsapImg from "../../assets/skill_img/gsap.png";
-import gitImg from "../../assets/skill_img/git.png";
-import githubImg from "../../assets/skill_img/github.png";
-import sourcetreeImg from "../../assets/skill_img/sourcetree.png";
-import notionImg from "../../assets/skill_img/notion_2.png";
-import figmaImg from "../../assets/skill_img/figma_2.png";
-import photoshopImg from "../../assets/skill_img/photoshop.png";
-import illustratorImg from "../../assets/skill_img/illustrator.png";
-import cafe24Img from "../../assets/skill_img/cafe24.png";
+import htmlImg from '../../assets/skill_img/html.png';
+import cssImg from '../../assets/skill_img/css.png';
+import javascriptImg from '../../assets/skill_img/javascript.png';
+import reactImg from '../../assets/skill_img/react.png';
+import nextImg from '../../assets/skill_img/next.png';
+import gsapImg from '../../assets/skill_img/gsap.png';
+import gitImg from '../../assets/skill_img/git.png';
+import githubImg from '../../assets/skill_img/github.png';
+import sourcetreeImg from '../../assets/skill_img/sourcetree.png';
+import notionImg from '../../assets/skill_img/notion_2.png';
+import figmaImg from '../../assets/skill_img/figma_2.png';
+import photoshopImg from '../../assets/skill_img/photoshop.png';
+import illustratorImg from '../../assets/skill_img/illustrator.png';
+import typescriptImg from '../../assets/skill_img/typescript.png';
+import cafe24Img from '../../assets/skill_img/cafe24.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const StrengthContentsBox = ({
-  activeSkill,
-}: {
-  activeSkill: string | null;
-}) => {
+const skillData = [
+  {
+    contents:
+      '유효성 문제 없이 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 간단하고 빠르게 구성 합니다.',
+    skill: 'HTML',
+    img: htmlImg,
+  },
+  {
+    contents:
+      '다양한 디자인과 애니메이션을 구성하며 Javascript와 연동 할 수 있는 화려한 디자인 제작 가능합니다.',
+    skill: 'CSS',
+    img: cssImg,
+  },
+  {
+    contents:
+      '조건문 및 반복문을 이용해 슬라이드, 메뉴, 스크롤 애니메이션과 같은 다양한 동적 기능을 구현 가능합니다.',
+    skill: 'Javascript',
+    img: javascriptImg,
+  },
+  {
+    contents:
+      'TypeScript를 활용하여 정적 타입 시스템으로 코드 안정성을 높이고, 인터페이스와 제네릭을 이용한 타입 안전한 개발이 가능합니다.',
+    skill: 'TypeScript',
+    img: typescriptImg,
+  },
+  {
+    contents:
+      'React의 기본 개념인 컴포넌트 기반 아키텍처를 활용하여 UI를 구조화하고, useState, useEffect와 같은 훅을 사용하여 상태 및 라이프사이클 관리 가능합니다.',
+    skill: 'React',
+    img: reactImg,
+  },
+  {
+    contents: 'Next.js를 활용해 기본적인 프로젝트 구성과 라우팅을 구현할 수 있습니다.',
+    skill: 'Next.js',
+    img: nextImg,
+  },
+  {
+    contents:
+      '스크롤 애니메이션, 타임라인 애니메이션 등 다양한 동적 효과를 GSAP을 이용해 구성 가능합니다.',
+    skill: 'Gsap.js',
+    img: gsapImg,
+  },
+
+  {
+    contents: 'Git과 Github를 활용한 버전 관리 및 프로젝트 협업이 가능합니다.',
+    skill: 'Git',
+    img: gitImg,
+  },
+  {
+    contents: 'Git과 Github를 활용한 버전 관리 및 프로젝트 협업이 가능합니다.',
+    skill: 'Github',
+    img: githubImg,
+  },
+  {
+    contents: 'SourceTree를 활용한 Git GUI 환경에서 직관적인 버전 관리와 브랜치 작업이 가능합니다.',
+    skill: 'SourceTree',
+    img: sourcetreeImg,
+  },
+  {
+    contents: '노션을 이용해 메모 및 아이디어 기록이나 해야할 일을 관리할 수 있습니다.',
+    skill: 'Notion',
+    img: notionImg,
+  },
+  {
+    contents: '와이어프레임과 프로토타입 제작, 협업을 위한 디자인 작업이 가능합니다.',
+    skill: 'Figma',
+    img: figmaImg,
+  },
+  {
+    contents:
+      '사진 보정, 합성, 상세페이지, SNS디자인 등 다양한 실무 디자인을 창의적으로 제작할 수 있습니다.',
+    skill: 'Photoshop',
+    img: photoshopImg,
+  },
+  {
+    contents:
+      '간단한 캐릭터 디자인, 로고 디자인 등 깔끔하고 돋보이는 백터 디자인을 제작할 수 있습니다.',
+    skill: 'Illustrator',
+    img: illustratorImg,
+  },
+  {
+    contents:
+      'Cafe24 호스팅 환경에서 웹사이트 배포 및 관리, 도메인 설정 등 서버 운영이 가능합니다.',
+    skill: 'Cafe24',
+    img: cafe24Img,
+  },
+];
+
+const StrengthContentsBox = ({ activeSkill }: { activeSkill: string | null }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-
-  const skillData = [
-    {
-      contents:
-        "유효성 문제 없이 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 간단하고 빠르게 구성 합니다.",
-      skill: "HTML",
-      img: htmlImg,
-    },
-    {
-      contents:
-        "다양한 디자인과 애니메이션을 구성하며 Javascript와 연동 할 수 있는 화려한 디자인 제작 가능합니다.",
-      skill: "CSS",
-      img: cssImg,
-    },
-    {
-      contents:
-        "조건문 및 반복문을 이용해 슬라이드, 메뉴, 스크롤 애니메이션과 같은 다양한 동적 기능을 구현 가능합니다.",
-      skill: "Javascript",
-      img: javascriptImg,
-    },
-    {
-      contents:
-        "React의 기본 개념인 컴포넌트 기반 아키텍처를 활용하여 UI를 구조화하고, useState, useEffect와 같은 훅을 사용하여 상태 및 라이프사이클 관리 가능합니다.",
-      skill: "React",
-      img: reactImg,
-    },
-    {
-      contents:
-        "Next.js를 활용해 기본적인 프로젝트 구성과 라우팅을 구현할 수 있습니다.",
-      skill: "Next.js",
-      img: nextImg,
-    },
-    {
-      contents:
-        "스크롤 애니메이션, 타임라인 애니메이션 등 다양한 동적 효과를 GSAP을 이용해 구성 가능합니다.",
-      skill: "Gsap.js",
-      img: gsapImg,
-    },
-
-    {
-      contents:
-        "Git과 Github를 활용한 버전 관리 및 프로젝트 협업이 가능합니다.",
-      skill: "Git",
-      img: gitImg,
-    },
-    {
-      contents:
-        "Git과 Github를 활용한 버전 관리 및 프로젝트 협업이 가능합니다.",
-      skill: "Github",
-      img: githubImg,
-    },
-    {
-      contents:
-        "SourceTree를 활용한 Git GUI 환경에서 직관적인 버전 관리와 브랜치 작업이 가능합니다.",
-      skill: "SourceTree",
-      img: sourcetreeImg,
-    },
-    {
-      contents:
-        "노션을 이용해 메모 및 아이디어 기록이나 해야할 일을 관리할 수 있습니다.",
-      skill: "Notion",
-      img: notionImg,
-    },
-    {
-      contents:
-        "와이어프레임과 프로토타입 제작, 협업을 위한 디자인 작업이 가능합니다.",
-      skill: "Figma",
-      img: figmaImg,
-    },
-    {
-      contents:
-        "사진 보정, 합성, 상세페이지, SNS디자인 등 다양한 실무 디자인을 창의적으로 제작할 수 있습니다.",
-      skill: "Photoshop",
-      img: photoshopImg,
-    },
-    {
-      contents:
-        "간단한 캐릭터 디자인, 로고 디자인 등 깔끔하고 돋보이는 백터 디자인을 제작할 수 있습니다.",
-      skill: "Illustrator",
-      img: illustratorImg,
-    },
-    {
-      contents:
-        "Cafe24 호스팅 환경에서 웹사이트 배포 및 관리, 도메인 설정 등 서버 운영이 가능합니다.",
-      skill: "Cafe24",
-      img: cafe24Img,
-    },
-  ];
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -144,13 +141,13 @@ const StrengthContentsBox = ({
           y: 0,
           z: 0,
           duration: 1.5,
-          ease: "power3.out",
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: card,
-            start: "top 85%",
-            end: "top 15%",
+            start: 'top 85%',
+            end: 'top 15%',
             scrub: 1.2,
-            toggleActions: "play none none reverse",
+            toggleActions: 'play none none reverse',
           },
         });
 
@@ -158,13 +155,13 @@ const StrengthContentsBox = ({
         gsap.to(card, {
           rotationX: 2,
           duration: 0.8,
-          ease: "power2.out",
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: card,
-            start: "top 75%",
-            end: "top 25%",
+            start: 'top 75%',
+            end: 'top 25%',
             scrub: 1,
-            toggleActions: "play none none reverse",
+            toggleActions: 'play none none reverse',
           },
         });
       }
@@ -183,19 +180,19 @@ const StrengthContentsBox = ({
         opacity: 1,
         scale: 1,
         duration: 2,
-        ease: "power3.out",
+        ease: 'power3.out',
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 85%",
-          end: "top 20%",
+          start: 'top 85%',
+          end: 'top 20%',
           scrub: 1.5,
-          toggleActions: "play none none reverse",
+          toggleActions: 'play none none reverse',
         },
       }
     );
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
 
@@ -203,15 +200,13 @@ const StrengthContentsBox = ({
     if (!activeSkill) return;
 
     // 활성 스킬에 따른 카드 애니메이션
-    const activeIndex = skillData.findIndex(
-      (skill) => skill.skill === activeSkill
-    );
+    const activeIndex = skillData.findIndex(skill => skill.skill === activeSkill);
     if (activeIndex !== -1 && cardsRef.current[activeIndex]) {
       gsap.to(cardsRef.current[activeIndex], {
         scale: 1.05,
         rotationY: 5,
         duration: 0.3,
-        ease: "power2.out",
+        ease: 'power2.out',
       });
 
       // 다른 카드들은 살짝 축소
@@ -221,18 +216,18 @@ const StrengthContentsBox = ({
             scale: 0.95,
             opacity: 0.7,
             duration: 0.3,
-            ease: "power2.out",
+            ease: 'power2.out',
           });
         }
       });
     } else {
       // 모든 카드를 원래 상태로
-      gsap.to(cardsRef.current, {
+      gsap.to(cardsRef.current.filter(Boolean), {
         scale: 1,
         rotationY: 0,
         opacity: 1,
         duration: 0.3,
-        ease: "power2.out",
+        ease: 'power2.out',
       });
     }
   }, [activeSkill]);
@@ -242,14 +237,10 @@ const StrengthContentsBox = ({
       {skillData.map((skill, index) => (
         <div
           key={skill.skill}
-          ref={(el) => (cardsRef.current[index] = el)}
+          ref={el => (cardsRef.current[index] = el)}
           className="strength_card_wrapper"
         >
-          <StrengthContents
-            contents={skill.contents}
-            skill={skill.skill}
-            img={skill.img}
-          />
+          <StrengthContents contents={skill.contents} skill={skill.skill} img={skill.img} />
         </div>
       ))}
     </div>

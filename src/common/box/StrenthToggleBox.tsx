@@ -1,43 +1,36 @@
-import React, { useRef } from "react";
-import StrengthToggle from "../button/StrengthToggle";
-import "../../styles/skills.css";
+import React from 'react';
+import StrengthToggle from '../button/StrengthToggle';
+import '../../styles/skills.css';
 
 interface StrenthToggleBoxProps {
   activeSkill: string | null;
   onSkillChange: (skill: string) => void;
 }
 
-const StrenthToggleBox: React.FC<StrenthToggleBoxProps> = ({
-  activeSkill,
-  onSkillChange,
-}) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const togglesRef = useRef<(HTMLDivElement | null)[]>([]);
+const StrenthToggleBox: React.FC<StrenthToggleBoxProps> = ({ activeSkill, onSkillChange }) => {
+  const containerRef = React.useRef<HTMLDivElement>(null);
 
   const skills = [
-    "HTML",
-    "CSS",
-    "Javascript",
-    "React",
-    "Next.js",
-    "Gsap.js",
-    "Git/Github",
-    "SourceTree",
-    "Notion",
-    "Figma",
-    "Photoshop",
-    "Illustrator",
-    "Cafe24",
+    'HTML',
+    'CSS',
+    'Javascript',
+    'TypeScript',
+    'React',
+    'Next.js',
+    'Gsap.js',
+    'Git/Github',
+    'SourceTree',
+    'Notion',
+    'Figma',
+    'Photoshop',
+    'Illustrator',
+    'Cafe24',
   ];
 
   return (
     <div ref={containerRef} className="strength_toggle_container">
-      {skills.map((skill, index) => (
-        <div
-          key={skill}
-          ref={(el) => (togglesRef.current[index] = el)}
-          className="toggle_wrapper"
-        >
+      {skills.map(skill => (
+        <div key={skill} className="toggle_wrapper">
           <StrengthToggle
             strength={skill}
             isActive={activeSkill === skill}
