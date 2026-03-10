@@ -17,15 +17,15 @@ const About = () => {
           <div className="about_text">
             <h3 className="name">Lee yurim</h3>
             <p className="greeting">
-              디자인부터 퍼블리싱까지 직접 담당한 실무 경험을 바탕으로, 화면을 완성하는 것을 넘어
-              서비스 전체를 이해하는 <span className="highlight_tech">웹 퍼블리셔</span>{' '}
-              이유림입니다.
+              디자인부터 퍼블리싱, 프론트엔드 개발까지 직접 경험한 실무형{' '}
+              <span className="highlight_tech">웹 개발자</span> 이유림입니다.
             </p>
             <p className="description">
               마케터용 데이터 레포팅 SaaS의 랜딩 및 앱 프론트를 단독으로 구현하고, 광고주 홈페이지를
               디자인부터 배포까지 100% 책임진 경험이 있습니다.{' '}
-              <span className="highlight_tech">웹 표준과 접근성</span>을 지키는 견고한 마크업,
-              디자인 시안을 픽셀 단위로 재현하는 CSS 구현력을 강점으로 삼고 있습니다.
+              <span className="highlight_tech">웹 표준과 접근성</span>을 지키는 견고한 마크업과
+              디자인 시안을 픽셀 단위로 재현하는 CSS 구현력, React·TypeScript 기반 컴포넌트 개발
+              경험을 강점으로 삼고 있습니다.
             </p>
             <p className="description">
               디자인과 개발을 모두 이해하는 만큼, 디자이너와 개발자 사이의 간격을 자연스럽게 좁히는
