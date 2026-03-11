@@ -44,6 +44,13 @@ const Portfolio = () => {
     if (horizontalContainerRef.current && !isMobile) {
       const portfolioItems = portfolioItemsRef.current.filter(Boolean);
 
+      // 각 슬라이드별 오프셋 (책 페이지처럼 엣지가 계단식으로 보이도록)
+      const maxOffset = 97;
+      const step = 2.5;
+      const totalItems = portfolioItems.length;
+      const getSlideOffset = (idx: number) =>
+        maxOffset - (totalItems - 1 - idx) * step;
+
       // 모든 섹션을 초기에 살짝 나온 상태로 설정
       portfolioItems.forEach((item, index) => {
         if (item) {
@@ -51,19 +58,17 @@ const Portfolio = () => {
             gsap.set(item, { opacity: 1, x: '0%', y: '0%', zIndex: index + 1 });
           } else {
             if (isMobile) {
-              // 모바일: 아래에서 위로 올라오는 애니메이션
               gsap.set(item, {
                 opacity: 1,
                 x: '0%',
-                y: '100%', // 아래에서 시작
+                y: '100%',
                 zIndex: index + 1,
               });
             } else {
-              // 데스크톱: 오른쪽에서 왼쪽으로 슬라이드
-              const offsetPercentage = 85 + index * 2.5; // 87.5%, 90%, 92.5%, 95%, 97.5% 순으로
+              // 각 슬라이드마다 다른 오프셋으로 책 페이지 효과
               gsap.set(item, {
                 opacity: 1,
-                x: `${offsetPercentage}%`,
+                x: `${getSlideOffset(index)}%`,
                 y: '0%',
                 zIndex: index + 1,
               });
@@ -79,8 +84,7 @@ const Portfolio = () => {
             if (isMobile) {
               gsap.set(item, { y: '100%' });
             } else {
-              const offsetPercentage = 85 + index * 2.5;
-              gsap.set(item, { x: `${offsetPercentage}%` });
+              gsap.set(item, { x: `${getSlideOffset(index)}%` });
             }
           }
         });
@@ -121,8 +125,8 @@ const Portfolio = () => {
                     overwrite: true,
                   });
                 } else {
-                  const startOffset = 85 + index * 2.5;
-                  const xPosition = startOffset * (1 - sectionProgress);
+                  const slideOffset = getSlideOffset(index);
+                  const xPosition = slideOffset * (1 - sectionProgress);
                   gsap.to(item, {
                     x: `${xPosition}%`,
                     duration: 0.1,
@@ -134,8 +138,7 @@ const Portfolio = () => {
                 if (isMobile) {
                   gsap.set(item, { y: '100%' });
                 } else {
-                  const startOffset = 85 + index * 2.5;
-                  gsap.set(item, { x: `${startOffset}%` });
+                  gsap.set(item, { x: `${getSlideOffset(index)}%` });
                 }
               } else {
                 if (isMobile) {
@@ -311,9 +314,9 @@ const Portfolio = () => {
         </div>
       </div>
       <div className="portfolio_right_column">
-        <div className="portfolio_image_container">
+        <a href={section.link} target="_blank" rel="noopener noreferrer" className="portfolio_image_container">
           <img src={section.image} alt={section.title} className="portfolio_section_image" />
-        </div>
+        </a>
       </div>
     </div>
   );
