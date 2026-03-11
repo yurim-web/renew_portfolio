@@ -657,6 +657,21 @@
 }
 
 /* 반응형 디자인 */
+@media (max-width: 1440px) {
+  .contact_container {
+    max-width: 1200px;
+    padding: 50px 40px;
+  }
+
+  .contact_title h2 {
+    font-size: 58px;
+  }
+
+  .contact_item {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 1200px) {
   .contact_container {
     padding: 40px 40px;

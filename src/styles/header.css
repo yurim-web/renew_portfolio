@@ -17,6 +17,11 @@
   color: #ffffff;
 }
 
+.header_hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
 .header_scrolled {
   background-color: rgba(255, 255, 255, 0.15) !important;
   backdrop-filter: blur(6px) !important;
@@ -302,6 +307,46 @@
 }
 
 /* 반응형 디자인 */
+@media (max-width: 1440px) {
+  .nav {
+    padding: 0px 40px;
+  }
+
+  .nav_right {
+    gap: 30px;
+  }
+
+  .nav_menu {
+    gap: 30px;
+  }
+
+  .nav_link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav {
+    padding: 0px 30px;
+  }
+
+  .nav_right {
+    gap: 20px;
+  }
+
+  .nav_menu {
+    gap: 20px;
+  }
+
+  .nav_link {
+    font-size: 15px;
+  }
+
+  .nav_logo {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 1024px) {
   .header_container {
     padding: 30px 0;

@@ -281,6 +281,64 @@
 }
 
 /* 반응형 디자인 */
+@media (max-width: 1440px) {
+  .about_container {
+    max-width: 1200px;
+  }
+
+  .name {
+    font-size: 45px;
+  }
+
+  .greeting {
+    font-size: 19px;
+  }
+
+  .about_info {
+    gap: 40px;
+  }
+
+  .infinite_scroll_text {
+    font-size: 170px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about_container {
+    max-width: 1000px;
+  }
+
+  .name {
+    font-size: 42px;
+  }
+
+  .greeting {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .about_info {
+    gap: 30px;
+  }
+
+  .info_list li {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+
+  .infinite_scroll_container {
+    height: 220px;
+    margin: 60px 0;
+  }
+
+  .infinite_scroll_text {
+    font-size: 160px;
+  }
+}
+
 @media (max-width: 1024px) {
   .about_content {
     flex-direction: column;

@@ -422,6 +422,50 @@
 }
 
 /* 반응형 디자인 */
+@media screen and (max-width: 1440px) {
+  .web_design_container {
+    max-width: 1200px;
+    padding: 130px 30px;
+  }
+
+  .web_design_title {
+    font-size: 45px;
+    margin-bottom: 60px;
+  }
+
+  .web_design_grid {
+    gap: 30px;
+  }
+
+  .web_design_card_image_container {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .web_design_container {
+    padding: 120px 30px;
+  }
+
+  .web_design_title {
+    font-size: 42px;
+    margin-bottom: 50px;
+  }
+
+  .web_design_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .web_design_card_image_container {
+    height: 220px;
+  }
+
+  .web_design_card_title {
+    font-size: 22px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .web_design_container {
     padding: 120px 30px;

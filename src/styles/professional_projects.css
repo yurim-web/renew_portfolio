@@ -343,6 +343,33 @@
 }
 
 /* 반응형 디자인 */
+@media screen and (max-width: 1440px) {
+  .professional_projects_container {
+    max-width: 1200px;
+  }
+
+  .professional_projects_grid {
+    gap: 30px;
+  }
+
+  .professional_projects_title {
+    font-size: 42px;
+    margin-bottom: 60px;
+  }
+
+  .professional_project_name {
+    font-size: 22px;
+  }
+
+  .professional_project_image_container {
+    height: 240px;
+  }
+
+  .professional_project_card {
+    min-height: 550px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .professional_projects_grid {
     grid-template-columns: repeat(2, 1fr);
