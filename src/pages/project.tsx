@@ -19,7 +19,7 @@ const work_categories = [
   {
     id: 2,
     title: '02 Learning Projects',
-    projects: ['Groundplace', 'IMELE', 'SAINT LAURENT', 'Waveyy', 'ToDoList', 'Apple'],
+    projects: ['Groundplace', 'IMELE', 'SAINT LAURENT', 'Waveyy'],
     bgColor: '#ffffff',
     targetSection: 'portfolio',
   },

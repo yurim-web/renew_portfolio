@@ -48,8 +48,7 @@ const Portfolio = () => {
       const maxOffset = 97;
       const step = 2.5;
       const totalItems = portfolioItems.length;
-      const getSlideOffset = (idx: number) =>
-        maxOffset - (totalItems - 1 - idx) * step;
+      const getSlideOffset = (idx: number) => maxOffset - (totalItems - 1 - idx) * step;
 
       // 모든 섹션을 초기에 살짝 나온 상태로 설정
       portfolioItems.forEach((item, index) => {
@@ -314,7 +313,12 @@ const Portfolio = () => {
         </div>
       </div>
       <div className="portfolio_right_column">
-        <a href={section.link} target="_blank" rel="noopener noreferrer" className="portfolio_image_container">
+        <a
+          href={section.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="portfolio_image_container"
+        >
           <img src={section.image} alt={section.title} className="portfolio_section_image" />
         </a>
       </div>

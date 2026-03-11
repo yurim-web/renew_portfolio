@@ -19,7 +19,7 @@ import figmaImg from '../../assets/skill_img/figma_2.png';
 import photoshopImg from '../../assets/skill_img/photoshop.png';
 import illustratorImg from '../../assets/skill_img/illustrator.png';
 import typescriptImg from '../../assets/skill_img/typescript.png';
-import confluenceImg from '../../assets/skill_img/confluence.png';
+import confluenceImg from '../../assets/skill_img/confluence.svg';
 import cafe24Img from '../../assets/skill_img/cafe24.png';
 
 gsap.registerPlugin(ScrollTrigger);
