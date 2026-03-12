@@ -197,11 +197,19 @@
 [data-theme='dark'] .content_box {
   color: #e0e0e0;
 }
+
+[data-theme='dark'] .content_img {
+  background: rgba(255, 255, 255, 0.1);
+}
 .content_img {
-  width: 100px; /* 이미지 크기 축소 */
-  height: 100px; /* 이미지 크기 축소 */
+  width: 90px;
+  height: 90px;
   object-fit: contain;
-  flex-shrink: 0; /* 이미지 크기 고정 */
+  flex-shrink: 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  box-sizing: border-box;
 }
 .content_title {
   background-color: #667eea;
