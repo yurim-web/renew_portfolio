@@ -59,7 +59,7 @@
   min-height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -71,11 +71,12 @@
 .portfolio_content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 80px;
   align-items: center;
-  width: 80%;
-  max-width: 1200px;
-  padding: 0 50px;
+  width: 90%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 60px;
 }
 
 .portfolio_left_column {
@@ -172,8 +173,8 @@
 .portfolio_image_container {
   display: block;
   width: 100%;
-  max-width: 500px;
-  height: 450px;
+  max-width: 700px;
+  height: 600px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
