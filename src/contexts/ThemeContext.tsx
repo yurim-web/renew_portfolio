@@ -1,10 +1,16 @@
+/**
+ * 테마 & 섹션 상태 관리 Context
+ *
+ * - isDarkMode: 다크모드 토글 (localStorage에 저장, data-theme 속성으로 CSS 제어)
+ * - resumeSection: 현재 활성화된 섹션 번호 (ResumeToggle 도트 네비게이터와 연동)
+ */
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface ThemeContextType {
-  is_dark_mode: boolean;
-  toggle_dark_mode: () => void;
-  resume_section: number;
-  set_resume_section: (section: number) => void;
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+  resumeSection: number;
+  setResumeSection: (section: number) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -22,31 +28,31 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [is_dark_mode, setIsDarkMode] = useState<boolean>(() => {
-    const saved_theme = localStorage.getItem('theme');
-    return saved_theme === 'dark';
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme === 'dark';
   });
 
-  const [resume_section, setResumeSection] = useState<number>(1);
+  const [resumeSection, setResumeSectionState] = useState<number>(1);
 
   useEffect(() => {
-    localStorage.setItem('theme', is_dark_mode ? 'dark' : 'light');
-    document.documentElement.setAttribute('data-theme', is_dark_mode ? 'dark' : 'light');
-  }, [is_dark_mode]);
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+  }, [isDarkMode]);
 
-  const toggle_dark_mode = () => {
-    setIsDarkMode(!is_dark_mode);
+  const toggleDarkMode = () => {
+    setIsDarkMode(prev => !prev);
   };
 
-  const set_resume_section = (section: number) => {
-    setResumeSection(section);
+  const setResumeSection = (section: number) => {
+    setResumeSectionState(section);
   };
 
   const value = {
-    is_dark_mode,
-    toggle_dark_mode,
-    resume_section,
-    set_resume_section,
+    isDarkMode,
+    toggleDarkMode,
+    resumeSection,
+    setResumeSection,
   };
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;

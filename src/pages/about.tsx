@@ -1,7 +1,8 @@
+import useScrollAnimation from '../hooks/useScrollAnimation';
 import '../styles/info_section.css';
-import '../utils/main.js';
 
 const About = () => {
+  useScrollAnimation();
   return (
     <section id="about" className="about_section">
       <div className="about_container">

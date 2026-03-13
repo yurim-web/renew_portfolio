@@ -1,8 +1,9 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { gsap } from 'gsap';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -152,7 +153,7 @@ const Portfolio = () => {
       }
 
       // 각 섹션의 콘텐츠 애니메이션
-      portfolioItems.forEach((item, index) => {
+      portfolioItems.forEach(item => {
         if (!item) return;
 
         const leftColumn = item.querySelector('.portfolio_left_column');

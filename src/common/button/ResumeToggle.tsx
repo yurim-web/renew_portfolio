@@ -1,51 +1,51 @@
+/**
+ * 섹션 도트 네비게이터 (화면 좌측 고정)
+ *
+ * - 7개 섹션에 대응하는 도트 버튼을 렌더링
+ * - 스크롤 위치에 따라 현재 섹션을 자동 감지하여 활성 도트 표시
+ * - 도트 클릭 시 해당 섹션으로 부드러운 스크롤 이동
+ */
 import React, { useEffect } from 'react';
+
 import { useTheme } from '../../contexts/ThemeContext';
 import '../styles/resume_toggle.css';
 
-// 섹션별 데이터 정의
-const section_data = [
-  { id: 1, label: 'ABOUT', color: '#00d4aa', element_id: 'about' },
-  { id: 2, label: 'STRENGTH', color: '#ff6b6b', element_id: 'strength' },
-  { id: 3, label: 'PROJECT', color: '#4ecdc4', element_id: 'project' },
-  {
-    id: 4,
-    label: 'PROFESSIONAL',
-    color: '#45b7d1',
-    element_id: 'professional',
-  },
-  { id: 5, label: 'LEARNING', color: '#96ceb4', element_id: 'portfolio' },
-  { id: 6, label: 'WEB DESIGN', color: '#feca57', element_id: 'web_design' },
-  { id: 7, label: 'CONTACT', color: '#ff9ff3', element_id: 'contact' },
+const sectionData = [
+  { id: 1, label: 'ABOUT', color: '#00d4aa', elementId: 'about' },
+  { id: 2, label: 'STRENGTH', color: '#ff6b6b', elementId: 'strength' },
+  { id: 3, label: 'PROJECT', color: '#4ecdc4', elementId: 'project' },
+  { id: 4, label: 'PROFESSIONAL', color: '#45b7d1', elementId: 'professional' },
+  { id: 5, label: 'LEARNING', color: '#96ceb4', elementId: 'portfolio' },
+  { id: 6, label: 'WEB DESIGN', color: '#feca57', elementId: 'web_design' },
+  { id: 7, label: 'CONTACT', color: '#ff9ff3', elementId: 'contact' },
 ];
 
 const ResumeToggle: React.FC = () => {
-  const { resume_section, set_resume_section } = useTheme();
+  const { resumeSection, setResumeSection } = useTheme();
 
-  // 스크롤 감지하여 현재 섹션 업데이트
   useEffect(() => {
-    const handle_scroll = () => {
-      const scroll_position = window.scrollY + 100; // 헤더 높이 고려
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 100;
 
-      for (let i = section_data.length - 1; i >= 0; i--) {
-        const element = document.getElementById(section_data[i].element_id);
-        if (element && element.offsetTop <= scroll_position) {
-          set_resume_section(section_data[i].id);
+      for (let i = sectionData.length - 1; i >= 0; i--) {
+        const element = document.getElementById(sectionData[i].elementId);
+        if (element && element.offsetTop <= scrollPosition) {
+          setResumeSection(sectionData[i].id);
           break;
         }
       }
     };
 
-    window.addEventListener('scroll', handle_scroll);
-    return () => window.removeEventListener('scroll', handle_scroll);
-  }, [set_resume_section]);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [setResumeSection]);
 
-  const handle_section_change = (section: number) => {
-    set_resume_section(section);
+  const handleSectionChange = (section: number) => {
+    setResumeSection(section);
 
-    // 해당 섹션으로 스크롤
-    const target_element = document.getElementById(section_data[section - 1].element_id);
-    if (target_element) {
-      target_element.scrollIntoView({
+    const targetElement = document.getElementById(sectionData[section - 1].elementId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
       });
@@ -55,11 +55,11 @@ const ResumeToggle: React.FC = () => {
   return (
     <div className="resume_toggle_container">
       <div className="resume_dots_container">
-        {section_data.map(section => (
+        {sectionData.map(section => (
           <button
             key={section.id}
-            className={`resume_dot ${resume_section === section.id ? 'active' : ''}`}
-            onClick={() => handle_section_change(section.id)}
+            className={`resume_dot ${resumeSection === section.id ? 'active' : ''}`}
+            onClick={() => handleSectionChange(section.id)}
             aria-label={`${section.label} section`}
             style={
               {

@@ -1,6 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { gsap } from 'gsap';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useRef, useEffect, useState } from 'react';
+
 import '../styles/web_design.css';
 import { web_design_projects, WebDesignProject } from '../data/webDesignData';
 

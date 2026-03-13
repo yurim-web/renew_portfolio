@@ -1,14 +1,13 @@
 import '../styles/main_section.css';
-import '../utils/main.js';
 
 const Main = () => {
   return (
     <main className="main">
       <section id="main" className="main_section">
-        <div className="blur blur_1"></div>
-        <div className="blur blur_2"></div>
-        <div className="blur blur_3"></div>
-        <div className="blur blur_4"></div>
+        <div className="blur blur_1" />
+        <div className="blur blur_2" />
+        <div className="blur blur_3" />
+        <div className="blur blur_4" />
         <div className="main_container">
           <h1 className="main_title">
             YURIM'S

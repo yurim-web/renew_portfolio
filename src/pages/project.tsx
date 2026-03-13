@@ -1,8 +1,8 @@
-import React, { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useRef, useEffect } from 'react';
 import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';

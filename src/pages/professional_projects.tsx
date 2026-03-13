@@ -1,6 +1,7 @@
-import React, { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useRef, useEffect } from 'react';
+
 import '../styles/professional_projects.css';
 import { professional_projects } from '../data/portfolioData';
 

@@ -1,11 +1,18 @@
+/**
+ * 다크모드 토글 + TOP 버튼 (화면 우측 하단 고정)
+ *
+ * - LIGHT/DARK 모드 전환 스위치
+ * - TOP 버튼 클릭 시 페이지 최상단으로 부드러운 스크롤 이동
+ */
 import React from 'react';
+
 import { useTheme } from '../../contexts/ThemeContext';
 import '../styles/theme_toggle.css';
 
 const ThemeToggle: React.FC = () => {
-  const { is_dark_mode, toggle_dark_mode } = useTheme();
+  const { isDarkMode, toggleDarkMode } = useTheme();
 
-  const scroll_to_top = () => {
+  const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -16,13 +23,13 @@ const ThemeToggle: React.FC = () => {
     <div className="theme_toggle_container">
       <span className="theme_toggle_label">LIGHT</span>
       <button
-        className={`theme_toggle_button ${is_dark_mode ? 'dark_mode' : 'light_mode'}`}
-        onClick={toggle_dark_mode}
-        aria-label={is_dark_mode ? 'Switch to light mode' : 'Switch to dark mode'}
+        className={`theme_toggle_button ${isDarkMode ? 'dark_mode' : 'light_mode'}`}
+        onClick={toggleDarkMode}
+        aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
       >
-        <div className="theme_toggle_circle"></div>
+        <div className="theme_toggle_circle" />
       </button>
-      <div className="theme_toggle_bottom" onClick={scroll_to_top}>
+      <div className="theme_toggle_bottom" onClick={scrollToTop}>
         <span className="theme_toggle_bottom_text">TOP</span>
       </div>
     </div>

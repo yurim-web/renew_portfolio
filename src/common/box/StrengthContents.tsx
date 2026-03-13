@@ -1,6 +1,12 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+/**
+ * 개별 스킬 카드 컴포넌트
+ *
+ * 스킬 아이콘(이미지), 설명(contents), 스킬명(skill)을 표시합니다.
+ * 스크롤 진입 시 이미지는 회전+확대, 제목은 슬라이드 애니메이션이 적용됩니다.
+ */
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect, useRef } from 'react';
 import '../../styles/skills.css';
 
 gsap.registerPlugin(ScrollTrigger);
