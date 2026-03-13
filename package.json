@@ -1,6 +1,6 @@
 {
   "name": "renew_portfolio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "homepage": "https://yurim-web.github.io/yurim_portfolio_page",
   "dependencies": {
@@ -14,6 +14,7 @@
     "gsap": "^3.13.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-helmet-async": "^3.0.0",
     "react-scripts": "5.0.1",
     "swiper": "^12.0.2",
     "typescript": "^4.9.5",
@@ -27,14 +28,14 @@
     "prepare": "husky",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "lint": "eslint src/ --ext .ts,.tsx --max-warnings 0",
+    "lint:fix": "eslint src/ --ext .ts,.tsx --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,json,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css,json,md}\"",
     "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "test:e2e:ui": "playwright test --ui",
+    "typecheck": "tsc --noEmit"
   },
   "browserslist": {
     "production": [
@@ -64,12 +65,14 @@
     "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.27",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.5.5",
     "gh-pages": "^6.3.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.3.2",
     "postcss": "^8.5.8",
     "prettier": "^3.8.1",
+    "source-map-explorer": "^2.5.3",
     "tailwindcss": "^4.2.1"
   }
 }
