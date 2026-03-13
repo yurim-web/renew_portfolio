@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useState, useEffect, useRef } from 'react';
+
 import StrengthContentsBox from '../common/box/StrengthContentsBox';
-import StrenthToggleBox from '../common/box/StrenthToggleBox';
+import StrengthToggleBox from '../common/box/StrengthToggleBox';
 import '../styles/skills.css';
 
 const Skills = () => {
@@ -25,7 +26,7 @@ const Skills = () => {
         Strength.
       </h1>
       <div className="strength_toggle_wrapper">
-        <StrenthToggleBox activeSkill={activeSkill} onSkillChange={handleSkillChange} />
+        <StrengthToggleBox activeSkill={activeSkill} onSkillChange={handleSkillChange} />
       </div>
       <StrengthContentsBox activeSkill={activeSkill} />
     </article>

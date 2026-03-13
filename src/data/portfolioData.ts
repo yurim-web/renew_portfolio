@@ -128,53 +128,6 @@ export const portfolio_sections: PortfolioItem[] = [
     ],
     image: `${process.env.PUBLIC_URL}/assets/portfolio_img/waveyy_img.png`,
   },
-
-  // {
-  //   id: 5,
-  //   title: 'Learning Project',
-  //   subtitle: 'ToDoList',
-  //   bgColor: '#dbeafe',
-  //   textColor: '#1e293b',
-  //   content:
-  //     '할 일 목록을 관리할 수 있는 간단한 To-Do 리스트 웹입니다. React를 사용하여 구현되었으며, 직관적인 UI로 사용자가 할 일을 쉽게 추가, 수정, 삭제할 수 있습니다.',
-  //   year: '2024',
-  //   period: '2024.11.02 ~ 2024.11.05',
-  //   participation: '개인 100%',
-  //   type: '반응형',
-  //   link: 'https://yurim-web.github.io/todolist/',
-  //   github_link: 'https://github.com/yurim-web/TODOLIST_code',
-  //   tech_stack: [
-  //     { name: 'HTML', icon: `${process.env.PUBLIC_URL}/assets/skill_img/html.png` },
-  //     { name: 'CSS', icon: `${process.env.PUBLIC_URL}/assets/skill_img/css.png` },
-  //     { name: 'React', icon: `${process.env.PUBLIC_URL}/assets/skill_img/react.png` },
-  //     { name: 'Javascript', icon: `${process.env.PUBLIC_URL}/assets/skill_img/javascript.png` },
-  //     { name: 'API', icon: `${process.env.PUBLIC_URL}/assets/skill_img/api.jpg` },
-  //   ],
-  //   image: `${process.env.PUBLIC_URL}/assets/portfolio_img/todolist_img.png`,
-  // },
-
-  // {
-  //   id: 6,
-  //   title: 'Learning Project',
-  //   subtitle: 'Apple',
-  //   bgColor: '#e9d5ff',
-  //   textColor: '#1e293b',
-  //   content:
-  //     'Apple 공식 사이트의 PC 버전을 클론 코딩하여 만든 작품입니다. React를 활용해 메인페이지를 구성했습니다.',
-  //   year: '2024',
-  //   period: '2024.10.29 ~ 2024.11.02',
-  //   participation: '개인 100%',
-  //   type: '웹용',
-  //   link: 'https://yurim-web.github.io/apple_clone_page2/',
-  //   github_link: 'https://github.com/yurim-web/apple_web_clone_renew',
-  //   tech_stack: [
-  //     { name: 'HTML', icon: `${process.env.PUBLIC_URL}/assets/skill_img/html.png` },
-  //     { name: 'CSS', icon: `${process.env.PUBLIC_URL}/assets/skill_img/css.png` },
-  //     { name: 'React', icon: `${process.env.PUBLIC_URL}/assets/skill_img/react.png` },
-  //     { name: 'Javascript', icon: `${process.env.PUBLIC_URL}/assets/skill_img/javascript.png` },
-  //   ],
-  //   image: `${process.env.PUBLIC_URL}/assets/portfolio_img/apple_img.png`,
-  // },
 ];
 
 // Professional Projects

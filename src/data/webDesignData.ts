@@ -1,13 +1,13 @@
 // 이미지 import
 import addmoaWebImg from '../assets/design_img/addmoa_web.png';
-import makeupWebImg from '../assets/design_img/makeup_web.png';
-import lhWebImg from '../assets/design_img/lh_web.png';
-import colorAppImg from '../assets/design_img/color_app.png';
-import elecAppImg from '../assets/design_img/elec_app.png';
-import sunAppImg from '../assets/design_img/sun_app.png';
 import banner1Img from '../assets/design_img/banner_1_1.png';
 import banner2Img from '../assets/design_img/banner_2.png';
 import banner3Img from '../assets/design_img/banner_3.png';
+import colorAppImg from '../assets/design_img/color_app.png';
+import elecAppImg from '../assets/design_img/elec_app.png';
+import lhWebImg from '../assets/design_img/lh_web.png';
+import makeupWebImg from '../assets/design_img/makeup_web.png';
+import sunAppImg from '../assets/design_img/sun_app.png';
 
 export interface WebDesignProject {
   id: number;
