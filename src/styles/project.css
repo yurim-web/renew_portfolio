@@ -1,8 +1,8 @@
 /* 프로젝트 섹션 스타일 */
 .work_section {
   width: 100vw;
-  height: 100vh;
-  padding: 300px 0;
+  height: auto;
+  padding: 120px 0;
   min-height: auto;
   display: flex;
   align-items: center;
@@ -324,7 +324,7 @@
 /* 반응형 디자인 */
 @media screen and (max-width: 1440px) {
   .work_section {
-    padding: 200px 0;
+    padding: 100px 0;
   }
 
   .work_container {
@@ -364,7 +364,7 @@
 
 @media screen and (max-width: 1200px) {
   .work_section {
-    padding: 150px 0;
+    padding: 80px 0;
   }
 
   .work_grid {
