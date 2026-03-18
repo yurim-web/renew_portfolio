@@ -5,7 +5,7 @@
 
 ![Status](https://img.shields.io/badge/Status-Live-brightgreen) ![React](https://img.shields.io/badge/React-18.3.1-blue?logo=react) ![TypeScript](https://img.shields.io/badge/TypeScript-4.9.5-blue?logo=typescript) ![GSAP](https://img.shields.io/badge/GSAP-3.13.0-green?logo=greensock)
 
-🔗 **배포 URL** : https://yurim-web.github.io/yurim_portfolio_page
+🔗 **배포 URL** : https://yurim-web.github.io
 
 ---
 
@@ -56,7 +56,7 @@
 - 이력 타임라인 (경력 · 교육 · 자격증)
 
 ### 🎯 Strength
-- 15개 스킬 탭 버튼
+- 16개 스킬 탭 버튼
 - 탭 클릭 시 해당 스킬 카드 강조 + 3D 애니메이션
 - 스킬 이미지 + 설명 텍스트 구성
 
@@ -90,16 +90,19 @@ src/
 ├── common/
 │   ├── box/               # 스킬 카드 컴포넌트
 │   ├── button/            # 테마·이력서 토글 버튼
-│   └── styles/            # 공통 컴포넌트 CSS
+│   └── GitHubLink.tsx     # 공용 GitHub 링크 컴포넌트
 ├── contexts/
-│   └── ThemeContext.tsx   # 라이트·다크 모드 전역 상태
+│   └── ThemeContext.tsx    # 라이트·다크 모드 전역 상태
 ├── data/
 │   ├── portfolioData.ts   # 프로젝트 데이터
+│   ├── skillsData.ts      # 스킬 데이터 (Single Source of Truth)
 │   └── webDesignData.ts   # 웹 디자인 데이터
+├── hooks/
+│   ├── useHeaderScroll.ts  # 헤더 스크롤 훅
+│   └── useScrollAnimation.ts # About 섹션 애니메이션 훅
 ├── pages/                 # 섹션별 페이지 컴포넌트
 ├── styles/                # 섹션별 CSS
-├── types/                 # TypeScript 타입 선언
-└── utils/                 # GSAP 애니메이션 유틸
+└── types/                 # TypeScript 타입 선언
 ```
 
 ---
