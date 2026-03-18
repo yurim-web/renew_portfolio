@@ -145,7 +145,7 @@ export const professional_projects: ProfessionalProject[] = [
       { name: 'EmailJS', icon: `${process.env.PUBLIC_URL}/assets/skill_img/api.jpg` },
     ],
     description:
-      'Cafe24 플랫폼을 활용한 광고주 홈페이지 제작으로, 템플릿 없이 기획·디자인부터 프론트엔드 개발까지 전 과정을 단독으로 담당했습니다. EmailJS를 연동한 문의 폼을 직접 구현하며 실무 프론트엔드 개발 역량을 발휘했습니다.',
+      'Cafe24 플랫폼을 활용한 광고주 홈페이지의 프론트엔드 개발 및 유지보수를 담당했습니다. EmailJS를 연동한 문의 폼을 직접 구현하며 실무 프론트엔드 개발 역량을 발휘했습니다.',
     image: `${process.env.PUBLIC_URL}/assets/professional_projects/herzion_banner.jpg`,
     view_link: 'https://herzionshop.cafe24.com/',
     github_link: 'https://github.com/yurim-web/aribio_final_kor',
@@ -161,7 +161,7 @@ export const professional_projects: ProfessionalProject[] = [
       { name: 'JavaScript', icon: `${process.env.PUBLIC_URL}/assets/skill_img/javascript.png` },
     ],
     description:
-      '마케터를 위한 멀티채널 데이터 자동 수집·레포팅 SaaS 서비스로, 랜딩페이지(markx.dev)와 앱(mxrx.dev) 프론트엔드를 100% 단독 담당했습니다. 차트·타임블럭 등 외부 라이브러리를 활용해 대시보드, 성과 분석, 체험단 관리 등 다양한 UI와 인터랙션을 구현했으며, 반응형 레이아웃도 직접 작업했습니다.',
+      '마케터를 위한 멀티채널 데이터 자동 수집·레포팅 SaaS 서비스로, 랜딩페이지, 웹 페이지(반응형), 가이드 페이지의 프론트엔드를 100% 단독 담당했습니다. 차트·타임블럭 등 외부 라이브러리를 활용해 대시보드, 성과 분석, 체험단 관리 등 다양한 UI와 인터랙션을 구현했습니다.',
     image: `${process.env.PUBLIC_URL}/assets/professional_projects/rx_banner.png`,
     view_link: 'https://mxrx.dev/',
     demo_link: 'https://markx.dev/',
