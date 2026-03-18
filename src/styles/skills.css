@@ -199,7 +199,7 @@
 }
 
 [data-theme='dark'] .content_img {
-  background: rgba(255, 255, 255, 0.1);
+  background: transparent;
 }
 .content_img {
   width: 90px;
@@ -207,7 +207,7 @@
   object-fit: contain;
   flex-shrink: 0;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.6);
+  background: transparent;
   border-radius: 12px;
   box-sizing: border-box;
 }

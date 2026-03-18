@@ -7,7 +7,7 @@
 import cafe24Img from '../assets/skill_img/cafe24.png';
 import confluenceImg from '../assets/skill_img/confluence.svg';
 import cssImg from '../assets/skill_img/css.png';
-import figmaImg from '../assets/skill_img/figma_2.png';
+import figmaImg from '../assets/skill_img/figma.png';
 import gitImg from '../assets/skill_img/git.png';
 import githubImg from '../assets/skill_img/github.png';
 import gsapImg from '../assets/skill_img/gsap.png';
@@ -15,7 +15,7 @@ import htmlImg from '../assets/skill_img/html.png';
 import illustratorImg from '../assets/skill_img/illustrator.png';
 import javascriptImg from '../assets/skill_img/javascript.png';
 import nextImg from '../assets/skill_img/next.png';
-import notionImg from '../assets/skill_img/notion_2.png';
+import notionImg from '../assets/skill_img/notion_icon.svg';
 import photoshopImg from '../assets/skill_img/photoshop.png';
 import reactImg from '../assets/skill_img/react.png';
 import sourcetreeImg from '../assets/skill_img/sourcetree.png';
@@ -101,7 +101,7 @@ export const skillList: SkillItem[] = [
   },
   {
     name: 'Figma',
-    description: '와이어프레임과 프로토타입 제작, 협업을 위한 디자인 작업이 가능합니다.',
+    description: '기본적인 화면 설계와 간단한 UI 디자인 작업이 가능하며, 꾸준히 학습하고 있습니다.',
     img: figmaImg,
   },
   {
