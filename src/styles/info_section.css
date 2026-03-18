@@ -202,6 +202,7 @@
 .info_list li:hover {
   background: #fdf2f2;
   transform: translateX(5px);
+  font-weight: bold;
 }
 
 [data-theme='dark'] .info_list li {
@@ -212,6 +213,7 @@
 
 [data-theme='dark'] .info_list li:hover {
   background: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
 }
 
 .info_icon {

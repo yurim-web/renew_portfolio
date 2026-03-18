@@ -4,7 +4,7 @@ import { useEffect } from 'react';
  * About 섹션의 스크롤 기반 애니메이션을 관리하는 커스텀 훅
  *
  * - IntersectionObserver로 요소가 뷰포트에 진입하면 페이드인 + 슬라이드업
- * - 정보 목록(info_list) 항목에 마우스 호버 시 색상·위치 인터랙션
+ * - 정보 목록(info_list) 항목에 마우스 호버 시 굵기·위치 인터랙션
  * - About 섹션 최초 로드 시 부드러운 페이드인 효과
  */
 const useScrollAnimation = () => {
@@ -39,11 +39,11 @@ const useScrollAnimation = () => {
     const infoItems = document.querySelectorAll('.info_list li');
     infoItems.forEach(item => {
       item.addEventListener('mouseenter', function (this: HTMLElement) {
-        this.style.color = '#007bff';
+        this.style.fontWeight = 'bold';
         this.style.transform = 'translateX(5px)';
       });
       item.addEventListener('mouseleave', function (this: HTMLElement) {
-        this.style.color = '#555555';
+        this.style.fontWeight = 'normal';
         this.style.transform = 'translateX(0)';
       });
     });
