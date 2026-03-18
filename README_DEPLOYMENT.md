@@ -9,9 +9,9 @@
 
 **🎉 포트폴리오가 성공적으로 배포되었습니다!**
 
-👉 **[https://yurim-web.github.io/yurim_portfolio_page/](https://yurim-web.github.io/yurim_portfolio_page/)**
+👉 **[https://yurim-web.github.io](https://yurim-web.github.io)**
 
-📂 **소스 코드**: [https://github.com/yurim-web/renew_portfolio](https://github.com/yurim-web/renew_portfolio)
+📂 **소스 코드**: [https://github.com/yurim-web/frontend-portfolio](https://github.com/yurim-web/frontend-portfolio)
 
 
 ## 🛠️ 기술 스택
@@ -39,7 +39,7 @@ src/
 
 ```bash
 # 저장소 클론
-git clone https://github.com/yurim-web/renew_portfolio.git
+git clone https://github.com/yurim-web/frontend-portfolio.git
 
 # 의존성 설치
 npm install
