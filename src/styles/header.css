@@ -168,7 +168,7 @@
 }
 
 .nav_dropdown_link:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(254, 202, 202, 0.35);
 }
 
 [data-theme='dark'] .nav_dropdown_menu {
@@ -180,7 +180,7 @@
 }
 
 [data-theme='dark'] .nav_dropdown_link:hover {
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(254, 202, 202, 0.15);
 }
 
 /* 모바일 메뉴 */
