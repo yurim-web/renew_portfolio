@@ -1,16 +1,13 @@
 /**
- * 테마 & 섹션 상태 관리 Context
+ * 테마 상태 관리 Context
  *
  * - isDarkMode: 다크모드 토글 (localStorage에 저장, data-theme 속성으로 CSS 제어)
- * - resumeSection: 현재 활성화된 섹션 번호 (ResumeToggle 도트 네비게이터와 연동)
  */
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface ThemeContextType {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
-  resumeSection: number;
-  setResumeSection: (section: number) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -33,8 +30,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     return savedTheme === 'dark';
   });
 
-  const [resumeSection, setResumeSectionState] = useState<number>(1);
-
   useEffect(() => {
     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
@@ -44,15 +39,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     setIsDarkMode(prev => !prev);
   };
 
-  const setResumeSection = (section: number) => {
-    setResumeSectionState(section);
-  };
-
   const value = {
     isDarkMode,
     toggleDarkMode,
-    resumeSection,
-    setResumeSection,
   };
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;

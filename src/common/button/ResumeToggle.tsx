@@ -7,7 +7,7 @@
  */
 import React, { useEffect } from 'react';
 
-import { useTheme } from '../../contexts/ThemeContext';
+import { useSection } from '../../contexts/SectionContext';
 import '../styles/resume_toggle.css';
 
 const sectionData = [
@@ -16,12 +16,12 @@ const sectionData = [
   { id: 3, label: 'PROJECT', color: '#4ecdc4', elementId: 'project' },
   { id: 4, label: 'PROFESSIONAL', color: '#45b7d1', elementId: 'professional' },
   { id: 5, label: 'LEARNING', color: '#96ceb4', elementId: 'portfolio' },
-  { id: 6, label: 'WEB DESIGN', color: '#feca57', elementId: 'web_design' },
+  { id: 6, label: 'UI/UX DESIGN', color: '#feca57', elementId: 'web_design' },
   { id: 7, label: 'CONTACT', color: '#ff9ff3', elementId: 'contact' },
 ];
 
 const ResumeToggle: React.FC = () => {
-  const { resumeSection, setResumeSection } = useTheme();
+  const { resumeSection, setResumeSection } = useSection();
 
   useEffect(() => {
     const handleScroll = () => {
