@@ -66,7 +66,7 @@ export const portfolio_sections: PortfolioItem[] = [
     bgColor: '#fed7aa',
     textColor: '#1e293b',
     content:
-      'IMELE 공식 쇼핑몰 사이트를 클론 코딩하여 만든 작품입니다. 반응형 웹 디자인을 다양한 크기에서 최적화된 사용자 환경을 제공했으며, GSAP.js를 활용해 애니메이션적인 효과를 구현했습니다.',
+      'IMELE 공식 쇼핑몰 사이트를 클론 코딩한 프로젝트입니다. 다양한 디바이스 크기에 최적화된 반응형 레이아웃을 구현하고, GSAP.js를 활용해 스크롤 기반 애니메이션 효과를 적용했습니다.',
     year: '2025',
     period: '2025.01.02 ~ 2025.01.06',
     participation: '개인 100%',
@@ -89,7 +89,7 @@ export const portfolio_sections: PortfolioItem[] = [
     bgColor: '#fef3c7',
     textColor: '#1e293b',
     content:
-      '입생로랑(YSL) 공식 홈페이지를 새롭게 기획한 포트폴리오 사이트입니다. GSAP.js를 활용한 다양한 애니메이션 효과로 세련된 디자인을 강조했습니다.',
+      '입생로랑(YSL) 브랜드 컨셉을 기반으로 새롭게 기획·디자인한 웹사이트입니다. GSAP.js를 활용한 시퀀스 애니메이션과 시차 스크롤로 럭셔리 브랜드의 세련된 분위기를 표현했습니다.',
     year: '2024',
     period: '2024.11.02 ~ 2024.11.15',
     participation: '개인 100%',
@@ -111,7 +111,8 @@ export const portfolio_sections: PortfolioItem[] = [
     subtitle: 'Waveyy',
     bgColor: '#dcfce7',
     textColor: '#1e293b',
-    content: 'Next.js와 영화·드라마 API를 활용해 기획하고 만든 영화,드라마 정보 사이트입니다.',
+    content:
+      'Next.js 프레임워크와 TMDB API를 연동하여 직접 기획·개발한 영화·드라마 정보 사이트입니다. 서버 사이드 렌더링(SSR)과 동적 라우팅을 적용하고, API 데이터를 활용한 검색·필터링 기능을 구현했습니다.',
     year: '2024',
     period: '2024.12.01 ~ 2024.12.12',
     participation: '개인 100%',

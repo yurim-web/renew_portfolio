@@ -73,13 +73,13 @@ export const skillList: SkillItem[] = [
   {
     name: 'Git',
     description:
-      '브랜치 전략과 커밋 컨벤션 기반으로 버전을 관리하고, 실무 협업 환경에서 Git을 일상적으로 사용하고 있습니다.',
+      '브랜치 전략과 커밋 컨벤션을 기반으로 체계적인 버전 관리를 수행합니다. 충돌 해결, 리베이스 등 실무에서 발생하는 다양한 상황에 대응할 수 있습니다.',
     img: gitImg,
   },
   {
-    name: 'Github',
+    name: 'GitHub',
     description:
-      '브랜치 전략과 커밋 컨벤션 기반으로 버전을 관리하고, 실무 협업 환경에서 GitHub을 일상적으로 사용하고 있습니다.',
+      'Pull Request 기반 코드 리뷰와 GitHub Pages 배포, Issue 관리 등 GitHub을 활용한 협업 워크플로우에 익숙합니다.',
     img: githubImg,
   },
   {
@@ -90,7 +90,8 @@ export const skillList: SkillItem[] = [
   },
   {
     name: 'Notion',
-    description: '노션을 이용해 메모 및 아이디어 기록이나 해야할 일을 관리할 수 있습니다.',
+    description:
+      '프로젝트 일정 관리, 회의록 작성, 작업 현황 공유 등 팀 단위 협업 도구로 Notion을 활용한 경험이 있습니다.',
     img: notionImg,
   },
   {
@@ -113,13 +114,13 @@ export const skillList: SkillItem[] = [
   {
     name: 'Illustrator',
     description:
-      '간단한 캐릭터 디자인, 로고 디자인 등 깔끔하고 돋보이는 백터 디자인을 제작할 수 있습니다.',
+      '로고, 아이콘, UI 요소 등 벡터 기반 디자인 에셋을 제작할 수 있으며, SVG 최적화를 통해 웹에 적합한 리소스를 직접 만들 수 있습니다.',
     img: illustratorImg,
   },
   {
     name: 'Cafe24',
     description:
-      'Cafe24 호스팅 환경에서 웹사이트 배포 및 관리, 도메인 설정 등 서버 운영이 가능합니다.',
+      'Cafe24 플랫폼에서 쇼핑몰 템플릿을 HTML·CSS·JavaScript로 전면 커스텀하고, 배포 및 도메인 설정까지 독립적으로 수행한 경험이 있습니다.',
     img: cafe24Img,
   },
 ];
