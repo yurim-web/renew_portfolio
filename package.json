@@ -60,7 +60,6 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.58.2",
-    "@tailwindcss/postcss": "^4.2.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.27",
@@ -72,7 +71,6 @@
     "lint-staged": "^16.3.2",
     "postcss": "^8.5.8",
     "prettier": "^3.8.1",
-    "source-map-explorer": "^2.5.3",
-    "tailwindcss": "^4.2.1"
+    "source-map-explorer": "^2.5.3"
   }
 }
