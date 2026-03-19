@@ -8,28 +8,28 @@
 
 ## 목차
 
-1. [Pages (섹션 컴포넌트)](#pages)
+1. [Sections (섹션 컴포넌트)](#sections)
 2. [Common/Box](#commonbox)
 3. [Common/Button](#commonbutton)
 4. [Contexts](#contexts)
 
 ---
 
-## Pages
+## Sections
 
-> `src/pages/` — 섹션별 독립 페이지 컴포넌트. props 없이 자체 데이터를 가짐.
+> `src/sections/` — 섹션별 독립 컴포넌트. props 없이 자체 데이터를 가짐.
 
 | 컴포넌트 | 파일 | 역할 |
 |---|---|---|
-| Header | `header.tsx` | 상단 네비게이션, 섹션 링크, 로고 |
-| Main | `main.tsx` | 메인 히어로 섹션, 타이틀 + 소개 텍스트 |
-| About | `about.tsx` | 자기소개, 이력 타임라인 (경력·교육·자격증) |
-| Skills | `skills.tsx` | Strength 섹션 — 스킬 탭 + 카드 |
-| Project | `project.tsx` | Portfolio 섹션 — Learning Projects 카드 목록 |
-| ProfessionalProjects | `professional_projects.tsx` | 실무 프로젝트 3개 카드 목록 |
-| Portfolio | `portfolio.tsx` | Project 섹션 레이아웃 래퍼 |
-| WebDesign | `web_design.tsx` | 디자인 작업물 갤러리 그리드 |
-| Contact | `contact.tsx` | 연락처, SNS 링크, Copyright |
+| Header | `Header.tsx` | 상단 네비게이션, 섹션 링크, 로고 |
+| Main | `Main.tsx` | 메인 히어로 섹션, 타이틀 + 소개 텍스트 |
+| About | `About.tsx` | 자기소개, 이력 타임라인 (경력·교육·자격증) |
+| Skills | `Skills.tsx` | Strength 섹션 — 스킬 탭 + 카드 |
+| Project | `Project.tsx` | Portfolio 섹션 — Learning Projects 카드 목록 |
+| ProfessionalProjects | `ProfessionalProjects.tsx` | 실무 프로젝트 3개 카드 목록 |
+| Portfolio | `Portfolio.tsx` | Project 섹션 레이아웃 래퍼 |
+| WebDesign | `WebDesign.tsx` | UI/UX 디자인 작업물 갤러리 그리드 |
+| Contact | `Contact.tsx` | 연락처, SNS 링크, Copyright |
 
 ---
 
@@ -124,7 +124,7 @@
 > `src/common/button/ResumeToggle.tsx`
 > 우측 고정 섹션 네비게이션 도트 버튼. 스크롤 위치에 따라 현재 섹션 자동 감지.
 
-**Props** : 없음 (`useTheme` Context 사용)
+**Props** : 없음 (`useSection` Context 사용)
 
 **섹션 목록**
 
@@ -135,7 +135,7 @@
 | 3 | PROJECT | project |
 | 4 | PROFESSIONAL | professional |
 | 5 | LEARNING | portfolio |
-| 6 | WEB DESIGN | web_design |
+| 6 | UI/UX DESIGN | web_design |
 | 7 | CONTACT | contact |
 
 **동작**
@@ -164,18 +164,33 @@
 ### ThemeContext
 
 > `src/contexts/ThemeContext.tsx`
-> 전역 테마 상태 관리. 다크 모드 및 현재 섹션 정보를 앱 전체에 공유.
+> 전역 테마 상태 관리. 다크 모드 상태를 앱 전체에 공유.
 
 **Context 값 (ThemeContextType)**
 
 | 이름 | 타입 | 설명 |
 |---|---|---|
-| `is_dark_mode` | `boolean` | 현재 다크 모드 여부 |
-| `toggle_dark_mode` | `() => void` | 다크 모드 전환 함수 |
-| `resume_section` | `number` | 현재 활성 섹션 ID (1~7) |
-| `set_resume_section` | `(section: number) => void` | 현재 섹션 업데이트 함수 |
+| `isDarkMode` | `boolean` | 현재 다크 모드 여부 |
+| `toggleDarkMode` | `() => void` | 다크 모드 전환 함수 |
 
 **특이사항**
 - `localStorage`에 테마 저장 → 새로고침 후에도 유지
 - `data-theme` attribute를 `document.documentElement`에 적용
 - `useTheme` 훅으로 사용 (`ThemeProvider` 외부에서 사용 시 에러 발생)
+
+---
+
+### SectionContext
+
+> `src/contexts/SectionContext.tsx`
+> 현재 활성 섹션 상태 관리. 도트 네비게이터(ResumeToggle)와 연동.
+
+**Context 값 (SectionContextType)**
+
+| 이름 | 타입 | 설명 |
+|---|---|---|
+| `resumeSection` | `number` | 현재 활성 섹션 ID (1~7) |
+| `setResumeSection` | `(section: number) => void` | 현재 섹션 업데이트 함수 |
+
+**특이사항**
+- `useSection` 훅으로 사용 (`SectionProvider` 외부에서 사용 시 에러 발생)
