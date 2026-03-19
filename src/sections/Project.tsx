@@ -25,7 +25,7 @@ const work_categories = [
   },
   {
     id: 3,
-    title: '03 Web Design',
+    title: '03 UI/UX Design',
     projects: [
       'Addmoa 기업 홈페이지',
       '뷰티 정보 홈페이지',

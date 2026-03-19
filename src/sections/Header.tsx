@@ -56,7 +56,7 @@ const Header = () => {
                 </li>
                 <li>
                   <a href="#web_design" className="nav_dropdown_link" onClick={closeMobileMenu}>
-                    Web Design
+                    UI/UX Design
                   </a>
                 </li>
               </ul>

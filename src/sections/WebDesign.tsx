@@ -104,7 +104,7 @@ const WebDesign = () => {
     <section ref={sectionRef} className="web_design_section">
       <div className="web_design_container">
         <h1 ref={titleRef} className="web_design_title">
-          WEB DESIGN.
+          UI/UX DESIGN.
         </h1>
 
         <div ref={gridRef} className="web_design_grid">
